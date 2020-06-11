@@ -43,3 +43,5 @@ library(RCurl)
 
   cat("\n << QC Check (2) >> \n")
   covidPT[, .(N=.N), .(existsURL, existsRaw, emptyFile)]
+
+
