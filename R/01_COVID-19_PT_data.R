@@ -1,0 +1,45 @@
+# Downloading, cleaning and making the Portuguese COVID-19 available in a user
+# friend format.
+
+# Load (attach) libraries
+library(here)
+library(jsonlite)
+library(magrittr)
+library(data.table)
+library(RCurl)
+
+
+# The data source is https://github.com/dssg-pt/covid19pt-data
+
+# The API uses date formatted as DD-MM-YYYY (all numberic)
+  stemUrl <- "https://covid19-api.vost.pt/Requests/get_entry/"
+
+# The source data starts from 26th Feb 2020.
+  startDay <-  as.Date("2020-02-26", format = "%Y-%m-%d")
+  endDay <- Sys.Date()
+  cvDayYMD <- format(seq(startDay, endDay, by="days"), "%Y-%m-%d")
+  cvDayDMY <- format(seq(startDay, endDay, by="days"), "%d-%m-%Y")
+  # Directory to store the raw JSON data.
+  rawDataDir <- "data-raw"
+
+  # Creating a dataset to track downloads and existing JSON files.
+  covidPT <-  as.data.table(cvDayDMY, cvDayYMD)[
+    , cvURL := paste0(stemUrl, cvDayDMY)][
+    , jsonFile := paste0(cvDayYMD, "_covid19pt-DSSG.json")][
+    , existsURL := url.exists(cvURL)][
+    , existsJSON := file.exists(here(rawDataDir, jsonFile))]
+
+  cat("\n << QC Check (1) >> \n")
+  covidPT[, .(N=.N), .(existsURL, existsJSON)]
+
+  # Download the JSON files that are not available.
+  dlJSON <- covidPT[existsURL==TRUE & existsJSON==FALSE]
+  download.file(dlJSON$cvURL, destfile = here("data-raw", dlJSON$jsonFile))
+
+  # QC:: Update tracking dataset to confirm available files and empty files
+  covidPT[, existsRaw := file.exists(here(rawDataDir, jsonFile))][
+    , fileSize := file.size(here(rawDataDir, jsonFile))][
+    , emptyFile := ifelse(fileSize == 0, "Empty", "Not Empty")]
+
+  cat("\n << QC Check (2) >> \n")
+  covidPT[, .(N=.N), .(existsURL, existsRaw, emptyFile)]
