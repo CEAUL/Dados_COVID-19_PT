@@ -8,8 +8,11 @@ library(magrittr)
 library(data.table)
 library(RCurl)
 
+##
+## Download latest data
+##
 
-# The data source is https://github.com/dssg-pt/covid19pt-data
+# The data source is originally from https://github.com/dssg-pt/covid19pt-data
 
 # The API uses date formatted as DD-MM-YYYY (all numberic)
   stemUrl <- "https://covid19-api.vost.pt/Requests/get_entry/"
@@ -19,6 +22,7 @@ library(RCurl)
   endDay <- Sys.Date()
   cvDayYMD <- format(seq(startDay, endDay, by="days"), "%Y-%m-%d")
   cvDayDMY <- format(seq(startDay, endDay, by="days"), "%d-%m-%Y")
+
   # Directory to store the raw JSON data.
   rawDataDir <- "data-raw"
 
@@ -43,3 +47,21 @@ library(RCurl)
 
   cat("\n << QC Check (2) >> \n")
   covidPT[, .(N=.N), .(existsURL, existsRaw, emptyFile)]
+
+##
+##  Part 2: Cleaning the data to make it user friendly
+##
+  # Use the downloaded raw json data.
+  rawFiles <- list.files(path=here(rawDataDir), full.names = TRUE)
+
+  allDays <- lapply(rawFiles, fromJSON, simplifyVector = FALSE) %>%
+    rbindlist(., fill = TRUE, idcol = TRUE)
+
+ cvpt <- melt(allDays,
+              id = c(".id", "data", "data_dados"),
+              variable.name = "origVars",
+              value.name = "count",
+              variable.factor = FALSE,
+              value.factor = FALSE)
+
+ str(cvpt)
