@@ -48,6 +48,7 @@ library(RCurl)
   cat("\n << QC Check (2) >> \n")
   covidPT[, .(N=.N), .(existsURL, existsRaw, emptyFile)]
 
+<<<<<<< HEAD
 ##
 ##  Part 2: Cleaning the data to make it user friendly
 ##
@@ -65,3 +66,6 @@ library(RCurl)
               value.factor = FALSE)
 
  str(cvpt)
+=======
+
+>>>>>>> 45bf508f14ce821973272828ea8cb3febdab7a71
