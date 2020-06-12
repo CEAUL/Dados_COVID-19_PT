@@ -38,7 +38,10 @@ library(RCurl)
 
   # Download the JSON files that are not available.
   dlJSON <- covidPT[existsURL==TRUE & existsJSON==FALSE]
-  download.file(dlJSON$cvURL, destfile = here("data-raw", dlJSON$jsonFile))
+
+  if (dim(dlJSON)[1]!=0){
+    download.file(dlJSON$cvURL, destfile = here("data-raw", dlJSON$jsonFile))
+  } else {message("Raw JSON data up to date")}
 
   # QC:: Update tracking dataset to confirm available files and empty files
   covidPT[, existsRaw := file.exists(here(rawDataDir, jsonFile))][
@@ -48,7 +51,6 @@ library(RCurl)
   cat("\n << QC Check (2) >> \n")
   covidPT[, .(N=.N), .(existsURL, existsRaw, emptyFile)]
 
-<<<<<<< HEAD
 ##
 ##  Part 2: Cleaning the data to make it user friendly
 ##
@@ -65,7 +67,10 @@ library(RCurl)
               variable.factor = FALSE,
               value.factor = FALSE)
 
- str(cvpt)
-=======
+  cvpt[, origType := tstrsplit(origVars, "_", fixed=TRUE, keep = 1)][
+    , sexo := ifelse(grepl("_f$|_m$", origVars),
+                     toupper(substring(origVars, nchar(origVars))), "All")]
 
->>>>>>> 45bf508f14ce821973272828ea8cb3febdab7a71
+### Test zone
+  oVars <- sort(unique(cvpt$origVars))
+  grepl("_f$|_m$", oVars)
