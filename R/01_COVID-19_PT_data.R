@@ -57,8 +57,10 @@ library(RCurl)
   # Use the downloaded raw json data.
   rawFiles <- list.files(path=here(rawDataDir), full.names = TRUE)
 
-  allDays <- lapply(rawFiles, fromJSON, simplifyVector = FALSE) %>%
-    rbindlist(., fill = TRUE, idcol = TRUE)
+  allDays <- lapply(rawFiles, fromJSON, simplifyVector = TRUE) %>%
+    rbindlist(., fill = TRUE, idcol = TRUE) %>%
+    lapply(., as.character) %>%
+    as.data.table(.)
 
  cvpt <- melt(allDays,
               id = c(".id", "data", "data_dados"),
@@ -66,10 +68,10 @@ library(RCurl)
               value.name = "count",
               variable.factor = FALSE,
               value.factor = FALSE)
-
   # List of regions to be used later.
-  regionsList <- c("arsnorte", "arscentro", "arslvt", "alentejo", "arsalgarve",
-                    "acores", "madeira", "estrangeiro")
+  #_# QC ISSUE: Alentejo has two codings "alentejo", "arsalentejo".
+  regionsList <- c("arsnorte", "arscentro", "arslvt", "alentejo", "arsalentejo",
+                   "arsalgarve", "acores", "madeira", "estrangeiro")
 
   cvpt[, origType := tstrsplit(origVars, "_", fixed=TRUE, keep = 1)][
     # Create variable for sex ("F", "M" & "All")
@@ -85,16 +87,24 @@ library(RCurl)
     , `:=` (region = ifelse(tempRegion %in% regionsList, tempRegion, "Portugal"),
             tempRegion = NULL)][
     # Create a variable for symptoms
-    origType=="sintomas", symptoms := gsub("_", " ", gsub("sintomas_", "", origVars))]
+    origType=="sintomas", symptoms := gsub("_", " ", gsub("sintomas_", "", origVars))][
+    # Other types not cover above
+    region=="Portugal" & is.na(symptoms) & sex=="All" & origVars!=origType, other := origVars][
+    # Convert count to numeric
+    , count := as.numeric(count)]
+
+
+  cv <- dcast(cvpt,
+              .id + data + data_dados + sex + ageGrpLower + ageGrpUpper + region + symptoms + other ~ origType,
+              value.var = c("count"))
+
+  fwrite(cv, file = here("data", "covid19pt_DSSG.csv"))
 
 ### Test zone
-  regionsList %in% oVars
+  # oVars <- sort(unique(cvpt$origVars))
+  # oVars[grepl("[0-9]", oVars)]
 
-  oVars <- sort(unique(cvpt$origVars))
-  oVars[grepl("[0-9]", oVars)]
-
-  cvpt[, .(N=.N), .(origVars, origType, ageGrpLower, ageGrpUpper, sex, region, symptoms)][
-    order(origVars)]
-
-  cvpt[, .(N=.N), .(origVars, origType, symptoms)][
-    order(origVars)]
+  # checkData <- cvpt[, .(N=.N), .(origVars, origType, ageGrpLower, ageGrpUpper, sex, region, symptoms, other)][
+  #   order(origVars)]
+  #
+  # c2 <- checkData[region=="Portugal" & is.na(symptoms) & sex=="All"]
