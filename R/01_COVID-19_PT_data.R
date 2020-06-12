@@ -67,10 +67,34 @@ library(RCurl)
               variable.factor = FALSE,
               value.factor = FALSE)
 
+  # List of regions to be used later.
+  regionsList <- c("arsnorte", "arscentro", "arslvt", "alentejo", "arsalgarve",
+                    "acores", "madeira", "estrangeiro")
+
   cvpt[, origType := tstrsplit(origVars, "_", fixed=TRUE, keep = 1)][
-    , sexo := ifelse(grepl("_f$|_m$", origVars),
-                     toupper(substring(origVars, nchar(origVars))), "All")]
+    # Create variable for sex ("F", "M" & "All")
+    , sex := ifelse(grepl("_f$|_m$", origVars),
+                    toupper(substring(origVars, nchar(origVars))), "All")][
+    # Create age group variables.
+    grepl("[0-9]", origVars)
+      , c("ageGrpLower", "ageGrpUpper") := tstrsplit(origVars, "_", fixed=TRUE, keep = 2:3)][
+    grepl("desconhecidos", origVars)
+        , `:=` (ageGrpLower = "desconhecidos", ageGrpUpper = "desconhecidos")][
+    # Create variables for region
+    , tempRegion := tstrsplit(origVars, "_", fixed=TRUE, keep = 2)][
+    , `:=` (region = ifelse(tempRegion %in% regionsList, tempRegion, "Portugal"),
+            tempRegion = NULL)][
+    # Create a variable for symptoms
+    origType=="sintomas", symptoms := gsub("_", " ", gsub("sintomas_", "", origVars))]
 
 ### Test zone
+  regionsList %in% oVars
+
   oVars <- sort(unique(cvpt$origVars))
-  grepl("_f$|_m$", oVars)
+  oVars[grepl("[0-9]", oVars)]
+
+  cvpt[, .(N=.N), .(origVars, origType, ageGrpLower, ageGrpUpper, sex, region, symptoms)][
+    order(origVars)]
+
+  cvpt[, .(N=.N), .(origVars, origType, symptoms)][
+    order(origVars)]
