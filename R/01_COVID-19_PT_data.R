@@ -97,10 +97,14 @@ library(RCurl)
 
     setkeyv(cvpt, c("origVars", "data"))
 
-    cvpt[, dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars]
+    cvpt[, dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
+      grepl("^sintomas", origVars), dayChange := NA][
+      , valueUnits := ifelse(grepl("^sintomas", origVars), "Proportion", "Count")][
+      is.na(value), valueUnits := NA]
 
-    setcolorder(cvpt, c(".id", "data", "data_dados", "origVars", "origType", "sex", "ageGrpLower",
-                        "ageGrpUpper", "region", "symptoms", "other", "value", "dayChange"))
+    setcolorder(cvpt, c(".id", "data", "data_dados", "origVars", "origType", "sex",
+                        "ageGrpLower", "ageGrpUpper", "region", "symptoms", "other",
+                        "value", "valueUnits", "dayChange"))
 
   fwrite(cvpt, file = here("data", "covid19pt_DSSG_Long.csv"))
 
