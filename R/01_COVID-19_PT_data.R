@@ -74,6 +74,7 @@ library(RCurl)
                    "arsalgarve", "acores", "madeira", "estrangeiro")
 
   cvpt[, origType := tstrsplit(origVars, "_", fixed=TRUE, keep = 1)][
+    , data := as.Date(data, format = "%d-%m-%Y")][
     # Create variable for sex ("F", "M" & "All")
     , sex := ifelse(grepl("_f$|_m$", origVars),
                     toupper(substring(origVars, nchar(origVars))), "All")][
@@ -94,18 +95,14 @@ library(RCurl)
     , value := as.numeric(count)][
     , count := NULL]
 
-    setcolorder(cvpt, c(".id", "data", "data_dados", "origVars", "origType",
-                "sex", "ageGrpLower", "ageGrpUpper", "region", "symptoms", "other", "value"))
+    setkeyv(cvpt, c("origVars", "data"))
 
-  # cv <- dcast(cvpt,
-  #             .id + data + data_dados + sex + ageGrpLower + ageGrpUpper + region + symptoms + other ~ origType,
-  #             value.var = c("value"))
+    cvpt[, dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars]
 
-  # Write the date to CSV files
-  # fwrite(cv, file = here("data", "covid19pt_DSSG.csv"))
+    setcolorder(cvpt, c(".id", "data", "data_dados", "origVars", "origType", "sex", "ageGrpLower",
+                        "ageGrpUpper", "region", "symptoms", "other", "value", "dayChange"))
+
   fwrite(cvpt, file = here("data", "covid19pt_DSSG_Long.csv"))
-
-
 
 ### Test zone - Code below to be deleted
   # oVars <- sort(unique(cvpt$origVars))
