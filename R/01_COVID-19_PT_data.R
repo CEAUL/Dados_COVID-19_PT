@@ -91,14 +91,19 @@ library(RCurl)
     # Other types not cover above
     region=="Portugal" & is.na(symptoms) & sex=="All" & origVars!=origType, other := origVars][
     # Convert count to numeric
-    , count := as.numeric(count)]
-
+    , value := as.numeric(count)][
+    , .(.id, data, data_dados, origVars, origType, sex, ageGrpLower, ageGrpUpper,
+        region, symptoms, other, value)]
 
   cv <- dcast(cvpt,
               .id + data + data_dados + sex + ageGrpLower + ageGrpUpper + region + symptoms + other ~ origType,
-              value.var = c("count"))
+              value.var = c("value"))
 
+  # Write the date to CSV files
   fwrite(cv, file = here("data", "covid19pt_DSSG.csv"))
+  fwrite(cvpt, file = here("data", "covid19pt_DSSG_Long.csv"))
+
+
 
 ### Test zone
   # oVars <- sort(unique(cvpt$origVars))
