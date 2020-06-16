@@ -58,5 +58,14 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   scale_y_log10() +
   theme(legend.position = "bottom")
 
+# What is the maximum number of deaths on any given day by region.
+CV[origType=="obitos" & ageGrp=="" & region!="Portugal",
+   .(max=max(dayChange, na.rm=TRUE)), .(region)]
+
+# What is the maximum number of reported cases on any given day by region.
+CV[origType=="confirmados" & ageGrp=="" & region!="Portugal",
+   .(max=max(dayChange, na.rm=TRUE)), .(region)]
+
+
 # To be checked. Why do we have negative daily change?
 CV[dayChange<0]
