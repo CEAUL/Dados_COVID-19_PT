@@ -27,8 +27,8 @@ Using the `data.table` package to process the data.
 ``` r
 # Load Libraries
 library(data.table)
-library(here)
-## here() starts at /home/saghir/Documents/saghirb/Github/Dados_COVID-19_PT
+# You can use use: library(here)
+suppressPackageStartupMessages(library(here))
 library(ggplot2)
 library(magrittr)
 

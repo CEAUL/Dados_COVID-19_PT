@@ -35,7 +35,8 @@ Using the `data.table` package to process the data.
 ```{r readin}
 # Load Libraries
 library(data.table)
-library(here)
+# You can use use: library(here)
+suppressPackageStartupMessages(library(here))
 library(ggplot2)
 library(magrittr)
 
