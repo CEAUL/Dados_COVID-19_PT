@@ -50,13 +50,18 @@ CV[origType=="obitos" & sex %in% c("F", "M") & ageGrp!=""] %>%
   facet_grid(sex~.) +
   theme(legend.position = "bottom")
 
-# Deaths by region and sex
+# Recorded number of COVID-19 cases by Region
 CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   ggplot(., aes(x=data, y=value, colour=region)) +
   geom_line() +
   scale_x_date(date_labels = "%b-%Y") +
   scale_y_log10() +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom") +
+  labs(
+    title = "COVID-19 Portugal: Number of Confirmed Cases",
+    x = "Date",
+    y = "Number of Confirmed cases",
+    colour = "Region")
 
 # What is the maximum number of deaths on any given day by region.
 CV[origType=="obitos" & ageGrp=="" & region!="Portugal",
