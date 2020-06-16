@@ -83,6 +83,8 @@ library(RCurl)
       , c("ageGrpLower", "ageGrpUpper") := tstrsplit(origVars, "_", fixed=TRUE, keep = 2:3)][
     grepl("desconhecidos", origVars)
         , `:=` (ageGrpLower = "desconhecidos", ageGrpUpper = "desconhecidos")][
+        , ageGrp := ifelse(ageGrpLower == "desconhecidos", "desconhecidos",
+                          sprintf("%s-%s", ageGrpLower, ageGrpUpper))][
     # Create variables for region
     , tempRegion := tstrsplit(origVars, "_", fixed=TRUE, keep = 2)][
     , `:=` (region = ifelse(tempRegion %in% regionsList, tempRegion, "Portugal"),
@@ -93,7 +95,8 @@ library(RCurl)
     region=="Portugal" & is.na(symptoms) & sex=="All" & origVars!=origType, other := origVars][
     # Convert count to numeric
     , value := as.numeric(count)][
-    , count := NULL]
+      # Remove unneeded variables
+    , `:=`(count=NULL, .id=NULL)]
 
     setkeyv(cvpt, c("origVars", "data"))
 
@@ -102,11 +105,22 @@ library(RCurl)
       , valueUnits := ifelse(grepl("^sintomas", origVars), "Proportion", "Count")][
       is.na(value), valueUnits := NA]
 
-    setcolorder(cvpt, c(".id", "data", "data_dados", "origVars", "origType", "sex",
-                        "ageGrpLower", "ageGrpUpper", "region", "symptoms", "other",
+    setcolorder(cvpt, c("data", "data_dados", "origVars", "origType", "sex", "ageGrpLower",
+                        "ageGrpUpper", "ageGrp", "region", "symptoms", "other",
                         "value", "valueUnits", "dayChange"))
 
+
+##
+##  Part 3: Write data to CSV files
+##
+
+  # Cleaned data
   fwrite(cvpt, file = here("data", "covid19pt_DSSG_Long.csv"))
+
+  # Source data
+  fwrite(allDays, file = here("data", "covid19pt_DSSG_Orig.csv"))
+
+
 
 ### Test zone - Code below to be deleted
   # oVars <- sort(unique(cvpt$origVars))
