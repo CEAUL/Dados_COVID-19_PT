@@ -13,10 +13,12 @@ The original data were downloaded from an API provide by VOST
 
 This repository intends to provide a user friendly CSV version of the
 Portuguse COVID-19 data (updated daily - once automated). Download the
-user friendly version
-    from:
+user friendly version from:
 
-  - [covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)
+  - Cleaned and user friendly data:
+    [covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)
+  - Original unprocessed data (json to CSV):
+    [covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)
 
 # Example Usage
 
@@ -32,10 +34,19 @@ suppressPackageStartupMessages(library(here))
 library(ggplot2)
 library(magrittr)
 
+# Change the ggplot theme.
+theme_set(theme_bw())
 
+# Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
-# Convert data to a data object in dataset
-CV[, data := as.Date(data, format = "%Y-%m-%d")]
+
+# Order data by original variable name and date.
+setkeyv(CV, c("origVars", "data"))
+
+# Convert data to a data object in dataset and add a chage from previous day variable.
+CV[, data := as.Date(data, format = "%Y-%m-%d")][
+  , dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
+  grepl("^sintomas", origVars), dayChange := NA]
 ```
 
 ## Overall Number of Deaths (daily) by Sex
@@ -68,10 +79,31 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases",
     x = "Date",
-    y = "Number of Confirmed cases",
+    y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 96 row(s) containing missing values (geom_path).
+## Warning: Removed 97 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
+
+## Issue with `dayChange`
+
+Chnage between days can be negative.
+
+``` r
+CV[dayChange<0][
+  , .(data, origVars, value, dayChange)]
+##            data            origVars value dayChange
+##   1: 2020-03-08 cadeias_transmissao     4        -1
+##   2: 2020-06-13   confirmados_0_9_f   423        -1
+##   3: 2020-03-24 confirmados_10_19_f    35        -1
+##   4: 2020-03-24 confirmados_40_49_f   224        -2
+##   5: 2020-03-19 confirmados_60_69_f    35       -14
+##  ---                                               
+## 262: 2020-05-31          vigilancia 27924      -259
+## 263: 2020-06-05          vigilancia 28088      -597
+## 264: 2020-06-08          vigilancia 28791      -521
+## 265: 2020-06-13          vigilancia 30655      -124
+## 266: 2020-06-17          vigilancia 30289      -521
+```

@@ -4,10 +4,19 @@ library(here)
 library(ggplot2)
 library(magrittr)
 
+# Change the ggplot theme.
+theme_set(theme_bw())
+
+# Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 
-# Convert data to a data object in dataset
-CV[, data := as.Date(data, format = "%Y-%m-%d")]
+# Order data by original variable name and date.
+setkeyv(CV, c("origVars", "data"))
+
+# Convert data to a data object in dataset and add a chage from previous day variable.
+CV[, data := as.Date(data, format = "%Y-%m-%d")][
+  , dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
+  grepl("^sintomas", origVars), dayChange := NA]
 
 # Overall number of Deaths (cumulative)
 CV[origVars=="obitos" & sex=="All"] %>%

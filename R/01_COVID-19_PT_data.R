@@ -96,18 +96,15 @@ library(RCurl)
     # Convert count to numeric
     , value := as.numeric(count)][
       # Remove unneeded variables
-    , `:=`(count=NULL, .id=NULL)]
+    , `:=`(count=NULL, .id=NULL)][
+    , valueUnits := ifelse(grepl("^sintomas", origVars), "Proportion", "Count")][
+      is.na(value), valueUnits := NA]
 
     setkeyv(cvpt, c("origVars", "data"))
 
-    cvpt[, dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
-      grepl("^sintomas", origVars), dayChange := NA][
-      , valueUnits := ifelse(grepl("^sintomas", origVars), "Proportion", "Count")][
-      is.na(value), valueUnits := NA]
-
     setcolorder(cvpt, c("data", "data_dados", "origVars", "origType", "sex", "ageGrpLower",
                         "ageGrpUpper", "ageGrp", "region", "symptoms", "other",
-                        "value", "valueUnits", "dayChange"))
+                        "value", "valueUnits"))
 
 
 ##
@@ -119,14 +116,3 @@ library(RCurl)
 
   # Source data
   fwrite(allDays, file = here("data", "covid19pt_DSSG_Orig.csv"))
-
-
-
-### Test zone - Code below to be deleted
-  # oVars <- sort(unique(cvpt$origVars))
-  # oVars[grepl("[0-9]", oVars)]
-
-  # checkData <- cvpt[, .(N=.N), .(origVars, origType, ageGrpLower, ageGrpUpper, sex, region, symptoms, other)][
-  #   order(origVars)]
-  #
-  # c2 <- checkData[region=="Portugal" & is.na(symptoms) & sex=="All"]
