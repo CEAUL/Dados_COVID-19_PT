@@ -82,7 +82,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 97 row(s) containing missing values (geom_path).
+## Warning: Removed 98 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -101,9 +101,9 @@ CV[dayChange<0][
 ##   4: 2020-03-24 confirmados_40_49_f   224        -2
 ##   5: 2020-03-19 confirmados_60_69_f    35       -14
 ##  ---                                               
-## 262: 2020-05-31          vigilancia 27924      -259
-## 263: 2020-06-05          vigilancia 28088      -597
-## 264: 2020-06-08          vigilancia 28791      -521
-## 265: 2020-06-13          vigilancia 30655      -124
-## 266: 2020-06-17          vigilancia 30289      -521
+## 265: 2020-05-31          vigilancia 27924      -259
+## 266: 2020-06-05          vigilancia 28088      -597
+## 267: 2020-06-08          vigilancia 28791      -521
+## 268: 2020-06-13          vigilancia 30655      -124
+## 269: 2020-06-17          vigilancia 30289      -521
 ```
