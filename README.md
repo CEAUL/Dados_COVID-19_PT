@@ -1,4 +1,6 @@
 
+**Last updated: Fri 19 Jun 2020 (15:25:41 WEST (+0100))**
+
 # Portuguese COVID-19 Data
 
 ## Source

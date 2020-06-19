@@ -30,8 +30,8 @@ library(RCurl)
   covidPT <-  as.data.table(cvDayDMY, cvDayYMD)[
     , cvURL := paste0(stemUrl, cvDayDMY)][
     , jsonFile := paste0(cvDayYMD, "_covid19pt-DSSG.json")][
-    , existsURL := url.exists(cvURL)][
-    , existsJSON := file.exists(here(rawDataDir, jsonFile))]
+    , existsJSON := file.exists(here(rawDataDir, jsonFile))][
+    existsJSON==FALSE, existsURL := url.exists(cvURL)]
 
   cat("\n << QC Check (1) >> \n")
   covidPT[, .(N=.N), .(existsURL, existsJSON)]
