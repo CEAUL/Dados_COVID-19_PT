@@ -9,19 +9,19 @@ knitr::opts_chunk$set(collapse=TRUE,
                       fig.path = "README_figs/README-")
 ```
 
-**Last updated: `r format(Sys.time(), '%a %d %b %Y (%H:%M:%S %Z (%z))')`**
-
 # Portuguese COVID-19 Data
+
+**Last updated:** `r format(Sys.time(), '%a %d %b %Y (%H:%M:%S %Z (%z))')`
 
 ## Source
 
-For more information about the data and varaibles see (https://github.com/dssg-pt/covid19pt-data)
+For more information about the data and variables see (https://github.com/dssg-pt/covid19pt-data)
 
 The original data were downloaded from an API provide by VOST (https://covid19-api.vost.pt/Requests/get_entry/)
 
 ## User Friendly version.
 
-This repository intends to provide a user friendly CSV version of the Portuguse COVID-19 
+This repository intends to provide a user friendly CSV version of the Portuguese COVID-19 
 data (updated daily - once automated). Download the user friendly version from:
 
 + Cleaned and user friendly data: [covid19pt_DSSG_Long.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)
@@ -48,6 +48,7 @@ theme_set(theme_bw())
 
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
+str(CV)
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
@@ -91,7 +92,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
 
 ## Issue with `dayChange`
 
-Chnage between days can be negative.
+Change between days can be negative.
 
 ```{r dayChageissues}
 CV[dayChange<0][

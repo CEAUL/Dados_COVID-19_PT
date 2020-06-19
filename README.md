@@ -1,11 +1,11 @@
 
-**Last updated: Fri 19 Jun 2020 (15:25:41 WEST (+0100))**
-
 # Portuguese COVID-19 Data
+
+**Last updated:** Fri 19 Jun 2020 (15:35:15 WEST (+0100))
 
 ## Source
 
-For more information about the data and varaibles see
+For more information about the data and variables see
 (<https://github.com/dssg-pt/covid19pt-data>)
 
 The original data were downloaded from an API provide by VOST
@@ -14,7 +14,7 @@ The original data were downloaded from an API provide by VOST
 ## User Friendly version.
 
 This repository intends to provide a user friendly CSV version of the
-Portuguse COVID-19 data (updated daily - once automated). Download the
+Portuguese COVID-19 data (updated daily - once automated). Download the
 user friendly version from:
 
   - Cleaned and user friendly data:
@@ -41,6 +41,22 @@ theme_set(theme_bw())
 
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
+str(CV)
+## Classes 'data.table' and 'data.frame':   9576 obs. of  13 variables:
+##  $ data       : chr  "2020-02-26" "2020-02-27" "2020-02-28" "2020-02-29" ...
+##  $ data_dados : chr  "26-02-2020 00:00" "27-02-2020 00:00" "28-02-2020 00:00" "29-02-2020 00:00" ...
+##  $ origVars   : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
+##  $ origType   : chr  "cadeias" "cadeias" "cadeias" "cadeias" ...
+##  $ sex        : chr  "All" "All" "All" "All" ...
+##  $ ageGrpLower: chr  "" "" "" "" ...
+##  $ ageGrpUpper: chr  "" "" "" "" ...
+##  $ ageGrp     : chr  "" "" "" "" ...
+##  $ region     : chr  "Portugal" "Portugal" "Portugal" "Portugal" ...
+##  $ symptoms   : chr  "" "" "" "" ...
+##  $ other      : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
+##  $ value      : num  NA NA NA NA NA NA NA NA NA 5 ...
+##  $ valueUnits : chr  "" "" "" "" ...
+##  - attr(*, ".internal.selfref")=<externalptr>
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
@@ -91,7 +107,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
 
 ## Issue with `dayChange`
 
-Chnage between days can be negative.
+Change between days can be negative.
 
 ``` r
 CV[dayChange<0][
