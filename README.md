@@ -1,7 +1,7 @@
 
 # Portuguese COVID-19 Data
 
-**Last updated:** Sat 20 Jun 2020 (10:24:35 WEST (+0100))
+**Last updated:** Sun 21 Jun 2020 (14:05:15 WEST (+0100))
 
 ## Source
 
@@ -42,7 +42,7 @@ theme_set(theme_bw())
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 str(CV)
-## Classes 'data.table' and 'data.frame':   9660 obs. of  13 variables:
+## Classes 'data.table' and 'data.frame':   9744 obs. of  13 variables:
 ##  $ data       : chr  "2020-02-26" "2020-02-27" "2020-02-28" "2020-02-29" ...
 ##  $ data_dados : chr  "26-02-2020 00:00" "27-02-2020 00:00" "28-02-2020 00:00" "29-02-2020 00:00" ...
 ##  $ origVars   : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
@@ -100,7 +100,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 99 row(s) containing missing values (geom_path).
+## Warning: Removed 100 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -119,9 +119,9 @@ CV[dayChange<0][
 ##   4: 2020-03-24 confirmados_40_49_f   224        -2
 ##   5: 2020-03-19 confirmados_60_69_f    35       -14
 ##  ---                                               
-## 267: 2020-06-05          vigilancia 28088      -597
-## 268: 2020-06-08          vigilancia 28791      -521
-## 269: 2020-06-13          vigilancia 30655      -124
-## 270: 2020-06-17          vigilancia 30289      -521
-## 271: 2020-06-19          vigilancia 29046     -1380
+## 269: 2020-06-05          vigilancia 28088      -597
+## 270: 2020-06-08          vigilancia 28791      -521
+## 271: 2020-06-13          vigilancia 30655      -124
+## 272: 2020-06-17          vigilancia 30289      -521
+## 273: 2020-06-19          vigilancia 29046     -1380
 ```
