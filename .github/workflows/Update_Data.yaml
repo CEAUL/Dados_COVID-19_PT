@@ -20,9 +20,10 @@ jobs:
       - name: Cache R packages
         uses: actions/cache@v1
         with:
-          path: ${{ env }}
-          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
+          path: ~/Library/Application Support/renv
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
 
       - name: Install dependencies
         run: Rscript -e 'install.packages("rmarkdown", "data.table", "jsonlite", "RCurl", "magrittr", "here", "ggplot2")'
