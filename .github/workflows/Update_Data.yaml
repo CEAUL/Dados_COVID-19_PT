@@ -14,8 +14,10 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - name: Install rmarkdown
         run: |
-          Rscript -e 'install.packages("rmarkdown", "data.table", "jsonlite")'
-          Rscript -e 'install.packages("RCurl", "magrittr", "here", "ggplot2")'
+          Rscript -e 'install.packages(c("rmarkdown", "data.table", "jsonlite"))'
+          Rscript -e 'install.packages(c("RCurl", "magrittr", "here", "ggplot2"))'
+      - name: Data updates
+        run: Rscript -e 'source("R/01_COVID-19_PT_data.R")'
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
       - name: Commit results
