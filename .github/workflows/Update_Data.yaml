@@ -10,6 +10,10 @@ jobs:
   render:
     name: Render README
     runs-on: macOS-latest
+
+env:
+  RENV_PATHS_ROOT: ~/Library/Application Support/renv
+
     steps:
       - uses: actions/checkout@v2
 
