@@ -11,7 +11,7 @@ knitr::opts_chunk$set(collapse=TRUE,
 
 # Portuguese COVID-19 Data
 
-**Last updated:** `r format(Sys.time(), '%a %d %b %Y (%H:%M:%S %Z (%z))')`
+**Last updated:** `r format(Sys.time(), '%a %d %b %Y (%H:%M:%S %Z [%z])')`
 
 ## Source
 
