@@ -13,11 +13,20 @@ knitr::opts_chunk$set(collapse=TRUE,
 
 **Last updated:** `r format(Sys.time(), '%a %d %b %Y (%H:%M:%S %Z [%z])')`
 
+## Data Meta Information
+
+```{r dataMetaInfo, echo=FALSE, eval=TRUE, results = "asis"}
+suppressPackageStartupMessages(library(here))
+dataMetaInfo <- readRDS(here("data", "dataMetaInfo.RData"))
+cat(dataMetaInfo)
+```
+
+
 ## Source
 
-For more information about the data and variables see (https://github.com/dssg-pt/covid19pt-data)
+For more information about the data and variables see: https://github.com/dssg-pt/covid19pt-data
 
-The original data were downloaded from an API provide by VOST (https://covid19-api.vost.pt/Requests/get_entry/)
+The original data were downloaded from an API provide by VOST https://covid19-api.vost.pt/Requests/get_entry/
 
 ## User Friendly version.
 
@@ -90,9 +99,9 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     colour = "Region")
 ```
 
-## Issue with `dayChange`
+## Issues with `dayChange`
 
-Change between days can be negative.
+### Calculated change between days can be negative.
 
 ```{r dayChageissues}
 CV[dayChange<0][

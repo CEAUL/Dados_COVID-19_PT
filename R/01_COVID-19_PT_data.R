@@ -96,13 +96,13 @@ library(RCurl)
     # Convert count to numeric
     , value := as.numeric(count)][
       # Remove unneeded variables
-    , `:=`(count=NULL, .id=NULL)][
+    , `:=`(count=NULL, .id=NULL, data_dados=NULL)][
     , valueUnits := ifelse(grepl("^sintomas", origVars), "Proportion", "Count")][
       is.na(value), valueUnits := NA]
 
     setkeyv(cvpt, c("origVars", "data"))
 
-    setcolorder(cvpt, c("data", "data_dados", "origVars", "origType", "sex", "ageGrpLower",
+    setcolorder(cvpt, c("data", "origVars", "origType", "sex", "ageGrpLower",
                         "ageGrpUpper", "ageGrp", "region", "symptoms", "other",
                         "value", "valueUnits"))
 
@@ -116,3 +116,19 @@ library(RCurl)
 
   # Source data
   fwrite(allDays, file = here("data", "covid19pt_DSSG_Orig.csv"))
+
+
+##
+##  Part 4: Useful information for README
+##
+
+allDays[, data := as.Date(data, format = "%d-%m-%Y")]
+
+firstDate <-  min(allDays$data)
+lastDate <- max(allDays$data)
+availableDays <- nrow(allDays)
+
+dataMetaInfo <- paste0("\n+ **Start date:** ", firstDate, "\n+ **End Date:** ",
+                       lastDate, "\n+ **Number of days:** ", availableDays, "\n" )
+
+saveRDS(dataMetaInfo, file = here("data", "dataMetaInfo.RData"))

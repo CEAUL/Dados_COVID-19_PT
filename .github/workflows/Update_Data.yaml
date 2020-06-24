@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  '20 6,14 * * *'
+    - cron:  '20 15 * * *'
 
 name: Render README
 

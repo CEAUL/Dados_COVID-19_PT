@@ -1,15 +1,21 @@
 
 # Portuguese COVID-19 Data
 
-**Last updated:** Wed 24 Jun 2020 (06:23:41 UTC \[+0000\])
+**Last updated:** Wed 24 Jun 2020 (13:59:45 WEST \[+0100\])
+
+## Data Meta Information
+
+  - **Start date:** 2020-02-26
+  - **End Date:** 2020-06-23
+  - **Number of days:** 119
 
 ## Source
 
-For more information about the data and variables see
-(<https://github.com/dssg-pt/covid19pt-data>)
+For more information about the data and variables see:
+<https://github.com/dssg-pt/covid19pt-data>
 
 The original data were downloaded from an API provide by VOST
-(<https://covid19-api.vost.pt/Requests/get_entry/>)
+<https://covid19-api.vost.pt/Requests/get_entry/>
 
 ## User Friendly version.
 
@@ -42,9 +48,8 @@ theme_set(theme_bw())
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 str(CV)
-## Classes 'data.table' and 'data.frame':   9996 obs. of  13 variables:
+## Classes 'data.table' and 'data.frame':   9996 obs. of  12 variables:
 ##  $ data       : chr  "2020-02-26" "2020-02-27" "2020-02-28" "2020-02-29" ...
-##  $ data_dados : chr  "26-02-2020 00:00" "27-02-2020 00:00" "28-02-2020 00:00" "29-02-2020 00:00" ...
 ##  $ origVars   : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
 ##  $ origType   : chr  "cadeias" "cadeias" "cadeias" "cadeias" ...
 ##  $ sex        : chr  "All" "All" "All" "All" ...
@@ -105,9 +110,9 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
 
-## Issue with `dayChange`
+## Issues with `dayChange`
 
-Change between days can be negative.
+### Calculated change between days can be negative.
 
 ``` r
 CV[dayChange<0][
