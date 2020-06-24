@@ -29,6 +29,6 @@ jobs:
 
       - name: Commit results
         run: |
-          git add README.md README_figs/*
+          git add README.md README_figs/* data/* data-raw/*
           git commit -m 'Data Update & Re-build README.Rmd' || echo "No changes to commit"
           git push origin || echo "No changes to commit"

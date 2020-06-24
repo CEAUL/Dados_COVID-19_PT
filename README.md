@@ -1,7 +1,7 @@
 
 # Portuguese COVID-19 Data
 
-**Last updated:** Wed 24 Jun 2020 (15:23:25 UTC \[+0000\])
+**Last updated:** Wed 24 Jun 2020 (16:43:13 WEST \[+0100\])
 
 ## Data Meta Information
 
