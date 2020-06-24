@@ -6,7 +6,7 @@ name: Render README
 
 jobs:
   render:
-    name: Render README
+    name: Update Data and README
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
