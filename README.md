@@ -1,13 +1,13 @@
 
 # Portuguese COVID-19 Data
 
-**Last updated:** Thu 25 Jun 2020 (15:23:28 UTC \[+0000\])
+**Last updated:** Fri 26 Jun 2020 (15:24:57 UTC \[+0000\])
 
 ## Data Meta Information
 
   - **Start date:** 2020-02-26
-  - **End Date:** 2020-06-25
-  - **Number of days:** 121
+  - **End Date:** 2020-06-26
+  - **Number of days:** 122
 
 ## Source
 
@@ -48,7 +48,7 @@ theme_set(theme_bw())
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 str(CV)
-## Classes 'data.table' and 'data.frame':   10164 obs. of  12 variables:
+## Classes 'data.table' and 'data.frame':   10248 obs. of  12 variables:
 ##  $ data       : chr  "2020-02-26" "2020-02-27" "2020-02-28" "2020-02-29" ...
 ##  $ origVars   : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
 ##  $ origType   : chr  "cadeias" "cadeias" "cadeias" "cadeias" ...
@@ -105,7 +105,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 105 row(s) containing missing values (geom_path).
+## Warning: Removed 106 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
