@@ -11,13 +11,20 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: actions/cache@v2
+        with:
+          path: ~/Library/Application Support/renv
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+
       - uses: r-lib/actions/setup-r@v1
 
       - uses: r-lib/actions/setup-pandoc@v1
 
       - name: Install rmarkdown
         run: |
-          Rscript -e 'install.packages(c("rmarkdown", "data.table", "jsonlite"))'
+          Rscript -e 'install.packages(c("rmarkdown", "data.table", "jsonlite", "renv"))'
           Rscript -e 'install.packages(c("RCurl", "magrittr", "here", "ggplot2"))'
 
       - name: Data updates
@@ -25,7 +32,6 @@ jobs:
 
       - name: Render README
         run: Rscript -e 'rmarkdown::render("README.Rmd")'
-
 
       - name: Commit results
         run: |
