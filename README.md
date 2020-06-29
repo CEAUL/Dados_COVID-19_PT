@@ -1,13 +1,13 @@
 
 # Portuguese COVID-19 Data
 
-**Last updated:** Mon 29 Jun 2020 (09:07:33 WEST \[+0100\])
+**Last updated:** Mon 29 Jun 2020 (15:25:16 UTC \[+0000\])
 
 ## Data Meta Information
 
   - **Start date:** 2020-02-26
-  - **End Date:** 2020-06-28
-  - **Number of days:** 124
+  - **End Date:** 2020-06-29
+  - **Number of days:** 125
 
 ## Source
 
@@ -48,7 +48,7 @@ theme_set(theme_bw())
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 str(CV)
-## Classes 'data.table' and 'data.frame':   10416 obs. of  12 variables:
+## Classes 'data.table' and 'data.frame':   10500 obs. of  12 variables:
 ##  $ data       : chr  "2020-02-26" "2020-02-27" "2020-02-28" "2020-02-29" ...
 ##  $ origVars   : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
 ##  $ origType   : chr  "cadeias" "cadeias" "cadeias" "cadeias" ...
@@ -105,7 +105,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 108 row(s) containing missing values (geom_path).
+## Warning: Removed 109 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -124,9 +124,9 @@ CV[dayChange<0][
 ##   4: 2020-03-24 confirmados_40_49_f   224        -2
 ##   5: 2020-03-19 confirmados_60_69_f    35       -14
 ##  ---                                               
-## 288: 2020-06-08          vigilancia 28791      -521
-## 289: 2020-06-13          vigilancia 30655      -124
-## 290: 2020-06-17          vigilancia 30289      -521
-## 291: 2020-06-19          vigilancia 29046     -1380
-## 292: 2020-06-23          vigilancia 30248      -708
+## 291: 2020-06-08          vigilancia 28791      -521
+## 292: 2020-06-13          vigilancia 30655      -124
+## 293: 2020-06-17          vigilancia 30289      -521
+## 294: 2020-06-19          vigilancia 29046     -1380
+## 295: 2020-06-23          vigilancia 30248      -708
 ```
