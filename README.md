@@ -1,32 +1,31 @@
 
 # Portuguese COVID-19 Data
 
-**Last updated:** Fri 03 Jul 2020 (15:24:46 UTC \[+0000\])
+**Last updated:** Fri 03 Jul 2020 (16:34:48 WEST \[+0100\])
 
-## Data Meta Information
+## Download User Friendly Version
+
+On a daily basis, this repository provides a user friendly CSV version
+of the Portuguese COVID-19 data.
+
+  - Download the cleaned and user friendly data:
+    **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
+  - Download the original unprocessed data (json to CSV):
+    **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
+
+### Data Meta Information
 
   - **Start date:** 2020-02-26
   - **End Date:** 2020-07-02
   - **Number of days:** 128
 
-## Source
+### Source
 
 For more information about the data and variables see:
-<https://github.com/dssg-pt/covid19pt-data>
+**<https://github.com/dssg-pt/covid19pt-data>**
 
 The original data were downloaded from an API provide by VOST
-<https://covid19-api.vost.pt/Requests/get_entry/>
-
-## User Friendly version.
-
-This repository intends to provide a user friendly CSV version of the
-Portuguese COVID-19 data (updated daily - once automated). Download the
-user friendly version from:
-
-  - Cleaned and user friendly data:
-    [covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)
-  - Original unprocessed data (json to CSV):
-    [covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)
+**<https://covid19-api.vost.pt/Requests/get_entry/>**
 
 # Example Usage
 
