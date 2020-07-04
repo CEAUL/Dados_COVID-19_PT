@@ -38,9 +38,12 @@ library(RCurl)
 
   # Download the JSON files that are not available.
   dlJSON <- covidPT[existsURL==TRUE & existsJSON==FALSE]
+  nAvail <- dim(dlJSON)[1]
 
-  if (dim(dlJSON)[1]!=0){
-    download.file(dlJSON$cvURL, destfile = here("data-raw", dlJSON$jsonFile))
+  if (nAvail>0){
+    for(i in 1:nAvail){
+      download.file(dlJSON$cvURL[i], destfile = here("data-raw", dlJSON$jsonFile[i]))
+    }
   } else {message("Raw JSON data up to date")}
 
   # QC:: Update tracking dataset to confirm available files and empty files
@@ -128,7 +131,7 @@ firstDate <-  min(allDays$data)
 lastDate <- max(allDays$data)
 availableDays <- nrow(allDays)
 
-dataMetaInfo <- paste0("\n+ **Start date:** ", firstDate, "\n+ **End Date:** ",
-                       lastDate, "\n+ **Number of days:** ", availableDays, "\n" )
+dataMetaInfo <- paste0("\n+ Data available from **", firstDate, "** until **",
+                       lastDate, "** (", availableDays, " days).\n" )
 
 saveRDS(dataMetaInfo, file = here("data", "dataMetaInfo.RData"))
