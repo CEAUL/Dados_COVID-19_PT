@@ -1,7 +1,7 @@
 
 # Portuguese COVID-19 Data
 
-**Last updated:** Sat 04 Jul 2020 (17:02:35 WEST \[+0100\])
+**Last updated:** Sun 05 Jul 2020 (03:24:58 UTC \[+0000\])
 
   - Data available from **2020-02-26** until **2020-07-04** (130 days).
 
