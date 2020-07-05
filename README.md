@@ -1,7 +1,7 @@
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Sun 05 Jul 2020 (14:04:21 WEST \[+0100\])**
+**Last updated: Sun 05 Jul 2020 (14:18:59 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **04 Jul 2020** (130
     days).
@@ -9,7 +9,7 @@
 ### Download User Friendly Version
 
   - Download the cleaned and user friendly data from:
-    **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
+    **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
       - `data`: Date (Portuguese spelling).
       - `origVars`: Variable name taken from source data.
       - `origType`: Orginal variable count type.
@@ -24,7 +24,7 @@
       - `value`: Numeric value.
       - `valueUnits`: Units for the variable `value`.
   - Download the original unprocessed data (json to CSV):
-    **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
+    **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
 
 ### Source
 

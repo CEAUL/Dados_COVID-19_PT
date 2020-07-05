@@ -21,7 +21,7 @@ cat(dataMetaInfo)
 
 ### Download User Friendly Version
 
-+ Download the cleaned and user friendly data from: **[covid19pt_DSSG_Long.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
++ Download the cleaned and user friendly data from: **[covid19pt_DSSG_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
 	+ `data`: Date (Portuguese spelling).
 	+ `origVars`: Variable name taken from source data.
 	+ `origType`: Orginal variable count type.
@@ -36,7 +36,7 @@ cat(dataMetaInfo)
 	+ `valueUnits`: Units for the variable `value`.
 
 
-+ Download the original unprocessed data (json to CSV): **[covid19pt_DSSG_Orig.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
++ Download the original unprocessed data (json to CSV): **[covid19pt_DSSG_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
   
 ### Source
   
