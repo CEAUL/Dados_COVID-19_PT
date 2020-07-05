@@ -105,8 +105,8 @@ library(RCurl)
 
     setkeyv(cvpt, c("origVars", "data"))
 
-    setcolorder(cvpt, c("data", "origVars", "origType", "sex", "ageGrpLower",
-                        "ageGrpUpper", "ageGrp", "region", "symptoms", "other",
+    setcolorder(cvpt, c("data", "origVars", "origType", "other", "symptoms",
+                        "sex", "ageGrpLower", "ageGrpUpper", "ageGrp", "region",
                         "value", "valueUnits"))
 
 
@@ -127,8 +127,8 @@ library(RCurl)
 
 allDays[, data := as.Date(data, format = "%d-%m-%Y")]
 
-firstDate <-  min(allDays$data)
-lastDate <- max(allDays$data)
+firstDate <-  format(min(allDays$data), "%d %b %Y")
+lastDate <- format(max(allDays$data), "%d %b %Y")
 availableDays <- nrow(allDays)
 
 dataMetaInfo <- paste0("\n+ Data available from **", firstDate, "** until **",

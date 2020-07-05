@@ -1,17 +1,28 @@
 
-# Portuguese COVID-19 Data
+## Daily Portuguese COVID-19 Data
 
-**Last updated:** Sun 05 Jul 2020 (03:24:58 UTC \[+0000\])
+**Last updated: Sun 05 Jul 2020 (14:04:21 WEST \[+0100\])**
 
-  - Data available from **2020-02-26** until **2020-07-04** (130 days).
+  - Data available from **26 Feb 2020** until **04 Jul 2020** (130
+    days).
 
-## Download User Friendly Version
+### Download User Friendly Version
 
-On a daily basis, this repository provides a user friendly CSV version
-of the Portuguese COVID-19 data.
-
-  - Download the cleaned and user friendly data:
+  - Download the cleaned and user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
+      - `data`: Date (Portuguese spelling).
+      - `origVars`: Variable name taken from source data.
+      - `origType`: Orginal variable count type.
+      - `other`: Other types of `origVars`.
+      - `symptoms`: Recorded COVID-19 symptoms.
+      - `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
+        Males).
+      - `ageGrp`: Age groups in years (`desconhecidos` - unknown).
+      - `ageGrpLower`: Lower limit of age group (useful for sorting).
+      - `ageGrpUpper`: Upper limit of age group.
+      - `region`: Portuguese Regions
+      - `value`: Numeric value.
+      - `valueUnits`: Units for the variable `value`.
   - Download the original unprocessed data (json to CSV):
     **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/saghirb/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
 
@@ -23,22 +34,16 @@ For more information about the data and variables see:
 The original data were downloaded from an API provide by VOST
 **<https://covid19-api.vost.pt/Requests/get_entry/>**
 
-# Example Usage
+## Example Usage
 
-## Read in the data
+### Read in the data
 
 Using the `data.table` package to process the data.
 
 ``` r
 # Load Libraries
 library(data.table)
-# You can use use: library(here)
-suppressPackageStartupMessages(library(here))
-library(ggplot2)
-library(magrittr)
-
-# Change the ggplot theme.
-theme_set(theme_bw())
+suppressPackageStartupMessages(library(here)) # library(here)
 
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
@@ -47,13 +52,13 @@ str(CV)
 ##  $ data       : chr  "2020-02-26" "2020-02-27" "2020-02-28" "2020-02-29" ...
 ##  $ origVars   : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
 ##  $ origType   : chr  "cadeias" "cadeias" "cadeias" "cadeias" ...
+##  $ other      : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
+##  $ symptoms   : chr  "" "" "" "" ...
 ##  $ sex        : chr  "All" "All" "All" "All" ...
 ##  $ ageGrpLower: chr  "" "" "" "" ...
 ##  $ ageGrpUpper: chr  "" "" "" "" ...
 ##  $ ageGrp     : chr  "" "" "" "" ...
 ##  $ region     : chr  "Portugal" "Portugal" "Portugal" "Portugal" ...
-##  $ symptoms   : chr  "" "" "" "" ...
-##  $ other      : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
 ##  $ value      : num  NA NA NA NA NA NA NA NA NA 5 ...
 ##  $ valueUnits : chr  "" "" "" "" ...
 ##  - attr(*, ".internal.selfref")=<externalptr>
@@ -61,15 +66,21 @@ str(CV)
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
 
-# Convert data to a data object in dataset and add a chage from previous day variable.
+# Convert data to a data object in dataset and add a change from previous day variable.
 CV[, data := as.Date(data, format = "%Y-%m-%d")][
   , dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
-  grepl("^sintomas", origVars), dayChange := NA]
+    grepl("^sintomas", origVars), dayChange := NA]
 ```
 
-## Overall Number of Deaths (daily) by Sex
+### Overall Number of Deaths (daily) by Sex
 
 ``` r
+library(ggplot2)
+library(magrittr)
+
+# Change the ggplot theme.
+theme_set(theme_bw())
+
 CV[origType=="obitos" & sex %in% c("F", "M") & ageGrp==""] %>%
   ggplot(aes(x=data, y=dayChange, fill=as.factor(sex))) +
   geom_bar(stat = "identity") +
@@ -85,7 +96,7 @@ CV[origType=="obitos" & sex %in% c("F", "M") & ageGrp==""] %>%
 
 <img src="README_figs/README-deathsbySex-1.png" width="672" />
 
-## Recorded Number of Confirmed COVID-19 Cases by Region
+### Recorded Number of Confirmed COVID-19 Cases by Region
 
 ``` r
 CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
@@ -105,9 +116,19 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
 
-## Issues with `dayChange`
+<hr>
 
-### Calculated change between days can be negative.
+## Issues & Notes
+
+### Use and interpret with care.
+
+The data are provided as is. Any quality issues or errors in the source
+data will be reflected in the user friend data.
+
+Please **create an issue** to discuss any errors, issues, requests or
+improvements.
+
+### Calculated change between days can be negative (`dayChange`).
 
 ``` r
 CV[dayChange<0][
