@@ -66,8 +66,8 @@ setkeyv(CV, c("origVars", "data"))
 
 # Convert data to a data object in dataset and add a change from previous day variable.
 CV[, data := as.Date(data, format = "%Y-%m-%d")][
-  , dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
-    grepl("^sintomas", origVars), dayChange := NA]
+  , dailyChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
+    grepl("^sintomas", origVars), dailyChange := NA]
 ```
 
 ### Overall Number of Deaths (daily) by Sex
@@ -80,7 +80,7 @@ library(magrittr)
 theme_set(theme_bw())
 
 CV[origType=="obitos" & sex %in% c("F", "M") & ageGrp==""] %>%
-  ggplot(aes(x=data, y=dayChange, fill=as.factor(sex))) +
+  ggplot(aes(x=data, y=dailyChange, fill=as.factor(sex))) +
   geom_bar(stat = "identity") +
   scale_x_date(date_labels = "%b-%Y") +
   theme(legend.position = "bottom") +
@@ -117,10 +117,10 @@ reflected in the user friend data.
 
 Please **create an issue** to discuss any errors, issues, requests or improvements.
 
-### Calculated change between days can be negative (`dayChange`).
+### Calculated change between days can be negative (`dailyChange`).
 
 ```{r dayChageissues}
-CV[dayChange<0][
-  , .(data, origVars, value, dayChange)]
+CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
+  , .(data, origType, origVars, value, dailyChange)]
 ```
 

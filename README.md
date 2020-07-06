@@ -1,7 +1,7 @@
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Mon 06 Jul 2020 (03:25:34 UTC \[+0000\])**
+**Last updated: Mon 06 Jul 2020 (10:05:05 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **05 Jul 2020** (131
     days).
@@ -68,8 +68,8 @@ setkeyv(CV, c("origVars", "data"))
 
 # Convert data to a data object in dataset and add a change from previous day variable.
 CV[, data := as.Date(data, format = "%Y-%m-%d")][
-  , dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
-    grepl("^sintomas", origVars), dayChange := NA]
+  , dailyChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
+    grepl("^sintomas", origVars), dailyChange := NA]
 ```
 
 ### Overall Number of Deaths (daily) by Sex
@@ -82,7 +82,7 @@ library(magrittr)
 theme_set(theme_bw())
 
 CV[origType=="obitos" & sex %in% c("F", "M") & ageGrp==""] %>%
-  ggplot(aes(x=data, y=dayChange, fill=as.factor(sex))) +
+  ggplot(aes(x=data, y=dailyChange, fill=as.factor(sex))) +
   geom_bar(stat = "identity") +
   scale_x_date(date_labels = "%b-%Y") +
   theme(legend.position = "bottom") +
@@ -128,21 +128,21 @@ data will be reflected in the user friend data.
 Please **create an issue** to discuss any errors, issues, requests or
 improvements.
 
-### Calculated change between days can be negative (`dayChange`).
+### Calculated change between days can be negative (`dailyChange`).
 
 ``` r
-CV[dayChange<0][
-  , .(data, origVars, value, dayChange)]
-##            data            origVars value dayChange
-##   1: 2020-03-08 cadeias_transmissao     4        -1
-##   2: 2020-06-13   confirmados_0_9_f   423        -1
-##   3: 2020-03-24 confirmados_10_19_f    35        -1
-##   4: 2020-03-24 confirmados_40_49_f   224        -2
-##   5: 2020-03-19 confirmados_60_69_f    35       -14
-##  ---                                               
-## 308: 2020-06-19          vigilancia 29046     -1380
-## 309: 2020-06-23          vigilancia 30248      -708
-## 310: 2020-07-01          vigilancia 31389       -25
-## 311: 2020-07-02          vigilancia 31274      -115
-## 312: 2020-07-05          vigilancia 31457       -29
+CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
+  , .(data, origType, origVars, value, dailyChange)]
+##            data    origType              origVars value dailyChange
+##   1: 2020-03-08     cadeias   cadeias_transmissao     4          -1
+##   2: 2020-06-13 confirmados     confirmados_0_9_f   423          -1
+##   3: 2020-03-24 confirmados   confirmados_10_19_f    35          -1
+##   4: 2020-03-24 confirmados   confirmados_40_49_f   224          -2
+##   5: 2020-03-19 confirmados   confirmados_60_69_f    35         -14
+##  ---                                                               
+## 148: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 149: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 150: 2020-06-20      obitos              obitos_f   768          -1
+## 151: 2020-05-21 transmissao transmissao_importada   767          -3
+## 152: 2020-07-05 transmissao transmissao_importada   767      -40295
 ```
