@@ -1,9 +1,9 @@
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Sun 12 Jul 2020 (15:26:47 UTC \[+0000\])**
+**Last updated: Mon 13 Jul 2020 (03:26:04 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **11 Jul 2020** (137
+  - Data available from **26 Feb 2020** until **12 Jul 2020** (138
     days).
 
 ### Download User Friendly Version
@@ -48,7 +48,7 @@ suppressPackageStartupMessages(library(here)) # library(here)
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 str(CV)
-## Classes 'data.table' and 'data.frame':   11508 obs. of  12 variables:
+## Classes 'data.table' and 'data.frame':   11592 obs. of  12 variables:
 ##  $ data       : chr  "2020-02-26" "2020-02-27" "2020-02-28" "2020-02-29" ...
 ##  $ origVars   : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
 ##  $ origType   : chr  "cadeias" "cadeias" "cadeias" "cadeias" ...
@@ -111,7 +111,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 121 row(s) containing missing values (geom_path).
+## Warning: Removed 122 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -140,9 +140,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-03-24 confirmados   confirmados_40_49_f   224          -2
 ##   5: 2020-03-19 confirmados   confirmados_60_69_f    35         -14
 ##  ---                                                               
-## 152: 2020-04-04      obitos    obitos_arsalentejo     0          -1
-## 153: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 154: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 155: 2020-06-20      obitos              obitos_f   768          -1
-## 156: 2020-05-21 transmissao transmissao_importada   767          -3
+## 155: 2020-04-04      obitos    obitos_arsalentejo     0          -1
+## 156: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 157: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 158: 2020-06-20      obitos              obitos_f   768          -1
+## 159: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
