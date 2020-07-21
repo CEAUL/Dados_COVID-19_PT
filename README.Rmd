@@ -21,7 +21,10 @@ cat(dataMetaInfo)
 
 ### Download User Friendly Version
 
-+ Download the cleaned and user friendly data from: **[covid19pt_DSSG_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
++ Download the user friendly data from: **[covid19pt_DSSG_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)** or use the following direct link in your program:
+  + https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv
+  
++ **Variables**
 	+ `data`: Date (Portuguese spelling).
 	+ `origVars`: Variable name taken from source data.
 	+ `origType`: Orginal variable count type.
@@ -35,8 +38,9 @@ cat(dataMetaInfo)
 	+ `value`: Numeric value.
 	+ `valueUnits`: Units for the variable `value`.
 
+<br>
 
-+ Download the original unprocessed data (json to CSV): **[covid19pt_DSSG_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
++ Download the original unprocessed data (json to CSV) from: **[covid19pt_DSSG_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
   
 ### Source
   
@@ -59,7 +63,11 @@ suppressPackageStartupMessages(library(here)) # library(here)
 
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
-str(CV)
+# You can use the direct link:
+# CV <- fread("https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv")
+
+# Looking at the data:
+tail(CV)
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))

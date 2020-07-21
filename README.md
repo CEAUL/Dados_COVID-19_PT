@@ -1,15 +1,19 @@
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 21 Jul 2020 (11:00:53 WEST \[+0100\])**
+**Last updated: Tue 21 Jul 2020 (11:20:36 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **20 Jul 2020** (146
     days).
 
 ### Download User Friendly Version
 
-  - Download the cleaned and user friendly data from:
+  - Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
+    or use the following direct link in your
+        program:
+      - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
+  - **Variables**
       - `data`: Date (Portuguese spelling).
       - `origVars`: Variable name taken from source data.
       - `origType`: Orginal variable count type.
@@ -23,7 +27,10 @@
       - `region`: Portuguese Regions
       - `value`: Numeric value.
       - `valueUnits`: Units for the variable `value`.
-  - Download the original unprocessed data (json to CSV):
+
+<br>
+
+  - Download the original unprocessed data (json to CSV) from:
     **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
 
 ### Source
@@ -47,21 +54,25 @@ suppressPackageStartupMessages(library(here)) # library(here)
 
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
-str(CV)
-## Classes 'data.table' and 'data.frame':   12264 obs. of  12 variables:
-##  $ data       : chr  "2020-02-26" "2020-02-27" "2020-02-28" "2020-02-29" ...
-##  $ origVars   : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
-##  $ origType   : chr  "cadeias" "cadeias" "cadeias" "cadeias" ...
-##  $ other      : chr  "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" "cadeias_transmissao" ...
-##  $ symptoms   : chr  "" "" "" "" ...
-##  $ sex        : chr  "All" "All" "All" "All" ...
-##  $ ageGrpLower: chr  "" "" "" "" ...
-##  $ ageGrpUpper: chr  "" "" "" "" ...
-##  $ ageGrp     : chr  "" "" "" "" ...
-##  $ region     : chr  "Portugal" "Portugal" "Portugal" "Portugal" ...
-##  $ value      : num  NA NA NA NA NA NA NA NA NA 5 ...
-##  $ valueUnits : chr  "" "" "" "" ...
-##  - attr(*, ".internal.selfref")=<externalptr>
+# You can use the direct link:
+# CV <- fread("https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv")
+
+# Looking at the data:
+tail(CV)
+##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
+## 1: 2020-07-15 vigilancia vigilancia                All                        
+## 2: 2020-07-16 vigilancia vigilancia                All                        
+## 3: 2020-07-17 vigilancia vigilancia                All                        
+## 4: 2020-07-18 vigilancia vigilancia                All                        
+## 5: 2020-07-19 vigilancia vigilancia                All                        
+## 6: 2020-07-20 vigilancia vigilancia                All                        
+##    ageGrp   region value valueUnits
+## 1:        Portugal 35316      Count
+## 2:        Portugal 34898      Count
+## 3:        Portugal 35150      Count
+## 4:        Portugal 35113      Count
+## 5:        Portugal 35081      Count
+## 6:        Portugal 35073      Count
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
