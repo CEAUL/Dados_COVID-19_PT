@@ -1,7 +1,7 @@
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Mon 20 Jul 2020 (15:26:22 UTC \[+0000\])**
+**Last updated: Tue 21 Jul 2020 (11:00:53 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **20 Jul 2020** (146
     days).
@@ -140,9 +140,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-03-24 confirmados   confirmados_40_49_f   224          -2
 ##   5: 2020-03-19 confirmados   confirmados_60_69_f    35         -14
 ##  ---                                                               
-## 165: 2020-04-04      obitos    obitos_arsalentejo     0          -1
-## 166: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 167: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 168: 2020-06-20      obitos              obitos_f   768          -1
-## 169: 2020-05-21 transmissao transmissao_importada   767          -3
+## 168: 2020-04-04      obitos    obitos_arsalentejo     0          -1
+## 169: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 170: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 171: 2020-06-20      obitos              obitos_f   768          -1
+## 172: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
