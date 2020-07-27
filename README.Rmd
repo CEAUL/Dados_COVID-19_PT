@@ -2,7 +2,7 @@
 output: rmarkdown::github_document
 ---
   
-  ```{r, echo = FALSE, purl=FALSE}
+```{r, echo = FALSE, purl=FALSE}
 knitr::opts_chunk$set(collapse=TRUE,
                       comment="##",
                       fig.retina=2,
