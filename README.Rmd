@@ -9,6 +9,8 @@ knitr::opts_chunk$set(collapse=TRUE,
                       fig.path = "README_figs/README-")
 ```
 
+![Rendered README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/badge.svg)
+
 ## Daily Portuguese COVID-19 Data
 
 **Last updated: `r format(Sys.time(), '%a %d %b %Y (%H:%M:%S %Z [%z])**')`
