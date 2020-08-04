@@ -4,17 +4,16 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 04 Aug 2020 (13:26:39 WEST \[+0100\])**
+**Last updated: Tue 04 Aug 2020 (15:25:06 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **03 Aug 2020** (160
+  - Data available from **26 Feb 2020** until **04 Aug 2020** (161
     days).
 
 ### Download User Friendly Version
 
   - Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
-    or use the following direct link in your
-        program:
+    or use the following direct link in your program:
       - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
   - **Variables**
       - `data`: Date (Portuguese spelling).
@@ -63,19 +62,19 @@ CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # Looking at the data:
 tail(CV)
 ##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
-## 1: 2020-07-29 vigilancia vigilancia                All                        
-## 2: 2020-07-30 vigilancia vigilancia                All                        
-## 3: 2020-07-31 vigilancia vigilancia                All                        
-## 4: 2020-08-01 vigilancia vigilancia                All                        
-## 5: 2020-08-02 vigilancia vigilancia                All                        
-## 6: 2020-08-03 vigilancia vigilancia                All                        
+## 1: 2020-07-30 vigilancia vigilancia                All                        
+## 2: 2020-07-31 vigilancia vigilancia                All                        
+## 3: 2020-08-01 vigilancia vigilancia                All                        
+## 4: 2020-08-02 vigilancia vigilancia                All                        
+## 5: 2020-08-03 vigilancia vigilancia                All                        
+## 6: 2020-08-04 vigilancia vigilancia                All                        
 ##    ageGrp   region value valueUnits
-## 1:        Portugal 35339      Count
-## 2:        Portugal 35741      Count
-## 3:        Portugal 35757      Count
-## 4:        Portugal 35661      Count
-## 5:        Portugal 36148      Count
-## 6:        Portugal 36481      Count
+## 1:        Portugal 35741      Count
+## 2:        Portugal 35757      Count
+## 3:        Portugal 35661      Count
+## 4:        Portugal 36148      Count
+## 5:        Portugal 36481      Count
+## 6:        Portugal 36946      Count
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
@@ -125,7 +124,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 144 row(s) containing missing values (geom_path).
+## Warning: Removed 145 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
