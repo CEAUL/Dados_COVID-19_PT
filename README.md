@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 04 Aug 2020 (03:26:07 UTC \[+0000\])**
+**Last updated: Tue 04 Aug 2020 (13:26:39 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **03 Aug 2020** (160
     days).
@@ -13,7 +13,8 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
   - Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
-    or use the following direct link in your program:
+    or use the following direct link in your
+        program:
       - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
   - **Variables**
       - `data`: Date (Portuguese spelling).
