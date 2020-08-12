@@ -4,9 +4,9 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 11 Aug 2020 (15:28:11 UTC \[+0000\])**
+**Last updated: Wed 12 Aug 2020 (15:22:16 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **11 Aug 2020** (168
+  - Data available from **26 Feb 2020** until **12 Aug 2020** (169
     days).
 
 ### Download User Friendly Version
@@ -62,19 +62,19 @@ CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # Looking at the data:
 tail(CV)
 ##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
-## 1: 2020-08-06 vigilancia vigilancia                All                        
-## 2: 2020-08-07 vigilancia vigilancia                All                        
-## 3: 2020-08-08 vigilancia vigilancia                All                        
-## 4: 2020-08-09 vigilancia vigilancia                All                        
-## 5: 2020-08-10 vigilancia vigilancia                All                        
-## 6: 2020-08-11 vigilancia vigilancia                All                        
+## 1: 2020-08-07 vigilancia vigilancia                All                        
+## 2: 2020-08-08 vigilancia vigilancia                All                        
+## 3: 2020-08-09 vigilancia vigilancia                All                        
+## 4: 2020-08-10 vigilancia vigilancia                All                        
+## 5: 2020-08-11 vigilancia vigilancia                All                        
+## 6: 2020-08-12 vigilancia vigilancia                All                        
 ##    ageGrp   region value valueUnits
-## 1:        Portugal 37783      Count
-## 2:        Portugal 37729      Count
-## 3:        Portugal 37579      Count
-## 4:        Portugal 37496      Count
-## 5:        Portugal 37810      Count
-## 6:        Portugal 37767      Count
+## 1:        Portugal 37729      Count
+## 2:        Portugal 37579      Count
+## 3:        Portugal 37496      Count
+## 4:        Portugal 37810      Count
+## 5:        Portugal 37767      Count
+## 6:        Portugal 36377      Count
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
@@ -124,7 +124,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 152 row(s) containing missing values (geom_path).
+## Warning: Removed 153 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -153,9 +153,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-03-24 confirmados   confirmados_40_49_f   224          -2
 ##   5: 2020-03-19 confirmados   confirmados_60_69_f    35         -14
 ##  ---                                                               
-## 196: 2020-04-04      obitos    obitos_arsalentejo     0          -1
-## 197: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 198: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 199: 2020-06-20      obitos              obitos_f   768          -1
-## 200: 2020-05-21 transmissao transmissao_importada   767          -3
+## 198: 2020-04-04      obitos    obitos_arsalentejo     0          -1
+## 199: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 200: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 201: 2020-06-20      obitos              obitos_f   768          -1
+## 202: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
