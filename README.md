@@ -4,17 +4,16 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Thu 13 Aug 2020 (17:41:32 WEST \[+0100\])**
+**Last updated: Fri 14 Aug 2020 (15:22:55 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **13 Aug 2020** (170
+  - Data available from **26 Feb 2020** until **14 Aug 2020** (171
     days).
 
 ### Download User Friendly Version
 
   - Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
-    or use the following direct link in your
-        program:
+    or use the following direct link in your program:
       - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
   - **Variables**
       - `data`: Date (Portuguese spelling).
@@ -63,19 +62,19 @@ CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # Looking at the data:
 tail(CV)
 ##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
-## 1: 2020-08-08 vigilancia vigilancia                All                        
-## 2: 2020-08-09 vigilancia vigilancia                All                        
-## 3: 2020-08-10 vigilancia vigilancia                All                        
-## 4: 2020-08-11 vigilancia vigilancia                All                        
-## 5: 2020-08-12 vigilancia vigilancia                All                        
-## 6: 2020-08-13 vigilancia vigilancia                All                        
+## 1: 2020-08-09 vigilancia vigilancia                All                        
+## 2: 2020-08-10 vigilancia vigilancia                All                        
+## 3: 2020-08-11 vigilancia vigilancia                All                        
+## 4: 2020-08-12 vigilancia vigilancia                All                        
+## 5: 2020-08-13 vigilancia vigilancia                All                        
+## 6: 2020-08-14 vigilancia vigilancia                All                        
 ##    ageGrp   region value valueUnits
-## 1:        Portugal 37579      Count
-## 2:        Portugal 37496      Count
-## 3:        Portugal 37810      Count
-## 4:        Portugal 37767      Count
-## 5:        Portugal 36377      Count
-## 6:        Portugal 36530      Count
+## 1:        Portugal 37496      Count
+## 2:        Portugal 37810      Count
+## 3:        Portugal 37767      Count
+## 4:        Portugal 36377      Count
+## 5:        Portugal 36530      Count
+## 6:        Portugal 36345      Count
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
@@ -125,7 +124,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 154 row(s) containing missing values (geom_path).
+## Warning: Removed 155 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -154,9 +153,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-03-24 confirmados   confirmados_40_49_f   224          -2
 ##   5: 2020-03-19 confirmados   confirmados_60_69_f    35         -14
 ##  ---                                                               
-## 199: 2020-04-04      obitos    obitos_arsalentejo     0          -1
-## 200: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 201: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 202: 2020-06-20      obitos              obitos_f   768          -1
-## 203: 2020-05-21 transmissao transmissao_importada   767          -3
+## 201: 2020-04-04      obitos    obitos_arsalentejo     0          -1
+## 202: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 203: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 204: 2020-06-20      obitos              obitos_f   768          -1
+## 205: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
