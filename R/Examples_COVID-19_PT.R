@@ -13,7 +13,7 @@ CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
 
-# Convert data to a data object in dataset and add a chage from previous day variable.
+# Convert data to a data object in dataset and add a change from previous day variable.
 CV[, data := as.Date(data, format = "%Y-%m-%d")][
   , dayChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
   grepl("^sintomas", origVars), dayChange := NA]

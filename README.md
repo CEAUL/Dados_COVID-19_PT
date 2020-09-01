@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 01 Sep 2020 (15:26:09 UTC \[+0000\])**
+**Last updated: Tue 01 Sep 2020 (17:54:39 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **01 Sep 2020** (189
     days).
@@ -42,6 +42,19 @@ For more information about the data and variables see:
 
 The original data were downloaded from an API provide by VOST
 **<https://covid19-api.vost.pt/Requests/get_entry/>**
+
+### Summary: Last 8 Days
+
+| data       | confirmados\_novos | confirmados | ativos | recuperados | obitos\_novos | obitos |
+| :--------- | -----------------: | ----------: | :----- | ----------: | ------------: | -----: |
+| 2020-08-25 |                192 |       55912 | 13086  |       41021 |             4 |   1805 |
+| 2020-08-26 |                362 |       56274 | 13283  |       41184 |             2 |   1807 |
+| 2020-08-27 |                397 |       56671 | 13507  |       41357 |             2 |   1809 |
+| 2020-08-28 |                403 |       57074 | 13703  |       41556 |             6 |   1815 |
+| 2020-08-29 |                374 |       57448 | 13864  |       41766 |             3 |   1818 |
+| 2020-08-30 |                320 |       57768 | 14064  |       41885 |             1 |   1819 |
+| 2020-08-31 |                244 |       58012 | 14229  |       41961 |             3 |   1822 |
+| 2020-09-01 |                231 |       58243 | 14315  |       42104 |             2 |   1824 |
 
 ## Example Usage
 
