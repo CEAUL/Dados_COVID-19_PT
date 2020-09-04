@@ -52,19 +52,31 @@ cat(dataMetaInfo)
   
 ### Summary: Last 8 Days
 
-```{r summary8Days, echo=FALSE, eval=TRUE}
+```{r summary8Days, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
 library(data.table)
 library(magrittr)
 library(knitr)
 suppressPackageStartupMessages(library(here)) # library(here)
 rDat <- fread(here("data", "covid19pt_DSSG_Orig.csv"))
 
-useVars <- c("data", "confirmados_novos", "confirmados", "ativos", "recuperados", "obitos_novos", "obitos")
-rDat[, `:=`(data = as.Date(data, format = "%d-%m-%Y"),
-            obitos_novos = obitos - shift(obitos, n=1, fill=NA, type="lag"))][
-  , ..useVars][
-  order(data), tail(.SD, 8)] %>% 
-  kable()
+# useVars <- c("Date", "confirmados_novos", "confirmados", "ativos", "recuperados", "obitos_novos", "obitos")
+useVars <- c("Date", "New_Cases", "Total_Cases", "Active", "Recovered", "Deaths")
+rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
+                            ativos = as.numeric(ativos))][
+      order(data2)][
+  , `:=`(obitos_novos = obitos - shift(obitos, n=1, fill=NA, type="lag"),
+         ativos_novos = ativos - shift(ativos, n=1, fill=NA, type="lag"),
+         recuperados_novos = recuperados - shift(recuperados, n=1, fill=NA, type="lag"))][
+  , `:=`(Date = format(data2, "%a %d %b %Y"),
+         New_Cases = sprintf("%+d", confirmados_novos),
+         Total_Cases = sprintf("%d", confirmados),
+         Deaths = sprintf("%d (%+d)", obitos, obitos_novos),
+         Active = sprintf("%d (%+d)", ativos, ativos_novos),
+         Recovered = sprintf("%d (%+d)", recuperados, recuperados_novos))][
+  , tail(.SD, 8)][
+  , ..useVars] %>% 
+  kable(align = c("rrrrrr"), caption = "Change from previous day in brackets.",
+        table.attr ="class=\"striped\"")
 ```
 
   
