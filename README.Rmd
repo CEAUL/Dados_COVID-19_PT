@@ -50,7 +50,7 @@ cat(dataMetaInfo)
   
   The original data were downloaded from an API provide by VOST **https://covid19-api.vost.pt/Requests/get_entry/**
   
-### Summary: Last 8 Days
+### Summary: Last 10 (available) Days
 
 ```{r summary8Days, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
 library(data.table)
@@ -73,7 +73,7 @@ rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
          Deaths = sprintf("%d (%+d)", obitos, obitos_novos),
          Active = sprintf("%d (%+d)", ativos, ativos_novos),
          Recovered = sprintf("%d (%+d)", recuperados, recuperados_novos))][
-  , tail(.SD, 8)][
+  , tail(.SD, 10)][
   , ..useVars] %>% 
   kable(align = c("rrrrrr"), caption = "Change from previous day in brackets.",
         table.attr ="class=\"striped\"")
