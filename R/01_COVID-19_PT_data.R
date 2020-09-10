@@ -72,8 +72,7 @@ library(RCurl)
               variable.factor = FALSE,
               value.factor = FALSE)
   # List of regions to be used later.
-  #_# QC ISSUE: Alentejo has two codings "alentejo", "arsalentejo".
-  regionsList <- c("arsnorte", "arscentro", "arslvt", "alentejo", "arsalentejo",
+  regionsList <- c("arsnorte", "arscentro", "arslvt", "arsalentejo",
                    "arsalgarve", "acores", "madeira", "estrangeiro")
 
   cvpt[, origType := tstrsplit(origVars, "_", fixed=TRUE, keep = 1)][
