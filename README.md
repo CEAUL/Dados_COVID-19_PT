@@ -4,9 +4,9 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 11 Sep 2020 (16:34:04 WEST \[+0100\])**
+**Last updated: Sun 13 Sep 2020 (15:26:39 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **11 Sep 2020** (199
+  - Data available from **26 Feb 2020** until **12 Sep 2020** (200
     days).
 
 ### Download User Friendly Version
@@ -47,7 +47,6 @@ The original data were downloaded from an API provide by VOST
 
 |            Date | Cases\_7\_Day\_Mean |        Cases |       Active |    Recovered |    Deaths |
 | --------------: | ------------------: | -----------: | -----------: | -----------: | --------: |
-| Wed 02 Sep 2020 |               337.0 | 58633 (+390) | 14573 (+258) | 42233 (+129) | 1827 (+3) |
 | Thu 03 Sep 2020 |               340.0 | 59051 (+418) | 14795 (+222) | 42427 (+194) | 1829 (+2) |
 | Fri 04 Sep 2020 |               340.4 | 59457 (+406) | 15048 (+253) | 42576 (+149) | 1833 (+4) |
 | Sat 05 Sep 2020 |               356.4 | 59943 (+486) | 15312 (+264) | 42793 (+217) | 1838 (+5) |
@@ -57,6 +56,7 @@ The original data were downloaded from an API provide by VOST
 | Wed 09 Sep 2020 |               415.4 | 61541 (+646) | 16408 (+505) | 43284 (+138) | 1849 (+3) |
 | Thu 10 Sep 2020 |               439.3 | 62126 (+585) | 16833 (+425) | 43441 (+157) | 1852 (+3) |
 | Fri 11 Sep 2020 |               479.4 | 62813 (+687) | 17314 (+481) | 43644 (+203) | 1855 (+3) |
+| Sat 12 Sep 2020 |               481.0 | 63310 (+497) | 17556 (+242) | 43894 (+250) | 1860 (+5) |
 
 Change from previous day in brackets.
 
@@ -79,19 +79,19 @@ CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # Looking at the data:
 tail(CV)
 ##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
-## 1: 2020-09-06 vigilancia vigilancia                All                        
-## 2: 2020-09-07 vigilancia vigilancia                All                        
-## 3: 2020-09-08 vigilancia vigilancia                All                        
-## 4: 2020-09-09 vigilancia vigilancia                All                        
-## 5: 2020-09-10 vigilancia vigilancia                All                        
-## 6: 2020-09-11 vigilancia vigilancia                All                        
+## 1: 2020-09-07 vigilancia vigilancia                All                        
+## 2: 2020-09-08 vigilancia vigilancia                All                        
+## 3: 2020-09-09 vigilancia vigilancia                All                        
+## 4: 2020-09-10 vigilancia vigilancia                All                        
+## 5: 2020-09-11 vigilancia vigilancia                All                        
+## 6: 2020-09-12 vigilancia vigilancia                All                        
 ##    ageGrp   region value valueUnits
-## 1:        Portugal 34240      Count
-## 2:        Portugal 34336      Count
-## 3:        Portugal 34466      Count
-## 4:        Portugal 35151      Count
-## 5:        Portugal 35181      Count
-## 6:        Portugal 35712      Count
+## 1:        Portugal 34336      Count
+## 2:        Portugal 34466      Count
+## 3:        Portugal 35151      Count
+## 4:        Portugal 35181      Count
+## 5:        Portugal 35712      Count
+## 6:        Portugal 36055      Count
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
@@ -141,7 +141,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 183 row(s) containing missing values (geom_path).
+## Warning: Removed 184 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -170,9 +170,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-03-24 confirmados   confirmados_40_49_f   224          -2
 ##   5: 2020-03-19 confirmados   confirmados_60_69_f    35         -14
 ##  ---                                                               
-## 220: 2020-04-04      obitos    obitos_arsalentejo     0          -1
-## 221: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 222: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 223: 2020-06-20      obitos              obitos_f   768          -1
-## 224: 2020-05-21 transmissao transmissao_importada   767          -3
+## 221: 2020-04-04      obitos    obitos_arsalentejo     0          -1
+## 222: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 223: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 224: 2020-06-20      obitos              obitos_f   768          -1
+## 225: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
