@@ -4,9 +4,9 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Thu 17 Sep 2020 (15:26:17 UTC \[+0000\])**
+**Last updated: Thu 17 Sep 2020 (17:34:54 WEST \[+0100\])**
 
-  - Data available from **26 Feb 2020** until **16 Sep 2020** (204
+  - Data available from **26 Feb 2020** until **17 Sep 2020** (205
     days).
 
 ### Download User Friendly Version
@@ -45,18 +45,18 @@ The original data were downloaded from an API provide by VOST
 
 ### Summary: Last 10 (available) Days
 
-|            Date | Cases\_7\_Day\_Mean |        Cases |       Active |    Recovered |    Deaths |
-| --------------: | ------------------: | -----------: | -----------: | -----------: | --------: |
-| Mon 07 Sep 2020 |               356.4 | 60507 (+249) | 15648 (+183) |  43016 (+63) | 1843 (+3) |
-| Tue 08 Sep 2020 |               378.9 | 60895 (+388) | 15903 (+255) | 43146 (+130) | 1846 (+3) |
-| Wed 09 Sep 2020 |               415.4 | 61541 (+646) | 16408 (+505) | 43284 (+138) | 1849 (+3) |
-| Thu 10 Sep 2020 |               439.3 | 62126 (+585) | 16833 (+425) | 43441 (+157) | 1852 (+3) |
-| Fri 11 Sep 2020 |               479.4 | 62813 (+687) | 17314 (+481) | 43644 (+203) | 1855 (+3) |
-| Sat 12 Sep 2020 |               481.0 | 63310 (+497) | 17556 (+242) | 43894 (+250) | 1860 (+5) |
-| Sun 13 Sep 2020 |               532.1 | 63983 (+673) | 18047 (+491) | 44069 (+175) | 1867 (+7) |
-| Mon 14 Sep 2020 |               584.1 | 64596 (+613) | 18540 (+493) | 44185 (+116) | 1871 (+4) |
-| Tue 15 Sep 2020 |               589.4 | 65021 (+425) | 18784 (+244) | 44362 (+177) | 1875 (+4) |
-| Wed 16 Sep 2020 |               583.6 | 65626 (+605) | 19220 (+436) | 44528 (+166) | 1878 (+3) |
+|            Date | Cases\_7\_Day\_Mean |        Cases |       Active |    Recovered |     Deaths |
+| --------------: | ------------------: | -----------: | -----------: | -----------: | ---------: |
+| Tue 08 Sep 2020 |               378.9 | 60895 (+388) | 15903 (+255) | 43146 (+130) |  1846 (+3) |
+| Wed 09 Sep 2020 |               415.4 | 61541 (+646) | 16408 (+505) | 43284 (+138) |  1849 (+3) |
+| Thu 10 Sep 2020 |               439.3 | 62126 (+585) | 16833 (+425) | 43441 (+157) |  1852 (+3) |
+| Fri 11 Sep 2020 |               479.4 | 62813 (+687) | 17314 (+481) | 43644 (+203) |  1855 (+3) |
+| Sat 12 Sep 2020 |               481.0 | 63310 (+497) | 17556 (+242) | 43894 (+250) |  1860 (+5) |
+| Sun 13 Sep 2020 |               532.1 | 63983 (+673) | 18047 (+491) | 44069 (+175) |  1867 (+7) |
+| Mon 14 Sep 2020 |               584.1 | 64596 (+613) | 18540 (+493) | 44185 (+116) |  1871 (+4) |
+| Tue 15 Sep 2020 |               589.4 | 65021 (+425) | 18784 (+244) | 44362 (+177) |  1875 (+4) |
+| Wed 16 Sep 2020 |               583.6 | 65626 (+605) | 19220 (+436) | 44528 (+166) |  1878 (+3) |
+| Thu 17 Sep 2020 |               610.0 | 66396 (+770) | 19714 (+494) | 44794 (+266) | 1888 (+10) |
 
 Change from previous day in brackets.
 
@@ -79,19 +79,19 @@ CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # Looking at the data:
 tail(CV)
 ##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
-## 1: 2020-09-11 vigilancia vigilancia                All                        
-## 2: 2020-09-12 vigilancia vigilancia                All                        
-## 3: 2020-09-13 vigilancia vigilancia                All                        
-## 4: 2020-09-14 vigilancia vigilancia                All                        
-## 5: 2020-09-15 vigilancia vigilancia                All                        
-## 6: 2020-09-16 vigilancia vigilancia                All                        
+## 1: 2020-09-12 vigilancia vigilancia                All                        
+## 2: 2020-09-13 vigilancia vigilancia                All                        
+## 3: 2020-09-14 vigilancia vigilancia                All                        
+## 4: 2020-09-15 vigilancia vigilancia                All                        
+## 5: 2020-09-16 vigilancia vigilancia                All                        
+## 6: 2020-09-17 vigilancia vigilancia                All                        
 ##    ageGrp   region value valueUnits
-## 1:        Portugal 35712      Count
-## 2:        Portugal 36055      Count
-## 3:        Portugal 36398      Count
-## 4:        Portugal 36758      Count
-## 5:        Portugal 36955      Count
-## 6:        Portugal 37287      Count
+## 1:        Portugal 36055      Count
+## 2:        Portugal 36398      Count
+## 3:        Portugal 36758      Count
+## 4:        Portugal 36955      Count
+## 5:        Portugal 37287      Count
+## 6:        Portugal 37804      Count
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
@@ -141,7 +141,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 188 row(s) containing missing values (geom_path).
+## Warning: Removed 189 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
