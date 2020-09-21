@@ -87,11 +87,14 @@ cvwd %>%
   ggplot(aes(x=data2, y=confirmados_novos)) +
   geom_bar(stat = "identity", fill = "grey70") +
   geom_line(aes(x = data2, y = confirmados_Avg7), group=1, colour = "blue") +
-  scale_x_date(date_labels = "%b-%Y") +
+  scale_x_date(date_breaks = "1 months",
+               date_labels = "%b-%y",
+               limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
   labs(
-    title = "COVID-19 Portugal: Number Daily Cases (with 7 Day Mean Line)",
+    title = "COVID-19 Portugal: Confirmed Daily Cases (with 7 Day Mean Line)",
     x = "Date",
-    y = "Number of Confirmed Cases")
+    y = "Number of Confirmed Cases") +
+  theme_bw()
 ```
   
 ## Example Usage
