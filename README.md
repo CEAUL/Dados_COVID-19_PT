@@ -4,9 +4,9 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 22 Sep 2020 (10:24:02 WEST \[+0100\])**
+**Last updated: Tue 22 Sep 2020 (16:38:36 WEST \[+0100\])**
 
-  - Data available from **26 Feb 2020** until **21 Sep 2020** (209
+  - Data available from **26 Feb 2020** until **22 Sep 2020** (210
     days).
 
 ### Download User Friendly Version
@@ -47,7 +47,6 @@ The original data were downloaded from an API provide by VOST
 
 |            Date | Cases\_7\_Day\_Mean |        Cases |       Active |    Recovered |     Deaths |
 | --------------: | ------------------: | -----------: | -----------: | -----------: | ---------: |
-| Sat 12 Sep 2020 |               481.0 | 63310 (+497) | 17556 (+242) | 43894 (+250) |  1860 (+5) |
 | Sun 13 Sep 2020 |               532.1 | 63983 (+673) | 18047 (+491) | 44069 (+175) |  1867 (+7) |
 | Mon 14 Sep 2020 |               584.1 | 64596 (+613) | 18540 (+493) | 44185 (+116) |  1871 (+4) |
 | Tue 15 Sep 2020 |               589.4 | 65021 (+425) | 18784 (+244) | 44362 (+177) |  1875 (+4) |
@@ -57,6 +56,7 @@ The original data were downloaded from an API provide by VOST
 | Sat 19 Sep 2020 |               673.6 | 68025 (+849) | 20722 (+493) | 45404 (+351) |  1899 (+5) |
 | Sun 20 Sep 2020 |               656.3 | 68577 (+552) | 21069 (+347) | 45596 (+192) | 1912 (+13) |
 | Mon 21 Sep 2020 |               657.7 | 69200 (+623) | 21544 (+475) | 45736 (+140) |  1920 (+8) |
+| Tue 22 Sep 2020 |               663.1 | 69663 (+463) | 21764 (+220) | 45974 (+238) |  1925 (+5) |
 
 Change from previous day in brackets.
 
@@ -71,7 +71,7 @@ Using the `data.table` package to process the data.
 ``` r
 # Load Libraries
 library(data.table)
-suppressPackageStartupMessages(library(here)) # library(here)
+library(here)
 
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
@@ -81,19 +81,19 @@ CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # Looking at the data:
 tail(CV)
 ##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
-## 1: 2020-09-16 vigilancia vigilancia                All                        
-## 2: 2020-09-17 vigilancia vigilancia                All                        
-## 3: 2020-09-18 vigilancia vigilancia                All                        
-## 4: 2020-09-19 vigilancia vigilancia                All                        
-## 5: 2020-09-20 vigilancia vigilancia                All                        
-## 6: 2020-09-21 vigilancia vigilancia                All                        
+## 1: 2020-09-17 vigilancia vigilancia                All                        
+## 2: 2020-09-18 vigilancia vigilancia                All                        
+## 3: 2020-09-19 vigilancia vigilancia                All                        
+## 4: 2020-09-20 vigilancia vigilancia                All                        
+## 5: 2020-09-21 vigilancia vigilancia                All                        
+## 6: 2020-09-22 vigilancia vigilancia                All                        
 ##    ageGrp   region value valueUnits
-## 1:        Portugal 37287      Count
-## 2:        Portugal 37804      Count
-## 3:        Portugal 38721      Count
-## 4:        Portugal 39388      Count
-## 5:        Portugal 39362      Count
-## 6:        Portugal 40465      Count
+## 1:        Portugal 37804      Count
+## 2:        Portugal 38721      Count
+## 3:        Portugal 39388      Count
+## 4:        Portugal 39362      Count
+## 5:        Portugal 40465      Count
+## 6:        Portugal 40418      Count
 
 # Order data by original variable name and date.
 setkeyv(CV, c("origVars", "data"))
@@ -143,7 +143,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     y = "Number of Confirmed Cases",
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 193 row(s) containing missing values (geom_path).
+## Warning: Removed 194 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -172,9 +172,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-03-24 confirmados   confirmados_40_49_f   224          -2
 ##   5: 2020-03-19 confirmados   confirmados_60_69_f    35         -14
 ##  ---                                                               
-## 224: 2020-04-04      obitos    obitos_arsalentejo     0          -1
-## 225: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 226: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 227: 2020-06-20      obitos              obitos_f   768          -1
-## 228: 2020-05-21 transmissao transmissao_importada   767          -3
+## 225: 2020-04-04      obitos    obitos_arsalentejo     0          -1
+## 226: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 227: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 228: 2020-06-20      obitos              obitos_f   768          -1
+## 229: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
