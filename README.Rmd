@@ -85,13 +85,13 @@ cvwd[, tail(.SD, 10)][
 library(ggplot2)
 cvwd %>% 
   ggplot(aes(x=data2, y=confirmados_novos)) +
-  geom_bar(stat = "identity", fill = "grey70") +
+  geom_bar(stat = "identity", fill = "grey75") +
   geom_line(aes(x = data2, y = confirmados_Avg7), group=1, colour = "blue") +
   scale_x_date(date_breaks = "1 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
   labs(
-    title = "COVID-19 Portugal: Confirmed Daily Cases (with 7 Day Mean Line)",
+    title = "COVID-19 Portugal: Confirmed Daily Cases with 7 Day Rolling Average",
     x = "Date",
     y = "Number of Confirmed Cases") +
   theme_bw()
@@ -104,10 +104,10 @@ cvwd %>%
   
   Using the `data.table` package to process the data.
 
-```{r readin}
+```{r readinm, message=FALSE}
 # Load Libraries
 library(data.table)
-suppressPackageStartupMessages(library(here)) # library(here)
+library(here)
 
 # Read in data as a data.frame and data.table object.
 CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
