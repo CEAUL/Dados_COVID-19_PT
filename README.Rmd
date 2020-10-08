@@ -139,11 +139,14 @@ library(magrittr)
 
 # Change the ggplot theme.
 theme_set(theme_bw())
+obMF <- CV[origType=="obitos" & sex %chin% c("M", "F") & ageGrp=="" & region == "Portugal"]
+obAll <- CV[origType=="obitos" & sex %chin% c("All") & ageGrp=="" & region == "Portugal"][ 
+  , sex := NA]
 
-CV[origType=="obitos" & sex %chin% c("All") & ageGrp=="" & region == "Portugal"] %>%
-  ggplot(aes(x=data, y=dailyChange)) +
-  geom_bar(stat = "identity", fill = "grey75") +
-  geom_line(aes(x = data, y = mean7Day), group=1, colour = "brown") +
+obMF %>% 
+  ggplot(aes(x=data, y=dailyChange, fill = sex)) +
+  geom_bar(stat = "identity") +
+  geom_line(data = obAll, aes(x = data, y = mean7Day), group=1) +
   scale_x_date(date_breaks = "1 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
@@ -153,6 +156,7 @@ CV[origType=="obitos" & sex %chin% c("All") & ageGrp=="" & region == "Portugal"]
     x = "",
     y = "Number of Deaths",
     fill = "Sex",
+    colour = "",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])"))
     )
 ```
