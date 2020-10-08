@@ -27,7 +27,7 @@ library(RCurl)
   rawDataDir <- "data-raw"
 
   # Creating a dataset to track downloads and existing JSON files.
-  covidPT <-  as.data.table(cvDayDMY, cvDayYMD)[
+  covidPT <-  as.data.table(cbind(cvDayDMY, cvDayYMD))[
     , cvURL := paste0(stemUrl, cvDayDMY)][
     , jsonFile := paste0(cvDayYMD, "_covid19pt-DSSG.json")][
     , existsJSON := file.exists(here(rawDataDir, jsonFile))][

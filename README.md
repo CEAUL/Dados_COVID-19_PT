@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Thu 08 Oct 2020 (03:18:45 UTC \[+0000\])**
+**Last updated: Thu 08 Oct 2020 (14:50:52 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **07 Oct 2020** (225
     days).
@@ -74,12 +74,12 @@ library(data.table)
 library(here)
 
 # Read in data as a data.frame and data.table object.
-CV <- fread(here("data", "covid19pt_DSSG_Long.csv"))
+CVPT <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # You can use the direct link:
 # CV <- fread("https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv")
 
 # Looking at the data:
-tail(CV)
+tail(CVPT)
 ##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
 ## 1: 2020-10-02 vigilancia vigilancia                All                        
 ## 2: 2020-10-03 vigilancia vigilancia                All                        
@@ -96,12 +96,16 @@ tail(CV)
 ## 6:        Portugal 46023      Count
 
 # Order data by original variable name and date.
-setkeyv(CV, c("origVars", "data"))
+setkeyv(CVPT, c("origVars", "data"))
 
 # Convert data to a data object in dataset and add a change from previous day variable.
-CV[, data := as.Date(data, format = "%Y-%m-%d")][
+# Added a 7 day rolling average for origVars (except for symptoms). 
+# Columns `data` is date in Portuguese.
+CV <- CVPT[, data := as.Date(data, format = "%Y-%m-%d")][
   , dailyChange := value - shift(value, n=1, fill=NA, type="lag"), by = origVars][
-    grepl("^sintomas", origVars), dailyChange := NA]
+    grepl("^sintomas", origVars), dailyChange := NA][
+  , mean7Day := fifelse(origVars %chin% c("ativos", "confirmados", "obitos", "recuperados"), 
+                         frollmean(dailyChange, 7), as.numeric(NA))]
 ```
 
 ### Overall Number of Deaths (daily) by Sex
@@ -113,17 +117,23 @@ library(magrittr)
 # Change the ggplot theme.
 theme_set(theme_bw())
 
-CV[origType=="obitos" & sex %in% c("F", "M") & ageGrp==""] %>%
-  ggplot(aes(x=data, y=dailyChange, fill=as.factor(sex))) +
-  geom_bar(stat = "identity") +
-  scale_x_date(date_labels = "%b-%Y") +
+CV[origType=="obitos" & sex %chin% c("All") & ageGrp=="" & region == "Portugal"] %>%
+  ggplot(aes(x=data, y=dailyChange)) +
+  geom_bar(stat = "identity", fill = "grey75") +
+  geom_line(aes(x = data, y = mean7Day), group=1, colour = "brown") +
+  scale_x_date(date_breaks = "1 months",
+               date_labels = "%b-%y",
+               limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
   theme(legend.position = "bottom") +
   labs(
-    title = "COVID-19 Portugal: Number Daily Deaths",
-    x = "Date",
+    title = "COVID-19 Portugal: Number Daily Deaths with 7 Day Rolling Mean",
+    x = "",
     y = "Number of Deaths",
-    fill = "Sex")
-## Warning: Removed 64 rows containing missing values (position_stack).
+    fill = "Sex",
+    caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])"))
+    )
+## Warning: Removed 1 rows containing missing values (position_stack).
+## Warning: Removed 7 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-deathsbySex-1.png" width="672" />
@@ -134,13 +144,16 @@ CV[origType=="obitos" & sex %in% c("F", "M") & ageGrp==""] %>%
 CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   ggplot(., aes(x=data, y=value, colour=region)) +
   geom_line() +
-  scale_x_date(date_labels = "%b-%Y") +
+  scale_x_date(date_breaks = "1 months",
+               date_labels = "%b-%y",
+               limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
   scale_y_log10() +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases",
-    x = "Date",
+    x = "",
     y = "Number of Confirmed Cases",
+    caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
 ## Warning: Removed 209 row(s) containing missing values (geom_path).
