@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Mon 12 Oct 2020 (17:07:30 WEST \[+0100\])**
+**Last updated: Mon 12 Oct 2020 (17:28:52 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **12 Oct 2020** (230
     days).
@@ -164,6 +164,30 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
+
+### Recorded Number of Confirmed COVID-19 Cases by Age Group and Sex
+
+``` r
+CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))] %>%
+  ggplot(., aes(x=data, y=value, colour = ageGrp)) +
+  geom_line() +
+  facet_grid(sex~.) +
+  scale_x_date(date_breaks = "2 months",
+               date_labels = "%b-%y",
+               limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
+  scale_y_log10(limits = c(10, 10000)) +
+  theme(legend.position = "right") +
+  labs(
+    title = "COVID-19 Portugal: Number of Confirmed Cases",
+    x = "",
+    y = "Number of Confirmed Cases",
+    caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
+    colour = "")
+## Warning: Transformation introduced infinite values in continuous y-axis
+## Warning: Removed 54 row(s) containing missing values (geom_path).
+```
+
+<img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
 
 <hr>
 
