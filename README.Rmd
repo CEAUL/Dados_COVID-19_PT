@@ -181,6 +181,26 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     colour = "Region")
 ```
 
+### Recorded Number of Confirmed COVID-19 Cases by Age Group and Sex
+
+```{r casesbyAgeSex, fig.height=11}
+CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))] %>%
+  ggplot(., aes(x=data, y=value, colour = ageGrp)) +
+  geom_line() +
+  facet_grid(sex~.) +
+  scale_x_date(date_breaks = "2 months",
+               date_labels = "%b-%y",
+               limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
+  scale_y_log10(limits = c(10, 10000)) +
+  theme(legend.position = "right") +
+  labs(
+    title = "COVID-19 Portugal: Number of Confirmed Cases",
+    x = "",
+    y = "Number of Confirmed Cases",
+    caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
+    colour = "")
+```
+
 <hr>
 ## Issues & Notes
 
