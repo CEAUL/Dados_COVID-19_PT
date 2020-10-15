@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Thu 15 Oct 2020 (16:13:24 UTC \[+0000\])**
+**Last updated: Thu 15 Oct 2020 (18:00:19 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **14 Oct 2020** (232
     days).
@@ -108,7 +108,7 @@ CV <- CVPT[, data := as.Date(data, format = "%Y-%m-%d")][
                          frollmean(dailyChange, 7), as.numeric(NA))]
 ```
 
-### Overall Number of Deaths (daily) by Sex
+### Overall Number of Deaths (daily)
 
 ``` r
 library(ggplot2)
@@ -116,13 +116,14 @@ library(magrittr)
 
 # Change the ggplot theme.
 theme_set(theme_bw())
-obMF <- CV[origType=="obitos" & sex %chin% c("M", "F") & ageGrp=="" & region == "Portugal"]
+# Data error prevents by sex plot.
+# obMF <- CV[origType=="obitos" & sex %chin% c("M", "F") & ageGrp=="" & region == "Portugal"]
 obAll <- CV[origType=="obitos" & sex %chin% c("All") & ageGrp=="" & region == "Portugal"][ 
   , sex := NA]
 
-obMF %>% 
-  ggplot(aes(x=data, y=dailyChange, fill = sex)) +
-  geom_bar(stat = "identity") +
+obAll %>% 
+  ggplot(aes(x=data, y=dailyChange)) +
+  geom_bar(stat = "identity", fill = "grey75") +
   geom_line(data = obAll, aes(x = data, y = mean7Day), group=1) +
   scale_x_date(date_breaks = "1 months",
                date_labels = "%b-%y",
@@ -132,11 +133,11 @@ obMF %>%
     title = "COVID-19 Portugal: Number Daily Deaths with 7 Day Rolling Mean",
     x = "",
     y = "Number of Deaths",
-    fill = "Sex",
     colour = "",
+    fill = "",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])"))
     )
-## Warning: Removed 64 rows containing missing values (position_stack).
+## Warning: Removed 1 rows containing missing values (position_stack).
 ## Warning: Removed 7 row(s) containing missing values (geom_path).
 ```
 
@@ -207,15 +208,15 @@ improvements.
 CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
   , .(data, origType, origVars, value, dailyChange)]
 ##            data    origType              origVars value dailyChange
-##   1: 2020-03-08     cadeias   cadeias_transmissao     4          -1
-##   2: 2020-06-13 confirmados     confirmados_0_9_f   423          -1
-##   3: 2020-03-24 confirmados   confirmados_10_19_f    35          -1
-##   4: 2020-03-24 confirmados   confirmados_40_49_f   224          -2
-##   5: 2020-03-19 confirmados   confirmados_60_69_f    35         -14
+##   1: 2020-05-12      ativos                ativos 23737        -249
+##   2: 2020-05-16      ativos                ativos 23785        -280
+##   3: 2020-05-17      ativos                ativos 23182        -603
+##   4: 2020-05-18      ativos                ativos 21548       -1634
+##   5: 2020-05-22      ativos                ativos 21321        -862
 ##  ---                                                               
-## 234: 2020-04-04      obitos    obitos_arsalentejo     0          -1
-## 235: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 236: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 237: 2020-06-20      obitos              obitos_f   768          -1
-## 238: 2020-05-21 transmissao transmissao_importada   767          -3
+## 296: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 297: 2020-06-20      obitos              obitos_f   768          -1
+## 298: 2020-10-05      obitos              obitos_f     0       -1001
+## 299: 2020-10-05      obitos              obitos_m     0       -1004
+## 300: 2020-05-21 transmissao transmissao_importada   767          -3
 ```

@@ -132,7 +132,7 @@ CV <- CVPT[, data := as.Date(data, format = "%Y-%m-%d")][
                          frollmean(dailyChange, 7), as.numeric(NA))]
 ```
 
-### Overall Number of Deaths (daily) by Sex
+### Overall Number of Deaths (daily)
 
 ```{r deathsbySex}
 library(ggplot2)
@@ -140,13 +140,14 @@ library(magrittr)
 
 # Change the ggplot theme.
 theme_set(theme_bw())
-obMF <- CV[origType=="obitos" & sex %chin% c("M", "F") & ageGrp=="" & region == "Portugal"]
+# Data error prevents by sex plot.
+# obMF <- CV[origType=="obitos" & sex %chin% c("M", "F") & ageGrp=="" & region == "Portugal"]
 obAll <- CV[origType=="obitos" & sex %chin% c("All") & ageGrp=="" & region == "Portugal"][ 
   , sex := NA]
 
-obMF %>% 
-  ggplot(aes(x=data, y=dailyChange, fill = sex)) +
-  geom_bar(stat = "identity") +
+obAll %>% 
+  ggplot(aes(x=data, y=dailyChange)) +
+  geom_bar(stat = "identity", fill = "grey75") +
   geom_line(data = obAll, aes(x = data, y = mean7Day), group=1) +
   scale_x_date(date_breaks = "1 months",
                date_labels = "%b-%y",
@@ -156,8 +157,8 @@ obMF %>%
     title = "COVID-19 Portugal: Number Daily Deaths with 7 Day Rolling Mean",
     x = "",
     y = "Number of Deaths",
-    fill = "Sex",
     colour = "",
+    fill = "",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])"))
     )
 ```
