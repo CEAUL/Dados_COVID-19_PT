@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Thu 15 Oct 2020 (18:00:19 WEST \[+0100\])**
+**Last updated: Thu 15 Oct 2020 (18:13:38 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **14 Oct 2020** (232
     days).
@@ -78,22 +78,20 @@ CVPT <- fread(here("data", "covid19pt_DSSG_Long.csv"))
 # You can use the direct link:
 # CV <- fread("https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv")
 
-# Looking at the data:
-tail(CVPT)
-##          data   origVars   origType other symptoms sex ageGrpLower ageGrpUpper
-## 1: 2020-10-09 vigilancia vigilancia                All                        
-## 2: 2020-10-10 vigilancia vigilancia                All                        
-## 3: 2020-10-11 vigilancia vigilancia                All                        
-## 4: 2020-10-12 vigilancia vigilancia                All                        
-## 5: 2020-10-13 vigilancia vigilancia                All                        
-## 6: 2020-10-14 vigilancia vigilancia                All                        
-##    ageGrp   region value valueUnits
-## 1:        Portugal 47721      Count
-## 2:        Portugal 47602      Count
-## 3:        Portugal 48413      Count
-## 4:        Portugal 48844      Count
-## 5:        Portugal 50291      Count
-## 6:        Portugal 50544      Count
+# Looking at the key variables in the original long dataset.
+CVPT[, .(data, origVars, origType, sex, ageGrp, region, value, valueUnits)]
+##              data   origVars   origType sex ageGrp   region value valueUnits
+##     1: 2020-02-26     ativos     ativos All        Portugal    NA           
+##     2: 2020-02-27     ativos     ativos All        Portugal    NA           
+##     3: 2020-02-28     ativos     ativos All        Portugal    NA           
+##     4: 2020-02-29     ativos     ativos All        Portugal    NA           
+##     5: 2020-03-01     ativos     ativos All        Portugal    NA           
+##    ---                                                                      
+## 19948: 2020-10-10 vigilancia vigilancia All        Portugal 47602      Count
+## 19949: 2020-10-11 vigilancia vigilancia All        Portugal 48413      Count
+## 19950: 2020-10-12 vigilancia vigilancia All        Portugal 48844      Count
+## 19951: 2020-10-13 vigilancia vigilancia All        Portugal 50291      Count
+## 19952: 2020-10-14 vigilancia vigilancia All        Portugal 50544      Count
 
 # Order data by original variable name and date.
 setkeyv(CVPT, c("origVars", "data"))
@@ -143,6 +141,29 @@ obAll %>%
 
 <img src="README_figs/README-deathsbySex-1.png" width="672" />
 
+### Recorded Number of Confirmed COVID-19 Cases by Age Group
+
+``` r
+CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
+  , .(valueFM = sum(value)), .(data, ageGrp)] %>%
+  ggplot(., aes(x=data, y=valueFM, colour = ageGrp)) +
+  geom_line() +
+  scale_x_date(date_breaks = "2 months",
+               date_labels = "%b-%y",
+               limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
+  scale_y_continuous() +
+  theme(legend.position = "bottom") +
+  labs(
+    title = "COVID-19 Portugal: Number of Confirmed Cases by Age Group",
+    x = "",
+    y = "Number of Confirmed Cases",
+    caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
+    colour = "Age Group")
+## Warning: Removed 54 row(s) containing missing values (geom_path).
+```
+
+<img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
+
 ### Recorded Number of Confirmed COVID-19 Cases by Region
 
 ``` r
@@ -155,7 +176,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   scale_y_log10() +
   theme(legend.position = "bottom") +
   labs(
-    title = "COVID-19 Portugal: Number of Confirmed Cases",
+    title = "COVID-19 Portugal: Number of Confirmed Cases by Region",
     x = "",
     y = "Number of Confirmed Cases",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
@@ -165,30 +186,6 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
-
-### Recorded Number of Confirmed COVID-19 Cases by Age Group and Sex
-
-``` r
-CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))] %>%
-  ggplot(., aes(x=data, y=value, colour = ageGrp)) +
-  geom_line() +
-  facet_grid(sex~.) +
-  scale_x_date(date_breaks = "2 months",
-               date_labels = "%b-%y",
-               limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_log10(limits = c(10, 10000)) +
-  theme(legend.position = "right") +
-  labs(
-    title = "COVID-19 Portugal: Number of Confirmed Cases",
-    x = "",
-    y = "Number of Confirmed Cases",
-    caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
-    colour = "")
-## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 54 row(s) containing missing values (geom_path).
-```
-
-<img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
 
 <hr>
 
