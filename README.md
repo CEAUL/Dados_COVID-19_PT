@@ -4,9 +4,9 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Sat 17 Oct 2020 (16:12:47 UTC \[+0000\])**
+**Last updated: Sun 18 Oct 2020 (03:10:40 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **16 Oct 2020** (234
+  - Data available from **26 Feb 2020** until **17 Oct 2020** (235
     days).
 
 ### Download User Friendly Version
@@ -45,18 +45,18 @@ The original data were downloaded from an API provide by VOST
 
 ### Summary: Last 10 (available) Days
 
-|            Date | Cases\_7\_Day\_Mean |         Cases |        Active |    Recovered |     Deaths |
-| --------------: | ------------------: | ------------: | ------------: | -----------: | ---------: |
-| Wed 07 Oct 2020 |               816.3 |  81256 (+944) |  28179 (+611) | 51037 (+325) |  2040 (+8) |
-| Thu 08 Oct 2020 |               876.9 | 82534 (+1278) |  28967 (+788) | 51517 (+480) | 2050 (+10) |
-| Fri 09 Oct 2020 |               949.1 | 83928 (+1394) |  29702 (+735) | 52164 (+647) | 2062 (+12) |
-| Sat 10 Oct 2020 |              1046.7 | 85574 (+1646) | 30704 (+1002) | 52803 (+639) |  2067 (+5) |
-| Sun 11 Oct 2020 |              1073.3 | 86664 (+1090) |  31397 (+693) | 53187 (+384) | 2080 (+13) |
-| Mon 12 Oct 2020 |              1146.9 | 87913 (+1249) |  32321 (+924) | 53498 (+311) | 2094 (+14) |
-| Tue 13 Oct 2020 |              1258.4 | 89121 (+1208) |  32964 (+643) | 54047 (+549) | 2110 (+16) |
-| Wed 14 Oct 2020 |              1419.6 | 91193 (+2072) | 34583 (+1619) | 54493 (+446) |  2117 (+7) |
-| Thu 15 Oct 2020 |              1537.1 | 93294 (+2101) | 36085 (+1502) | 55081 (+588) | 2128 (+11) |
-| Fri 16 Oct 2020 |              1710.6 | 95902 (+2608) | 37687 (+1602) | 56066 (+985) | 2149 (+21) |
+|            Date | Cases\_7\_Day\_Mean |         Cases |        Active |     Recovered |     Deaths |
+| --------------: | ------------------: | ------------: | ------------: | ------------: | ---------: |
+| Thu 08 Oct 2020 |               876.9 | 82534 (+1278) |  28967 (+788) |  51517 (+480) | 2050 (+10) |
+| Fri 09 Oct 2020 |               949.1 | 83928 (+1394) |  29702 (+735) |  52164 (+647) | 2062 (+12) |
+| Sat 10 Oct 2020 |              1046.7 | 85574 (+1646) | 30704 (+1002) |  52803 (+639) |  2067 (+5) |
+| Sun 11 Oct 2020 |              1073.3 | 86664 (+1090) |  31397 (+693) |  53187 (+384) | 2080 (+13) |
+| Mon 12 Oct 2020 |              1146.9 | 87913 (+1249) |  32321 (+924) |  53498 (+311) | 2094 (+14) |
+| Tue 13 Oct 2020 |              1258.4 | 89121 (+1208) |  32964 (+643) |  54047 (+549) | 2110 (+16) |
+| Wed 14 Oct 2020 |              1419.6 | 91193 (+2072) | 34583 (+1619) |  54493 (+446) |  2117 (+7) |
+| Thu 15 Oct 2020 |              1537.1 | 93294 (+2101) | 36085 (+1502) |  55081 (+588) | 2128 (+11) |
+| Fri 16 Oct 2020 |              1710.6 | 95902 (+2608) | 37687 (+1602) |  56066 (+985) | 2149 (+21) |
+| Sat 17 Oct 2020 |              1783.0 | 98055 (+2153) |  37974 (+287) | 57919 (+1853) | 2162 (+13) |
 
 Change from previous day in brackets.
 
@@ -87,11 +87,11 @@ CVPT[, .(data, origVars, origType, sex, ageGrp, region, value, valueUnits)]
 ##     4: 2020-02-29     ativos     ativos All        Portugal    NA           
 ##     5: 2020-03-01     ativos     ativos All        Portugal    NA           
 ##    ---                                                                      
-## 20120: 2020-10-12 vigilancia vigilancia All        Portugal 48844      Count
-## 20121: 2020-10-13 vigilancia vigilancia All        Portugal 50291      Count
-## 20122: 2020-10-14 vigilancia vigilancia All        Portugal 50544      Count
-## 20123: 2020-10-15 vigilancia vigilancia All        Portugal 51601      Count
-## 20124: 2020-10-16 vigilancia vigilancia All        Portugal 51784      Count
+## 20206: 2020-10-13 vigilancia vigilancia All        Portugal 50291      Count
+## 20207: 2020-10-14 vigilancia vigilancia All        Portugal 50544      Count
+## 20208: 2020-10-15 vigilancia vigilancia All        Portugal 51601      Count
+## 20209: 2020-10-16 vigilancia vigilancia All        Portugal 51784      Count
+## 20210: 2020-10-17 vigilancia vigilancia All        Portugal 52543      Count
 
 # Order data by original variable name and date.
 setkeyv(CVPT, c("origVars", "data"))
@@ -182,7 +182,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 218 row(s) containing missing values (geom_path).
+## Warning: Removed 219 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -211,9 +211,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548       -1634
 ##   5: 2020-05-22      ativos                ativos 21321        -862
 ##  ---                                                               
-## 296: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 297: 2020-06-20      obitos              obitos_f   768          -1
-## 298: 2020-10-05      obitos              obitos_f     0       -1001
-## 299: 2020-10-05      obitos              obitos_m     0       -1004
-## 300: 2020-05-21 transmissao transmissao_importada   767          -3
+## 297: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 298: 2020-06-20      obitos              obitos_f   768          -1
+## 299: 2020-10-05      obitos              obitos_f     0       -1001
+## 300: 2020-10-05      obitos              obitos_m     0       -1004
+## 301: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
