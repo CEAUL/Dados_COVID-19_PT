@@ -77,7 +77,6 @@ cvwd <- rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
 cvwd[, tail(.SD, 10)][
     , ..useVars]  %>%
   kable(align = c("rrrrrr"), 
-        format = "html",
         table.attr ="class=\"striped\"",
         col.names = c("Date", "Cases 7 Day Mean", "Cases", "Active", "Recovered", "Deaths"),
         caption = "Change from previous day in brackets.")
