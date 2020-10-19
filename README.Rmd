@@ -59,7 +59,6 @@ library(knitr)
 suppressPackageStartupMessages(library(here)) # library(here)
 rDat <- fread(here("data", "covid19pt_DSSG_Orig.csv"))
 
-# useVars <- c("Date", "confirmados_novos", "confirmados", "ativos", "recuperados", "obitos_novos", "obitos")
 useVars <- c("Date", "Cases_7_Day_Mean", "Cases", "Active", "Recovered", "Deaths")
 cvwd <- rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
                             ativos = as.numeric(ativos))][
@@ -77,8 +76,11 @@ cvwd <- rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
 
 cvwd[, tail(.SD, 10)][
     , ..useVars]  %>%
-  kable(align = c("rrrrrr"), caption = "Change from previous day in brackets.",
-        table.attr ="class=\"striped\"")
+  kable(align = c("rrrrrr"), 
+        format = "html",
+        table.attr ="class=\"striped\"",
+        col.names = c("Date", "Cases 7 Day Mean", "Cases", "Active", "Recovered", "Deaths"),
+        caption = "Change from previous day in brackets.")
 ```
 
 ```{r plotNewCases, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
@@ -149,7 +151,7 @@ obAll <- CV[origType=="obitos" & sex %chin% c("All") & ageGrp=="" & region == "P
 obAll %>% 
   ggplot(aes(x=data, y=dailyChange)) +
   geom_bar(stat = "identity", fill = "grey75") +
-  geom_line(data = obAll, aes(x = data, y = mean7Day), group=1) +
+  geom_line(data = obAll, aes(x = data, y = mean7Day), group=1, colour = "brown") +
   scale_x_date(date_breaks = "1 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
