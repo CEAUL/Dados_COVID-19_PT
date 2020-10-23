@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 23 Oct 2020 (03:09:49 UTC \[+0000\])**
+**Last updated: Fri 23 Oct 2020 (09:47:16 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **22 Oct 2020** (240
     days).
@@ -148,7 +148,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
   , .(valueFM = sum(value)), .(data, ageGrp)] %>%
   ggplot(., aes(x=data, y=valueFM, colour = ageGrp)) +
   geom_line() +
-  scale_x_date(date_breaks = "2 months",
+  scale_x_date(date_breaks = "1 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
   scale_y_continuous() +
