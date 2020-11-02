@@ -4,9 +4,9 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Mon 02 Nov 2020 (10:52:15 WET \[+0000\])**
+**Last updated: Mon 02 Nov 2020 (16:13:48 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **31 Oct 2020** (249
+  - Data available from **26 Feb 2020** until **01 Nov 2020** (250
     days).
 
 ### Download User Friendly Version
@@ -47,7 +47,6 @@ The original data were downloaded from an API provide by VOST
 
 |            Date | Cases 7 Day Mean |          Cases |        Active |     Recovered |     Deaths |
 | --------------: | ---------------: | -------------: | ------------: | ------------: | ---------: |
-| Thu 22 Oct 2020 |           2321.0 | 109541 (+3270) | 42765 (+1961) | 64531 (+1293) | 2245 (+16) |
 | Fri 23 Oct 2020 |           2362.6 | 112440 (+2899) | 44284 (+1519) | 65880 (+1349) | 2276 (+31) |
 | Sat 24 Oct 2020 |           2579.1 | 116109 (+3669) | 45970 (+1686) | 67842 (+1962) | 2297 (+21) |
 | Sun 25 Oct 2020 |           2682.1 | 118686 (+2577) | 47493 (+1523) | 68877 (+1035) | 2316 (+19) |
@@ -57,6 +56,7 @@ The original data were downloaded from an API provide by VOST
 | Thu 29 Oct 2020 |           3296.4 | 132616 (+4224) | 54486 (+2490) | 75702 (+1701) | 2428 (+33) |
 | Fri 30 Oct 2020 |           3547.4 | 137272 (+4656) | 57355 (+2869) | 77449 (+1747) | 2468 (+40) |
 | Sat 31 Oct 2020 |           3595.7 | 141279 (+4007) | 58492 (+1137) | 80280 (+2831) | 2507 (+39) |
+| Sun 01 Nov 2020 |           3665.0 | 144341 (+3062) | 60026 (+1534) | 81771 (+1491) | 2544 (+37) |
 
 Change from previous day in brackets.
 
@@ -87,11 +87,11 @@ CVPT[, .(data, origVars, origType, sex, ageGrp, region, value, valueUnits)]
 ##     4: 2020-02-29     ativos     ativos All        Portugal    NA           
 ##     5: 2020-03-01     ativos     ativos All        Portugal    NA           
 ##    ---                                                                      
-## 21410: 2020-10-27 vigilancia vigilancia All        Portugal 60063      Count
-## 21411: 2020-10-28 vigilancia vigilancia All        Portugal 62457      Count
-## 21412: 2020-10-29 vigilancia vigilancia All        Portugal 64426      Count
-## 21413: 2020-10-30 vigilancia vigilancia All        Portugal 65305      Count
-## 21414: 2020-10-31 vigilancia vigilancia All        Portugal 64514      Count
+## 21496: 2020-10-28 vigilancia vigilancia All        Portugal 62457      Count
+## 21497: 2020-10-29 vigilancia vigilancia All        Portugal 64426      Count
+## 21498: 2020-10-30 vigilancia vigilancia All        Portugal 65305      Count
+## 21499: 2020-10-31 vigilancia vigilancia All        Portugal 64514      Count
+## 21500: 2020-11-01 vigilancia vigilancia All        Portugal 64805      Count
 
 # Order data by original variable name and date.
 setkeyv(CVPT, c("origVars", "data"))
@@ -182,7 +182,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 233 row(s) containing missing values (geom_path).
+## Warning: Removed 234 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -211,9 +211,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548       -1634
 ##   5: 2020-05-22      ativos                ativos 21321        -862
 ##  ---                                                               
-## 288: 2020-10-25      obitos     obitos_arsalgarve    25         -10
-## 289: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 290: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 291: 2020-06-20      obitos              obitos_f   768          -1
-## 292: 2020-05-21 transmissao transmissao_importada   767          -3
+## 290: 2020-10-25      obitos     obitos_arsalgarve    25         -10
+## 291: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 292: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 293: 2020-06-20      obitos              obitos_f   768          -1
+## 294: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
