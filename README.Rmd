@@ -59,7 +59,7 @@ library(knitr)
 suppressPackageStartupMessages(library(here)) # library(here)
 rDat <- fread(here("data", "covid19pt_DSSG_Orig.csv"))
 
-useVars <- c("Date", "Cases_7_Day_Mean", "Cases", "Active", "Recovered", "Deaths")
+useVars <- c("Date", "Cases_7_Day_Mean", "Cases", "Active",  "Deaths_7_Day_Mean", "Deaths")
 cvwd <- rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
                             ativos = as.numeric(ativos))][
       order(data2)][
@@ -67,9 +67,11 @@ cvwd <- rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
          obitos_novos = obitos - shift(obitos, n=1, fill=NA, type="lag"),
          ativos_novos = ativos - shift(ativos, n=1, fill=NA, type="lag"),
          recuperados_novos = recuperados - shift(recuperados, n=1, fill=NA, type="lag"))][
+  , `:=`(obitos_Avg7 = frollmean(obitos_novos, 7))][
   , `:=`(Date = format(data2, "%a %d %b %Y"),
          Cases_7_Day_Mean = sprintf("%4.1f", confirmados_Avg7),
          Cases = sprintf("%d (%+d)", confirmados, confirmados_novos),
+         Deaths_7_Day_Mean = sprintf("%4.1f", obitos_Avg7),
          Deaths = sprintf("%d (%+d)", obitos, obitos_novos),
          Active = sprintf("%d (%+d)", ativos, ativos_novos),
          Recovered = sprintf("%d (%+d)", recuperados, recuperados_novos))]
@@ -78,7 +80,7 @@ cvwd[, tail(.SD, 10)][
     , ..useVars]  %>%
   kable(align = c("rrrrrr"), 
         table.attr ="class=\"striped\"",
-        col.names = c("Date", "Cases 7 Day Mean", "Cases", "Active", "Recovered", "Deaths"),
+        col.names = c("Date", "Cases 7 Day Mean", "Total Cases", "Active Cases",  "Deaths 7 Day Mean", "Deaths"),
         caption = "Change from previous day in brackets.")
 ```
 
