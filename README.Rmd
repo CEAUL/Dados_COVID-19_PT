@@ -59,7 +59,7 @@ library(knitr)
 suppressPackageStartupMessages(library(here)) # library(here)
 rDat <- fread(here("data", "covid19pt_DSSG_Orig.csv"))
 
-useVars <- c("Date", "Cases_7_Day_Mean", "Cases", "Active",  "Deaths_7_Day_Mean", "Deaths")
+useVars <- c("Date", "Cases_7_Day_Mean", "Active",  "Deaths_7_Day_Mean", "Deaths")
 cvwd <- rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
                             ativos = as.numeric(ativos))][
       order(data2)][
@@ -80,7 +80,7 @@ cvwd[, tail(.SD, 10)][
     , ..useVars]  %>%
   kable(align = c("rrrrrr"), 
         table.attr ="class=\"striped\"",
-        col.names = c("Date", "Cases 7 Day Mean", "Total Cases", "Active Cases",  "Deaths 7 Day Mean", "Deaths"),
+        col.names = c("Date", "Cases 7 Day Mean", "Active Cases",  "Deaths 7 Day Mean", "Deaths"),
         caption = "Change from previous day in brackets.")
 ```
 
