@@ -68,22 +68,16 @@ cvwd <- rDat[, `:=`(data2 = as.Date(data, format = "%d-%m-%Y"),
          recuperados_novos = recuperados - shift(recuperados, n=1, fill=NA, type="lag"))][
   , `:=`(obitos_Avg7 = frollmean(obitos_novos, 7))][
   , `:=`(Date = format(data2, "%a %d %b %Y"),
-         Cases_7_Day_Mean = sprintf("%4.1f", confirmados_Avg7),
-         Cases = sprintf("%d (%+d)", confirmados, confirmados_novos),
-         New_Cases = sprintf("%+d", confirmados_novos),
-         Deaths_7_Day_Mean = sprintf("%4.1f", obitos_Avg7),
-         Deaths = sprintf("%d (%+d)", obitos, obitos_novos),
-         Active = sprintf("%d (%+d)", ativos, ativos_novos),
-         Active_Cases = sprintf("%d", ativos),
-         Recovered = sprintf("%d (%+d)", recuperados, recuperados_novos))]
+         Cases_7_Day_Mean = sprintf("%d (%4.1f)", confirmados_novos, confirmados_Avg7),
+         Deaths_7_Day_Mean = sprintf("%d (%4.1f)", obitos_novos, obitos_Avg7),
+         Active_Cases = sprintf("%d", ativos))]
 
-useVars <- c("Date", "Cases_7_Day_Mean", "New_Cases", "Active_Cases", "Deaths_7_Day_Mean", "Deaths")
+useVars <- c("Date", "Cases_7_Day_Mean", "Active_Cases", "Deaths_7_Day_Mean")
 cvwd[, tail(.SD, 10)][
     , ..useVars]  %>%
   kable(align = c("rrrrrr"), 
         table.attr ="class=\"striped\"",
-        col.names = c("Date", "Cases 7 Day Mean", "New Cases", "Active Cases",
-                      "Deaths 7 Day Mean", "Deaths"))
+        col.names = c("Date", "Cases (7 Day Mean)", "Active Cases", "Deaths (7 Day Mean)"))
 ```
 
 ```{r plotNewCases, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
