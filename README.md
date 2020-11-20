@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 20 Nov 2020 (03:07:44 UTC \[+0000\])**
+**Last updated: Fri 20 Nov 2020 (09:10:04 WET \[+0000\])**
 
   - Data available from **26 Feb 2020** until **18 Nov 2020** (267
     days).
@@ -54,9 +54,9 @@ The original data were downloaded from an API provide by VOST
 | Fri 13 Nov 2020 |      6653 (5394.9) |        84032 |           69 (65.4) |
 | Sat 14 Nov 2020 |      6602 (5389.4) |        85444 |           55 (65.3) |
 | Sun 15 Nov 2020 |      6035 (5425.3) |        88854 |           76 (69.3) |
-| Mon 16 Nov 2020 |      3996 (5411.0) |        80045 |           91 (73.3) |
-| Tue 17 Nov 2020 |      4452 (5501.7) |        77126 |           81 (76.0) |
-| Wed 18 Nov 2020 |      5891 (5638.3) |        78641 |           79 (75.6) |
+| Mon 16 Nov 2020 |      8371 (6036.0) |        80045 |           91 (73.3) |
+| Tue 17 Nov 2020 |      4452 (6126.7) |        77126 |           81 (76.0) |
+| Wed 18 Nov 2020 |      5891 (6263.3) |        78641 |           79 (75.6) |
 
 <img src="README_figs/README-plotNewCases-1.png" width="672" />
 
@@ -209,9 +209,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548       -1634
 ##   5: 2020-05-22      ativos                ativos 21321        -862
 ##  ---                                                               
-## 303: 2020-10-25      obitos     obitos_arsalgarve    25         -10
-## 304: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 305: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 306: 2020-06-20      obitos              obitos_f   768          -1
-## 307: 2020-05-21 transmissao transmissao_importada   767          -3
+## 320: 2020-10-25      obitos     obitos_arsalgarve    25         -10
+## 321: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 322: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 323: 2020-06-20      obitos              obitos_f   768          -1
+## 324: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
