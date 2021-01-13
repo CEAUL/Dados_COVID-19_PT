@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 12 Jan 2021 (17:58:45 WET \[+0000\])**
+**Last updated: Wed 13 Jan 2021 (03:50:52 UTC \[+0000\])**
 
   - Data available from **26 Feb 2020** until **12 Jan 2021** (322
     days).
