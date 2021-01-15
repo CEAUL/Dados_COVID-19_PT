@@ -18,15 +18,15 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-renv-
 
-   name: Install package
-   run: |
-        sudo apt-get -y install libcurl4-dev libcurl4-openssl-dev
+      - name: Install R Packages
+        run: |
+          sudo apt-get -y install libcurl4-dev libcurl4-openssl-dev
 
       - uses: r-lib/actions/setup-r@v1
 
       - uses: r-lib/actions/setup-pandoc@v1
 
-      - name: Install rmarkdown
+      - name: Install R Packages
         run: |
           Rscript -e 'install.packages(c("rmarkdown", "data.table", "jsonlite", "renv"))'
           Rscript -e 'install.packages(c("RCurl", "magrittr", "here", "ggplot2"))'
