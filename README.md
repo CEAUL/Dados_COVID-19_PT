@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 23 Feb 2021 (03:12:25 UTC \[+0000\])**
+**Last updated: Tue 23 Feb 2021 (10:05:31 WET \[+0000\])**
 
   - Data available from **26 Feb 2020** until **22 Feb 2021** (363
     days).
@@ -209,9 +209,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548       -1634
 ##   5: 2020-05-22      ativos                ativos 21321        -862
 ##  ---                                                               
-## 432: 2020-10-25      obitos     obitos_arsalgarve    25         -10
-## 433: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 434: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 435: 2020-06-20      obitos              obitos_f   768          -1
-## 436: 2020-05-21 transmissao transmissao_importada   767          -3
+## 425: 2020-04-04      obitos    obitos_arsalentejo     0          -1
+## 426: 2020-10-25      obitos     obitos_arsalgarve    25         -10
+## 427: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 428: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 429: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
