@@ -43,7 +43,7 @@ library(RCurl)
   if (nAvail>0){
     for(i in 1:nAvail){
       download.file(dlJSON$cvURL[i], destfile = here("data-raw", dlJSON$jsonFile[i]))
-    }
+      Sys.sleep(runif(1, min = 0.01, max = 0.5))    }
   } else {message("Raw JSON data up to date")}
 
   # QC:: Update tracking dataset to confirm available files and empty files
