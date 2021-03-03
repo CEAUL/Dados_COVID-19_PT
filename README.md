@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Wed 03 Mar 2021 (03:10:43 UTC \[+0000\])**
+**Last updated: Wed 03 Mar 2021 (14:22:14 WET \[+0000\])**
 
   - Data available from **26 Feb 2020** until **02 Mar 2021** (371
     days).
@@ -118,12 +118,13 @@ obAll <- CV[origType=="obitos" & sex %chin% c("All") & ageGrp=="" & region == "P
   , sex := NA]
 
 obAll %>% 
-  ggplot(aes(x=data, y=dailyChange)) +
+  ggplot(aes(x = data, y = dailyChange)) +
   geom_bar(stat = "identity", fill = "grey75") +
   geom_line(data = obAll, aes(x = data, y = mean7Day), group=1, colour = "brown") +
-  scale_x_date(date_breaks = "1 months",
+  scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
+  scale_y_continuous(breaks = seq(0, max(obAll[, dailyChange], na.rm = TRUE) + 50, 50)) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number Daily Deaths with 7 Day Rolling Mean",
@@ -146,7 +147,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
   , .(valueFM = sum(value)), .(data, ageGrp)] %>%
   ggplot(., aes(x=data, y=valueFM, colour = ageGrp)) +
   geom_line() +
-  scale_x_date(date_breaks = "1 months",
+  scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
   scale_y_continuous() +
@@ -168,7 +169,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
 CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   ggplot(., aes(x=data, y=value, colour=region)) +
   geom_line() +
-  scale_x_date(date_breaks = "1 months",
+  scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
   scale_y_log10() +
