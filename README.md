@@ -4,35 +4,35 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 09 Apr 2021 (03:17:22 UTC \[+0000\])**
+**Last updated: Fri 09 Apr 2021 (13:56:04 WEST \[+0100\])**
 
-  - Data available from **26 Feb 2020** until **08 Apr 2021** (408
+-   Data available from **26 Feb 2020** until **08 Apr 2021** (408
     days).
 
 ### Download User Friendly Version
 
-  - Download the user friendly data from:
+-   Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
     or use the following direct link in your program:
-      - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
-  - **Variables**
-      - `data`: Date (Portuguese spelling).
-      - `origVars`: Variable name taken from source data.
-      - `origType`: Orginal variable count type.
-      - `other`: Other types of `origVars`.
-      - `symptoms`: Recorded COVID-19 symptoms.
-      - `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
+    -   <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
+-   **Variables**
+    -   `data`: Date (Portuguese spelling).
+    -   `origVars`: Variable name taken from source data.
+    -   `origType`: Orginal variable count type.
+    -   `other`: Other types of `origVars`.
+    -   `symptoms`: Recorded COVID-19 symptoms.
+    -   `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
         Males).
-      - `ageGrp`: Age groups in years (`desconhecidos` - unknown).
-      - `ageGrpLower`: Lower limit of age group (useful for sorting).
-      - `ageGrpUpper`: Upper limit of age group.
-      - `region`: Portuguese Regions
-      - `value`: Numeric value.
-      - `valueUnits`: Units for the variable `value`.
+    -   `ageGrp`: Age groups in years (`desconhecidos` - unknown).
+    -   `ageGrpLower`: Lower limit of age group (useful for sorting).
+    -   `ageGrpUpper`: Upper limit of age group.
+    -   `region`: Portuguese Regions
+    -   `value`: Numeric value.
+    -   `valueUnits`: Units for the variable `value`.
 
 <br>
 
-  - Download the original unprocessed data (json to CSV) from:
+-   Download the original unprocessed data (json to CSV) from:
     **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
 
 ### Source
@@ -46,7 +46,7 @@ The original data were downloaded from an API provide by VOST
 ### Summary: Last 10 (available) Days
 
 |            Date | Cases (7 Day Mean) | Active Cases | Deaths (7 Day Mean) |
-| --------------: | -----------------: | -----------: | ------------------: |
+|----------------:|-------------------:|-------------:|--------------------:|
 | Tue 30 Mar 2021 |        389 (413.3) |        26757 |            2 ( 7.3) |
 | Wed 31 Mar 2021 |        617 (419.3) |        26664 |            3 ( 6.1) |
 | Thu 01 Apr 2021 |        592 (443.4) |        26543 |           11 ( 6.4) |
@@ -158,7 +158,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
     y = "Number of Confirmed Cases",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Age Group")
-## Warning: Removed 63 row(s) containing missing values (geom_path).
+## Warning: Removed 54 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
@@ -210,9 +210,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548       -1634
 ##   5: 2020-05-22      ativos                ativos 21321        -862
 ##  ---                                                               
-## 523: 2020-04-04      obitos    obitos_arsalentejo     0          -1
-## 524: 2020-10-25      obitos     obitos_arsalgarve    25         -10
-## 525: 2020-05-23      obitos      obitos_arscentro   230          -3
-## 526: 2020-07-03      obitos      obitos_arscentro   248          -1
-## 527: 2020-05-21 transmissao transmissao_importada   767          -3
+## 541: 2020-04-04      obitos    obitos_arsalentejo     0          -1
+## 542: 2020-10-25      obitos     obitos_arsalgarve    25         -10
+## 543: 2020-05-23      obitos      obitos_arscentro   230          -3
+## 544: 2020-07-03      obitos      obitos_arscentro   248          -1
+## 545: 2020-05-21 transmissao transmissao_importada   767          -3
 ```
