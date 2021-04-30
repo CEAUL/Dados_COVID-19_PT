@@ -14,7 +14,7 @@ library(RCurl)
 
 # The data source is originally from https://github.com/dssg-pt/covid19pt-data
 
-# The API uses date formatted as DD-MM-YYYY (all numberic)
+# The API uses date formatted as DD-MM-YYYY (all numeric)
   stemUrl <- "https://covid19-api.vost.pt/Requests/get_entry/"
 
 # The source data starts from 26th Feb 2020.
