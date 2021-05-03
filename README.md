@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Mon 03 May 2021 (16:17:48 UTC \[+0000\])**
+**Last updated: Mon 03 May 2021 (18:47:12 WEST \[+0100\])**
 
   - Data available from **26 Feb 2020** until **02 May 2021** (432
     days).
@@ -107,9 +107,6 @@ CV <- CVPT[, data := as.Date(data, format = "%Y-%m-%d")][
 ### Overall Number of Deaths (daily)
 
 ``` r
-library(ggplot2)
-library(magrittr)
-
 # Change the ggplot theme.
 theme_set(theme_bw())
 # Data error prevents by sex plot.
@@ -150,7 +147,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
   scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_continuous() +
+  scale_y_continuous(labels = scales::number_format()) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases by Age Group",
@@ -158,7 +155,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
     y = "Number of Confirmed Cases",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Age Group")
-## Warning: Removed 81 row(s) containing missing values (geom_path).
+## Warning: Removed 72 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
@@ -172,7 +169,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_log10() +
+  scale_y_log10(labels = scales::number_format()) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases by Region",

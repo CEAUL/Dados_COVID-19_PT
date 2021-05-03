@@ -82,6 +82,7 @@ cvwd[, tail(.SD, 10)][
 
 ```{r plotNewCases, echo=FALSE, eval=TRUE, warning=FALSE, message=FALSE}
 library(ggplot2)
+library(scales)
 cvwd %>% 
   ggplot(aes(x=data2, y=confirmados_novos)) +
   geom_bar(stat = "identity", fill = "grey75") +
@@ -135,9 +136,6 @@ CV <- CVPT[, data := as.Date(data, format = "%Y-%m-%d")][
 ### Overall Number of Deaths (daily)
 
 ```{r deathsbySex}
-library(ggplot2)
-library(magrittr)
-
 # Change the ggplot theme.
 theme_set(theme_bw())
 # Data error prevents by sex plot.
@@ -174,7 +172,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
   scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_continuous() +
+  scale_y_continuous(labels = scales::number_format()) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases by Age Group",
@@ -193,7 +191,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_log10() +
+  scale_y_log10(labels = scales::number_format()) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases by Region",

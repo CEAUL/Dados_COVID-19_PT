@@ -30,7 +30,7 @@ jobs:
       - name: Install R Packages
         run: |
           Rscript -e 'install.packages(c("rmarkdown", "data.table", "jsonlite", "renv"))'
-          Rscript -e 'install.packages(c("RCurl", "magrittr", "here", "ggplot2"))'
+          Rscript -e 'install.packages(c("RCurl", "magrittr", "here", "ggplot2", "scales"))'
 
       - name: Data updates
         run: Rscript -e 'source("R/01_COVID-19_PT_data.R")'
