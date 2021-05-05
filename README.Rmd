@@ -172,7 +172,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
   scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_continuous(labels = scales::number_format()) +
+  scale_y_continuous(labels = scales::number_format(big.mark = ",")) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases by Age Group",
@@ -191,7 +191,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_log10(labels = scales::number_format()) +
+  scale_y_log10(labels = scales::number_format(big.mark = ",")) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases by Region",

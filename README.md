@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Wed 05 May 2021 (09:14:01 WEST \[+0100\])**
+**Last updated: Wed 05 May 2021 (09:20:02 WEST \[+0100\])**
 
 -   Data available from **26 Feb 2020** until **04 May 2021** (434
     days).
@@ -147,7 +147,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
   scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_continuous(labels = scales::number_format()) +
+  scale_y_continuous(labels = scales::number_format(big.mark = ",")) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases by Age Group",
@@ -169,7 +169,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
   scale_x_date(date_breaks = "2 months",
                date_labels = "%b-%y",
                limits = c(min(cvwd$data2, na.rm = TRUE), NA)) +
-  scale_y_log10(labels = scales::number_format()) +
+  scale_y_log10(labels = scales::number_format(big.mark = ",")) +
   theme(legend.position = "bottom") +
   labs(
     title = "COVID-19 Portugal: Number of Confirmed Cases by Region",
