@@ -129,8 +129,20 @@ allDays[, data := as.Date(data, format = "%d-%m-%Y")]
 firstDate <-  format(min(allDays$data), "%d %b %Y")
 lastDate <- format(max(allDays$data), "%d %b %Y")
 availableDays <- nrow(allDays)
+### Missing Days
+missingDays <- covidPT[emptyFile == "Empty", cvDayDMY]
+
+if (length(missingDays)==0) {
+  missingDates <- NULL
+  } else {
+    missingDates <- paste0("\n+ Dates with missing data: ",
+                           paste(missingDays, collapse = ", "),
+                           "\n")
+  }
 
 dataMetaInfo <- paste0("\n+ Data available from **", firstDate, "** until **",
-                       lastDate, "** (", availableDays, " days).\n" )
+                       lastDate, "** (", availableDays, " days - ",
+                       length(missingDays), " missing).\n",
+                       missingDates)
 
 saveRDS(dataMetaInfo, file = here("data", "dataMetaInfo.RData"))
