@@ -4,9 +4,9 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 28 May 2021 (04:35:53 UTC \[+0000\])**
+**Last updated: Fri 28 May 2021 (16:40:28 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **27 May 2021** (457 days
+  - Data available from **26 Feb 2020** until **28 May 2021** (458 days
     - 0 missing).
 
 ### Download User Friendly Version
@@ -47,7 +47,6 @@ The original data were downloaded from an API provide by VOST
 
 |            Date | Cases (7 Day Mean) | Active Cases | Deaths (7 Day Mean) |
 | --------------: | -----------------: | -----------: | ------------------: |
-| Tue 18 May 2021 |        386 (394.1) |        21997 |            2 ( 2.4) |
 | Wed 19 May 2021 |        511 (397.9) |        22089 |            2 ( 2.1) |
 | Thu 20 May 2021 |        451 (400.0) |        22193 |            1 ( 2.1) |
 | Fri 21 May 2021 |        559 (415.6) |        22287 |            3 ( 2.6) |
@@ -57,6 +56,7 @@ The original data were downloaded from an API provide by VOST
 | Tue 25 May 2021 |        375 (439.0) |        22171 |            3 ( 1.4) |
 | Wed 26 May 2021 |        594 (450.9) |        22347 |            1 ( 1.3) |
 | Thu 27 May 2021 |        572 (468.1) |        22452 |            0 ( 1.1) |
+| Fri 28 May 2021 |        598 (473.7) |        22534 |            1 ( 0.9) |
 
 <img src="README_figs/README-plotNewCases-1.png" width="672" />
 
@@ -85,11 +85,11 @@ CVPT[, .(data, origVars, origType, sex, ageGrp, region, value, valueUnits)]
 ##     4: 2020-02-29     ativos     ativos All        Portugal    NA           
 ##     5: 2020-03-01     ativos     ativos All        Portugal    NA           
 ##    ---                                                                      
-## 41583: 2021-05-23 vigilancia vigilancia All        Portugal 19479      Count
-## 41584: 2021-05-24 vigilancia vigilancia All        Portugal 19588      Count
-## 41585: 2021-05-25 vigilancia vigilancia All        Portugal 19851      Count
-## 41586: 2021-05-26 vigilancia vigilancia All        Portugal 20613      Count
-## 41587: 2021-05-27 vigilancia vigilancia All        Portugal 21834      Count
+## 41674: 2021-05-24 vigilancia vigilancia All        Portugal 19588      Count
+## 41675: 2021-05-25 vigilancia vigilancia All        Portugal 19851      Count
+## 41676: 2021-05-26 vigilancia vigilancia All        Portugal 20613      Count
+## 41677: 2021-05-27 vigilancia vigilancia All        Portugal 21834      Count
+## 41678: 2021-05-28 vigilancia vigilancia All        Portugal 22887      Count
 
 # Order data by original variable name and date.
 setkeyv(CVPT, c("origVars", "data"))
@@ -155,7 +155,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
     y = "Number of Confirmed Cases",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Age Group")
-## Warning: Removed 63 row(s) containing missing values (geom_path).
+## Warning: Removed 54 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
@@ -178,7 +178,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 441 row(s) containing missing values (geom_path).
+## Warning: Removed 442 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
