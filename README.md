@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 25 Jun 2021 (11:33:48 WEST \[+0100\])**
+**Last updated: Fri 25 Jun 2021 (11:53:08 WEST \[+0100\])**
 
 -   Data available from **26 Feb 2020** until **24 Jun 2021** (485
     days - 0 missing).
@@ -18,7 +18,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 -   **Variables**
     -   `data`: Date (Portuguese spelling).
     -   `origVars`: Variable name taken from source data.
-    -   `origType`: Orginal variable count type.
+    -   `origType`: Original variable count type.
     -   `other`: Other types of `origVars`.
     -   `symptoms`: Recorded COVID-19 symptoms.
     -   `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
