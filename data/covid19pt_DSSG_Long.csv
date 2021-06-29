@@ -488,6 +488,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,ativos,ativos,,,All,,,,Portugal,30759,Count
 2021-06-27,ativos,ativos,,,All,,,,Portugal,31779,Count
 2021-06-28,ativos,ativos,,,All,,,,Portugal,32071,Count
+2021-06-29,ativos,ativos,,,All,,,,Portugal,32134,Count
 2020-02-26,cadeias_transmissao,cadeias,cadeias_transmissao,,All,,,,Portugal,,
 2020-02-27,cadeias_transmissao,cadeias,cadeias_transmissao,,All,,,,Portugal,,
 2020-02-28,cadeias_transmissao,cadeias,cadeias_transmissao,,All,,,,Portugal,,
@@ -977,6 +978,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,cadeias_transmissao,cadeias,cadeias_transmissao,,All,,,,Portugal,,
 2021-06-27,cadeias_transmissao,cadeias,cadeias_transmissao,,All,,,,Portugal,,
 2021-06-28,cadeias_transmissao,cadeias,cadeias_transmissao,,All,,,,Portugal,,
+2021-06-29,cadeias_transmissao,cadeias,cadeias_transmissao,,All,,,,Portugal,,
 2020-02-26,confirmados,confirmados,,,All,,,,Portugal,0,Count
 2020-02-27,confirmados,confirmados,,,All,,,,Portugal,0,Count
 2020-02-28,confirmados,confirmados,,,All,,,,Portugal,0,Count
@@ -1466,6 +1468,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados,confirmados,,,All,,,,Portugal,873051,Count
 2021-06-27,confirmados,confirmados,,,All,,,,Portugal,874547,Count
 2021-06-28,confirmados,confirmados,,,All,,,,Portugal,875449,Count
+2021-06-29,confirmados,confirmados,,,All,,,,Portugal,877195,Count
 2020-02-26,confirmados_0_9_f,confirmados,,,F,0,9,0-9,Portugal,,
 2020-02-27,confirmados_0_9_f,confirmados,,,F,0,9,0-9,Portugal,,
 2020-02-28,confirmados_0_9_f,confirmados,,,F,0,9,0-9,Portugal,,
@@ -1955,6 +1958,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_0_9_f,confirmados,,,F,0,9,0-9,Portugal,,
 2021-06-27,confirmados_0_9_f,confirmados,,,F,0,9,0-9,Portugal,,
 2021-06-28,confirmados_0_9_f,confirmados,,,F,0,9,0-9,Portugal,23794,Count
+2021-06-29,confirmados_0_9_f,confirmados,,,F,0,9,0-9,Portugal,,
 2020-02-26,confirmados_0_9_m,confirmados,,,M,0,9,0-9,Portugal,,
 2020-02-27,confirmados_0_9_m,confirmados,,,M,0,9,0-9,Portugal,,
 2020-02-28,confirmados_0_9_m,confirmados,,,M,0,9,0-9,Portugal,,
@@ -2444,6 +2448,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_0_9_m,confirmados,,,M,0,9,0-9,Portugal,,
 2021-06-27,confirmados_0_9_m,confirmados,,,M,0,9,0-9,Portugal,,
 2021-06-28,confirmados_0_9_m,confirmados,,,M,0,9,0-9,Portugal,24968,Count
+2021-06-29,confirmados_0_9_m,confirmados,,,M,0,9,0-9,Portugal,,
 2020-02-26,confirmados_10_19_f,confirmados,,,F,10,19,10-19,Portugal,,
 2020-02-27,confirmados_10_19_f,confirmados,,,F,10,19,10-19,Portugal,,
 2020-02-28,confirmados_10_19_f,confirmados,,,F,10,19,10-19,Portugal,,
@@ -2933,6 +2938,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_10_19_f,confirmados,,,F,10,19,10-19,Portugal,,
 2021-06-27,confirmados_10_19_f,confirmados,,,F,10,19,10-19,Portugal,,
 2021-06-28,confirmados_10_19_f,confirmados,,,F,10,19,10-19,Portugal,41404,Count
+2021-06-29,confirmados_10_19_f,confirmados,,,F,10,19,10-19,Portugal,,
 2020-02-26,confirmados_10_19_m,confirmados,,,M,10,19,10-19,Portugal,,
 2020-02-27,confirmados_10_19_m,confirmados,,,M,10,19,10-19,Portugal,,
 2020-02-28,confirmados_10_19_m,confirmados,,,M,10,19,10-19,Portugal,,
@@ -3422,6 +3428,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_10_19_m,confirmados,,,M,10,19,10-19,Portugal,,
 2021-06-27,confirmados_10_19_m,confirmados,,,M,10,19,10-19,Portugal,,
 2021-06-28,confirmados_10_19_m,confirmados,,,M,10,19,10-19,Portugal,41156,Count
+2021-06-29,confirmados_10_19_m,confirmados,,,M,10,19,10-19,Portugal,,
 2020-02-26,confirmados_20_29_f,confirmados,,,F,20,29,20-29,Portugal,,
 2020-02-27,confirmados_20_29_f,confirmados,,,F,20,29,20-29,Portugal,,
 2020-02-28,confirmados_20_29_f,confirmados,,,F,20,29,20-29,Portugal,,
@@ -3911,6 +3918,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_20_29_f,confirmados,,,F,20,29,20-29,Portugal,,
 2021-06-27,confirmados_20_29_f,confirmados,,,F,20,29,20-29,Portugal,,
 2021-06-28,confirmados_20_29_f,confirmados,,,F,20,29,20-29,Portugal,67060,Count
+2021-06-29,confirmados_20_29_f,confirmados,,,F,20,29,20-29,Portugal,,
 2020-02-26,confirmados_20_29_m,confirmados,,,M,20,29,20-29,Portugal,,
 2020-02-27,confirmados_20_29_m,confirmados,,,M,20,29,20-29,Portugal,,
 2020-02-28,confirmados_20_29_m,confirmados,,,M,20,29,20-29,Portugal,,
@@ -4400,6 +4408,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_20_29_m,confirmados,,,M,20,29,20-29,Portugal,,
 2021-06-27,confirmados_20_29_m,confirmados,,,M,20,29,20-29,Portugal,,
 2021-06-28,confirmados_20_29_m,confirmados,,,M,20,29,20-29,Portugal,60133,Count
+2021-06-29,confirmados_20_29_m,confirmados,,,M,20,29,20-29,Portugal,,
 2020-02-26,confirmados_30_39_f,confirmados,,,F,30,39,30-39,Portugal,,
 2020-02-27,confirmados_30_39_f,confirmados,,,F,30,39,30-39,Portugal,,
 2020-02-28,confirmados_30_39_f,confirmados,,,F,30,39,30-39,Portugal,,
@@ -4889,6 +4898,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_30_39_f,confirmados,,,F,30,39,30-39,Portugal,,
 2021-06-27,confirmados_30_39_f,confirmados,,,F,30,39,30-39,Portugal,,
 2021-06-28,confirmados_30_39_f,confirmados,,,F,30,39,30-39,Portugal,68262,Count
+2021-06-29,confirmados_30_39_f,confirmados,,,F,30,39,30-39,Portugal,,
 2020-02-26,confirmados_30_39_m,confirmados,,,M,30,39,30-39,Portugal,,
 2020-02-27,confirmados_30_39_m,confirmados,,,M,30,39,30-39,Portugal,,
 2020-02-28,confirmados_30_39_m,confirmados,,,M,30,39,30-39,Portugal,,
@@ -5378,6 +5388,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_30_39_m,confirmados,,,M,30,39,30-39,Portugal,,
 2021-06-27,confirmados_30_39_m,confirmados,,,M,30,39,30-39,Portugal,,
 2021-06-28,confirmados_30_39_m,confirmados,,,M,30,39,30-39,Portugal,58440,Count
+2021-06-29,confirmados_30_39_m,confirmados,,,M,30,39,30-39,Portugal,,
 2020-02-26,confirmados_40_49_f,confirmados,,,F,40,49,40-49,Portugal,,
 2020-02-27,confirmados_40_49_f,confirmados,,,F,40,49,40-49,Portugal,,
 2020-02-28,confirmados_40_49_f,confirmados,,,F,40,49,40-49,Portugal,,
@@ -5867,6 +5878,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_40_49_f,confirmados,,,F,40,49,40-49,Portugal,,
 2021-06-27,confirmados_40_49_f,confirmados,,,F,40,49,40-49,Portugal,,
 2021-06-28,confirmados_40_49_f,confirmados,,,F,40,49,40-49,Portugal,80716,Count
+2021-06-29,confirmados_40_49_f,confirmados,,,F,40,49,40-49,Portugal,,
 2020-02-26,confirmados_40_49_m,confirmados,,,M,40,49,40-49,Portugal,,
 2020-02-27,confirmados_40_49_m,confirmados,,,M,40,49,40-49,Portugal,,
 2020-02-28,confirmados_40_49_m,confirmados,,,M,40,49,40-49,Portugal,,
@@ -6356,6 +6368,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_40_49_m,confirmados,,,M,40,49,40-49,Portugal,,
 2021-06-27,confirmados_40_49_m,confirmados,,,M,40,49,40-49,Portugal,,
 2021-06-28,confirmados_40_49_m,confirmados,,,M,40,49,40-49,Portugal,64773,Count
+2021-06-29,confirmados_40_49_m,confirmados,,,M,40,49,40-49,Portugal,,
 2020-02-26,confirmados_50_59_f,confirmados,,,F,50,59,50-59,Portugal,,
 2020-02-27,confirmados_50_59_f,confirmados,,,F,50,59,50-59,Portugal,,
 2020-02-28,confirmados_50_59_f,confirmados,,,F,50,59,50-59,Portugal,,
@@ -6845,6 +6858,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_50_59_f,confirmados,,,F,50,59,50-59,Portugal,,
 2021-06-27,confirmados_50_59_f,confirmados,,,F,50,59,50-59,Portugal,,
 2021-06-28,confirmados_50_59_f,confirmados,,,F,50,59,50-59,Portugal,71981,Count
+2021-06-29,confirmados_50_59_f,confirmados,,,F,50,59,50-59,Portugal,,
 2020-02-26,confirmados_50_59_m,confirmados,,,M,50,59,50-59,Portugal,,
 2020-02-27,confirmados_50_59_m,confirmados,,,M,50,59,50-59,Portugal,,
 2020-02-28,confirmados_50_59_m,confirmados,,,M,50,59,50-59,Portugal,,
@@ -7334,6 +7348,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_50_59_m,confirmados,,,M,50,59,50-59,Portugal,,
 2021-06-27,confirmados_50_59_m,confirmados,,,M,50,59,50-59,Portugal,,
 2021-06-28,confirmados_50_59_m,confirmados,,,M,50,59,50-59,Portugal,56853,Count
+2021-06-29,confirmados_50_59_m,confirmados,,,M,50,59,50-59,Portugal,,
 2020-02-26,confirmados_60_69_f,confirmados,,,F,60,69,60-69,Portugal,,
 2020-02-27,confirmados_60_69_f,confirmados,,,F,60,69,60-69,Portugal,,
 2020-02-28,confirmados_60_69_f,confirmados,,,F,60,69,60-69,Portugal,,
@@ -7823,6 +7838,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_60_69_f,confirmados,,,F,60,69,60-69,Portugal,,
 2021-06-27,confirmados_60_69_f,confirmados,,,F,60,69,60-69,Portugal,,
 2021-06-28,confirmados_60_69_f,confirmados,,,F,60,69,60-69,Portugal,46082,Count
+2021-06-29,confirmados_60_69_f,confirmados,,,F,60,69,60-69,Portugal,,
 2020-02-26,confirmados_60_69_m,confirmados,,,M,60,69,60-69,Portugal,,
 2020-02-27,confirmados_60_69_m,confirmados,,,M,60,69,60-69,Portugal,,
 2020-02-28,confirmados_60_69_m,confirmados,,,M,60,69,60-69,Portugal,,
@@ -8312,6 +8328,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_60_69_m,confirmados,,,M,60,69,60-69,Portugal,,
 2021-06-27,confirmados_60_69_m,confirmados,,,M,60,69,60-69,Portugal,,
 2021-06-28,confirmados_60_69_m,confirmados,,,M,60,69,60-69,Portugal,42190,Count
+2021-06-29,confirmados_60_69_m,confirmados,,,M,60,69,60-69,Portugal,,
 2020-02-26,confirmados_70_79_f,confirmados,,,F,70,79,70-79,Portugal,,
 2020-02-27,confirmados_70_79_f,confirmados,,,F,70,79,70-79,Portugal,,
 2020-02-28,confirmados_70_79_f,confirmados,,,F,70,79,70-79,Portugal,,
@@ -8801,6 +8818,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_70_79_f,confirmados,,,F,70,79,70-79,Portugal,,
 2021-06-27,confirmados_70_79_f,confirmados,,,F,70,79,70-79,Portugal,,
 2021-06-28,confirmados_70_79_f,confirmados,,,F,70,79,70-79,Portugal,30051,Count
+2021-06-29,confirmados_70_79_f,confirmados,,,F,70,79,70-79,Portugal,,
 2020-02-26,confirmados_70_79_m,confirmados,,,M,70,79,70-79,Portugal,,
 2020-02-27,confirmados_70_79_m,confirmados,,,M,70,79,70-79,Portugal,,
 2020-02-28,confirmados_70_79_m,confirmados,,,M,70,79,70-79,Portugal,,
@@ -9290,6 +9308,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_70_79_m,confirmados,,,M,70,79,70-79,Portugal,,
 2021-06-27,confirmados_70_79_m,confirmados,,,M,70,79,70-79,Portugal,,
 2021-06-28,confirmados_70_79_m,confirmados,,,M,70,79,70-79,Portugal,26834,Count
+2021-06-29,confirmados_70_79_m,confirmados,,,M,70,79,70-79,Portugal,,
 2020-02-26,confirmados_80_plus_f,confirmados,,,F,80,plus,80-plus,Portugal,,
 2020-02-27,confirmados_80_plus_f,confirmados,,,F,80,plus,80-plus,Portugal,,
 2020-02-28,confirmados_80_plus_f,confirmados,,,F,80,plus,80-plus,Portugal,,
@@ -9779,6 +9798,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_80_plus_f,confirmados,,,F,80,plus,80-plus,Portugal,,
 2021-06-27,confirmados_80_plus_f,confirmados,,,F,80,plus,80-plus,Portugal,,
 2021-06-28,confirmados_80_plus_f,confirmados,,,F,80,plus,80-plus,Portugal,46869,Count
+2021-06-29,confirmados_80_plus_f,confirmados,,,F,80,plus,80-plus,Portugal,,
 2020-02-26,confirmados_80_plus_m,confirmados,,,M,80,plus,80-plus,Portugal,,
 2020-02-27,confirmados_80_plus_m,confirmados,,,M,80,plus,80-plus,Portugal,,
 2020-02-28,confirmados_80_plus_m,confirmados,,,M,80,plus,80-plus,Portugal,,
@@ -10268,6 +10288,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_80_plus_m,confirmados,,,M,80,plus,80-plus,Portugal,,
 2021-06-27,confirmados_80_plus_m,confirmados,,,M,80,plus,80-plus,Portugal,,
 2021-06-28,confirmados_80_plus_m,confirmados,,,M,80,plus,80-plus,Portugal,23442,Count
+2021-06-29,confirmados_80_plus_m,confirmados,,,M,80,plus,80-plus,Portugal,,
 2020-02-26,confirmados_acores,confirmados,,,All,,,,acores,0,Count
 2020-02-27,confirmados_acores,confirmados,,,All,,,,acores,0,Count
 2020-02-28,confirmados_acores,confirmados,,,All,,,,acores,0,Count
@@ -10757,6 +10778,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_acores,confirmados,,,All,,,,acores,6076,Count
 2021-06-27,confirmados_acores,confirmados,,,All,,,,acores,6080,Count
 2021-06-28,confirmados_acores,confirmados,,,All,,,,acores,6097,Count
+2021-06-29,confirmados_acores,confirmados,,,All,,,,acores,6144,Count
 2020-02-26,confirmados_arsalentejo,confirmados,,,All,,,,arsalentejo,0,Count
 2020-02-27,confirmados_arsalentejo,confirmados,,,All,,,,arsalentejo,0,Count
 2020-02-28,confirmados_arsalentejo,confirmados,,,All,,,,arsalentejo,0,Count
@@ -11246,6 +11268,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_arsalentejo,confirmados,,,All,,,,arsalentejo,30850,Count
 2021-06-27,confirmados_arsalentejo,confirmados,,,All,,,,arsalentejo,30885,Count
 2021-06-28,confirmados_arsalentejo,confirmados,,,All,,,,arsalentejo,30903,Count
+2021-06-29,confirmados_arsalentejo,confirmados,,,All,,,,arsalentejo,30933,Count
 2020-02-26,confirmados_arsalgarve,confirmados,,,All,,,,arsalgarve,0,Count
 2020-02-27,confirmados_arsalgarve,confirmados,,,All,,,,arsalgarve,0,Count
 2020-02-28,confirmados_arsalgarve,confirmados,,,All,,,,arsalgarve,0,Count
@@ -11735,6 +11758,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_arsalgarve,confirmados,,,All,,,,arsalgarve,23804,Count
 2021-06-27,confirmados_arsalgarve,confirmados,,,All,,,,arsalgarve,23955,Count
 2021-06-28,confirmados_arsalgarve,confirmados,,,All,,,,arsalgarve,24055,Count
+2021-06-29,confirmados_arsalgarve,confirmados,,,All,,,,arsalgarve,24235,Count
 2020-02-26,confirmados_arscentro,confirmados,,,All,,,,arscentro,0,Count
 2020-02-27,confirmados_arscentro,confirmados,,,All,,,,arscentro,0,Count
 2020-02-28,confirmados_arscentro,confirmados,,,All,,,,arscentro,0,Count
@@ -12224,6 +12248,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_arscentro,confirmados,,,All,,,,arscentro,121572,Count
 2021-06-27,confirmados_arscentro,confirmados,,,All,,,,arscentro,121686,Count
 2021-06-28,confirmados_arscentro,confirmados,,,All,,,,arscentro,121731,Count
+2021-06-29,confirmados_arscentro,confirmados,,,All,,,,arscentro,121883,Count
 2020-02-26,confirmados_arslvt,confirmados,,,All,,,,arslvt,0,Count
 2020-02-27,confirmados_arslvt,confirmados,,,All,,,,arslvt,0,Count
 2020-02-28,confirmados_arslvt,confirmados,,,All,,,,arslvt,0,Count
@@ -12713,6 +12738,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_arslvt,confirmados,,,All,,,,arslvt,336270,Count
 2021-06-27,confirmados_arslvt,confirmados,,,All,,,,arslvt,337228,Count
 2021-06-28,confirmados_arslvt,confirmados,,,All,,,,arslvt,337737,Count
+2021-06-29,confirmados_arslvt,confirmados,,,All,,,,arslvt,338702,Count
 2020-02-26,confirmados_arsnorte,confirmados,,,All,,,,arsnorte,0,Count
 2020-02-27,confirmados_arsnorte,confirmados,,,All,,,,arsnorte,0,Count
 2020-02-28,confirmados_arsnorte,confirmados,,,All,,,,arsnorte,0,Count
@@ -13202,6 +13228,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_arsnorte,confirmados,,,All,,,,arsnorte,344599,Count
 2021-06-27,confirmados_arsnorte,confirmados,,,All,,,,arsnorte,344826,Count
 2021-06-28,confirmados_arsnorte,confirmados,,,All,,,,arsnorte,345029,Count
+2021-06-29,confirmados_arsnorte,confirmados,,,All,,,,arsnorte,345390,Count
 2020-02-26,confirmados_desconhecidos,confirmados,confirmados_desconhecidos,,All,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2020-02-27,confirmados_desconhecidos,confirmados,confirmados_desconhecidos,,All,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2020-02-28,confirmados_desconhecidos,confirmados,confirmados_desconhecidos,,All,desconhecidos,desconhecidos,desconhecidos,Portugal,,
@@ -13691,6 +13718,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_desconhecidos,confirmados,confirmados_desconhecidos,,All,desconhecidos,desconhecidos,desconhecidos,Portugal,437,Count
 2021-06-27,confirmados_desconhecidos,confirmados,confirmados_desconhecidos,,All,desconhecidos,desconhecidos,desconhecidos,Portugal,440,Count
 2021-06-28,confirmados_desconhecidos,confirmados,confirmados_desconhecidos,,All,desconhecidos,desconhecidos,desconhecidos,Portugal,441,Count
+2021-06-29,confirmados_desconhecidos,confirmados,confirmados_desconhecidos,,All,desconhecidos,desconhecidos,desconhecidos,Portugal,451,Count
 2020-02-26,confirmados_desconhecidos_f,confirmados,,,F,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2020-02-27,confirmados_desconhecidos_f,confirmados,,,F,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2020-02-28,confirmados_desconhecidos_f,confirmados,,,F,desconhecidos,desconhecidos,desconhecidos,Portugal,,
@@ -14180,6 +14208,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_desconhecidos_f,confirmados,,,F,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2021-06-27,confirmados_desconhecidos_f,confirmados,,,F,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2021-06-28,confirmados_desconhecidos_f,confirmados,,,F,desconhecidos,desconhecidos,desconhecidos,Portugal,,
+2021-06-29,confirmados_desconhecidos_f,confirmados,,,F,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2020-02-26,confirmados_desconhecidos_m,confirmados,,,M,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2020-02-27,confirmados_desconhecidos_m,confirmados,,,M,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2020-02-28,confirmados_desconhecidos_m,confirmados,,,M,desconhecidos,desconhecidos,desconhecidos,Portugal,,
@@ -14669,6 +14698,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_desconhecidos_m,confirmados,,,M,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2021-06-27,confirmados_desconhecidos_m,confirmados,,,M,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2021-06-28,confirmados_desconhecidos_m,confirmados,,,M,desconhecidos,desconhecidos,desconhecidos,Portugal,,
+2021-06-29,confirmados_desconhecidos_m,confirmados,,,M,desconhecidos,desconhecidos,desconhecidos,Portugal,,
 2020-02-26,confirmados_estrangeiro,confirmados,,,All,,,,estrangeiro,,
 2020-02-27,confirmados_estrangeiro,confirmados,,,All,,,,estrangeiro,,
 2020-02-28,confirmados_estrangeiro,confirmados,,,All,,,,estrangeiro,,
@@ -15158,6 +15188,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_estrangeiro,confirmados,,,All,,,,estrangeiro,,
 2021-06-27,confirmados_estrangeiro,confirmados,,,All,,,,estrangeiro,,
 2021-06-28,confirmados_estrangeiro,confirmados,,,All,,,,estrangeiro,,
+2021-06-29,confirmados_estrangeiro,confirmados,,,All,,,,estrangeiro,,
 2020-02-26,confirmados_f,confirmados,,,F,,,,Portugal,,
 2020-02-27,confirmados_f,confirmados,,,F,,,,Portugal,,
 2020-02-28,confirmados_f,confirmados,,,F,,,,Portugal,,
@@ -15647,6 +15678,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_f,confirmados,,,F,,,,Portugal,475008,Count
 2021-06-27,confirmados_f,confirmados,,,F,,,,Portugal,475760,Count
 2021-06-28,confirmados_f,confirmados,,,F,,,,Portugal,476219,Count
+2021-06-29,confirmados_f,confirmados,,,F,,,,Portugal,477082,Count
 2020-02-26,confirmados_m,confirmados,,,M,,,,Portugal,,
 2020-02-27,confirmados_m,confirmados,,,M,,,,Portugal,,
 2020-02-28,confirmados_m,confirmados,,,M,,,,Portugal,,
@@ -16136,6 +16168,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_m,confirmados,,,M,,,,Portugal,397606,Count
 2021-06-27,confirmados_m,confirmados,,,M,,,,Portugal,398347,Count
 2021-06-28,confirmados_m,confirmados,,,M,,,,Portugal,398789,Count
+2021-06-29,confirmados_m,confirmados,,,M,,,,Portugal,399662,Count
 2020-02-26,confirmados_madeira,confirmados,,,All,,,,madeira,0,Count
 2020-02-27,confirmados_madeira,confirmados,,,All,,,,madeira,0,Count
 2020-02-28,confirmados_madeira,confirmados,,,All,,,,madeira,0,Count
@@ -16625,6 +16658,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_madeira,confirmados,,,All,,,,madeira,9880,Count
 2021-06-27,confirmados_madeira,confirmados,,,All,,,,madeira,9887,Count
 2021-06-28,confirmados_madeira,confirmados,,,All,,,,madeira,9897,Count
+2021-06-29,confirmados_madeira,confirmados,,,All,,,,madeira,9908,Count
 2020-02-26,confirmados_novos,confirmados,confirmados_novos,,All,,,,Portugal,0,Count
 2020-02-27,confirmados_novos,confirmados,confirmados_novos,,All,,,,Portugal,0,Count
 2020-02-28,confirmados_novos,confirmados,confirmados_novos,,All,,,,Portugal,0,Count
@@ -17114,6 +17148,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,confirmados_novos,confirmados,confirmados_novos,,All,,,,Portugal,1568,Count
 2021-06-27,confirmados_novos,confirmados,confirmados_novos,,All,,,,Portugal,1496,Count
 2021-06-28,confirmados_novos,confirmados,confirmados_novos,,All,,,,Portugal,902,Count
+2021-06-29,confirmados_novos,confirmados,confirmados_novos,,All,,,,Portugal,1746,Count
 2020-02-26,incidencia_continente,incidencia,incidencia_continente,,All,,,,Portugal,,
 2020-02-27,incidencia_continente,incidencia,incidencia_continente,,All,,,,Portugal,,
 2020-02-28,incidencia_continente,incidencia,incidencia_continente,,All,,,,Portugal,,
@@ -17603,6 +17638,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,incidencia_continente,incidencia,incidencia_continente,,All,,,,Portugal,138.7,Count
 2021-06-27,incidencia_continente,incidencia,incidencia_continente,,All,,,,Portugal,138.7,Count
 2021-06-28,incidencia_continente,incidencia,incidencia_continente,,All,,,,Portugal,161.7,Count
+2021-06-29,incidencia_continente,incidencia,incidencia_continente,,All,,,,Portugal,161.7,Count
 2020-02-26,incidencia_nacional,incidencia,incidencia_nacional,,All,,,,Portugal,,
 2020-02-27,incidencia_nacional,incidencia,incidencia_nacional,,All,,,,Portugal,,
 2020-02-28,incidencia_nacional,incidencia,incidencia_nacional,,All,,,,Portugal,,
@@ -18092,6 +18128,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,incidencia_nacional,incidencia,incidencia_nacional,,All,,,,Portugal,137.5,Count
 2021-06-27,incidencia_nacional,incidencia,incidencia_nacional,,All,,,,Portugal,137.5,Count
 2021-06-28,incidencia_nacional,incidencia,incidencia_nacional,,All,,,,Portugal,158.5,Count
+2021-06-29,incidencia_nacional,incidencia,incidencia_nacional,,All,,,,Portugal,158.5,Count
 2020-02-26,internados,internados,,,All,,,,Portugal,,
 2020-02-27,internados,internados,,,All,,,,Portugal,,
 2020-02-28,internados,internados,,,All,,,,Portugal,,
@@ -18581,6 +18618,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,internados,internados,,,All,,,,Portugal,447,Count
 2021-06-27,internados,internados,,,All,,,,Portugal,477,Count
 2021-06-28,internados,internados,,,All,,,,Portugal,502,Count
+2021-06-29,internados,internados,,,All,,,,Portugal,492,Count
 2020-02-26,internados_enfermaria,internados,internados_enfermaria,,All,,,,Portugal,,
 2020-02-27,internados_enfermaria,internados,internados_enfermaria,,All,,,,Portugal,,
 2020-02-28,internados_enfermaria,internados,internados_enfermaria,,All,,,,Portugal,,
@@ -19070,6 +19108,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,internados_enfermaria,internados,internados_enfermaria,,All,,,,Portugal,334,Count
 2021-06-27,internados_enfermaria,internados,internados_enfermaria,,All,,,,Portugal,361,Count
 2021-06-28,internados_enfermaria,internados,internados_enfermaria,,All,,,,Portugal,387,Count
+2021-06-29,internados_enfermaria,internados,internados_enfermaria,,All,,,,Portugal,373,Count
 2020-02-26,internados_uci,internados,internados_uci,,All,,,,Portugal,,
 2020-02-27,internados_uci,internados,internados_uci,,All,,,,Portugal,,
 2020-02-28,internados_uci,internados,internados_uci,,All,,,,Portugal,,
@@ -19559,6 +19598,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,internados_uci,internados,internados_uci,,All,,,,Portugal,113,Count
 2021-06-27,internados_uci,internados,internados_uci,,All,,,,Portugal,116,Count
 2021-06-28,internados_uci,internados,internados_uci,,All,,,,Portugal,115,Count
+2021-06-29,internados_uci,internados,internados_uci,,All,,,,Portugal,119,Count
 2020-02-26,lab,lab,,,All,,,,Portugal,,
 2020-02-27,lab,lab,,,All,,,,Portugal,,
 2020-02-28,lab,lab,,,All,,,,Portugal,,
@@ -20048,6 +20088,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,lab,lab,,,All,,,,Portugal,,
 2021-06-27,lab,lab,,,All,,,,Portugal,,
 2021-06-28,lab,lab,,,All,,,,Portugal,,
+2021-06-29,lab,lab,,,All,,,,Portugal,,
 2020-02-26,n_confirmados,n,n_confirmados,,All,,,,Portugal,,
 2020-02-27,n_confirmados,n,n_confirmados,,All,,,,Portugal,,
 2020-02-28,n_confirmados,n,n_confirmados,,All,,,,Portugal,,
@@ -20537,6 +20578,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,n_confirmados,n,n_confirmados,,All,,,,Portugal,,
 2021-06-27,n_confirmados,n,n_confirmados,,All,,,,Portugal,,
 2021-06-28,n_confirmados,n,n_confirmados,,All,,,,Portugal,,
+2021-06-29,n_confirmados,n,n_confirmados,,All,,,,Portugal,,
 2020-02-26,obitos,obitos,,,All,,,,Portugal,0,Count
 2020-02-27,obitos,obitos,,,All,,,,Portugal,0,Count
 2020-02-28,obitos,obitos,,,All,,,,Portugal,0,Count
@@ -21026,6 +21068,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos,obitos,,,All,,,,Portugal,17083,Count
 2021-06-27,obitos,obitos,,,All,,,,Portugal,17084,Count
 2021-06-28,obitos,obitos,,,All,,,,Portugal,17086,Count
+2021-06-29,obitos,obitos,,,All,,,,Portugal,17092,Count
 2020-02-26,obitos_0_9_f,obitos,,,F,0,9,0-9,Portugal,,
 2020-02-27,obitos_0_9_f,obitos,,,F,0,9,0-9,Portugal,,
 2020-02-28,obitos_0_9_f,obitos,,,F,0,9,0-9,Portugal,,
@@ -21515,6 +21558,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_0_9_f,obitos,,,F,0,9,0-9,Portugal,,
 2021-06-27,obitos_0_9_f,obitos,,,F,0,9,0-9,Portugal,,
 2021-06-28,obitos_0_9_f,obitos,,,F,0,9,0-9,Portugal,1,Count
+2021-06-29,obitos_0_9_f,obitos,,,F,0,9,0-9,Portugal,,
 2020-02-26,obitos_0_9_m,obitos,,,M,0,9,0-9,Portugal,,
 2020-02-27,obitos_0_9_m,obitos,,,M,0,9,0-9,Portugal,,
 2020-02-28,obitos_0_9_m,obitos,,,M,0,9,0-9,Portugal,,
@@ -22004,6 +22048,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_0_9_m,obitos,,,M,0,9,0-9,Portugal,,
 2021-06-27,obitos_0_9_m,obitos,,,M,0,9,0-9,Portugal,,
 2021-06-28,obitos_0_9_m,obitos,,,M,0,9,0-9,Portugal,1,Count
+2021-06-29,obitos_0_9_m,obitos,,,M,0,9,0-9,Portugal,,
 2020-02-26,obitos_10_19_f,obitos,,,F,10,19,10-19,Portugal,,
 2020-02-27,obitos_10_19_f,obitos,,,F,10,19,10-19,Portugal,,
 2020-02-28,obitos_10_19_f,obitos,,,F,10,19,10-19,Portugal,,
@@ -22493,6 +22538,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_10_19_f,obitos,,,F,10,19,10-19,Portugal,,
 2021-06-27,obitos_10_19_f,obitos,,,F,10,19,10-19,Portugal,,
 2021-06-28,obitos_10_19_f,obitos,,,F,10,19,10-19,Portugal,1,Count
+2021-06-29,obitos_10_19_f,obitos,,,F,10,19,10-19,Portugal,,
 2020-02-26,obitos_10_19_m,obitos,,,M,10,19,10-19,Portugal,,
 2020-02-27,obitos_10_19_m,obitos,,,M,10,19,10-19,Portugal,,
 2020-02-28,obitos_10_19_m,obitos,,,M,10,19,10-19,Portugal,,
@@ -22982,6 +23028,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_10_19_m,obitos,,,M,10,19,10-19,Portugal,,
 2021-06-27,obitos_10_19_m,obitos,,,M,10,19,10-19,Portugal,,
 2021-06-28,obitos_10_19_m,obitos,,,M,10,19,10-19,Portugal,1,Count
+2021-06-29,obitos_10_19_m,obitos,,,M,10,19,10-19,Portugal,,
 2020-02-26,obitos_20_29_f,obitos,,,F,20,29,20-29,Portugal,,
 2020-02-27,obitos_20_29_f,obitos,,,F,20,29,20-29,Portugal,,
 2020-02-28,obitos_20_29_f,obitos,,,F,20,29,20-29,Portugal,,
@@ -23471,6 +23518,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_20_29_f,obitos,,,F,20,29,20-29,Portugal,,
 2021-06-27,obitos_20_29_f,obitos,,,F,20,29,20-29,Portugal,,
 2021-06-28,obitos_20_29_f,obitos,,,F,20,29,20-29,Portugal,5,Count
+2021-06-29,obitos_20_29_f,obitos,,,F,20,29,20-29,Portugal,,
 2020-02-26,obitos_20_29_m,obitos,,,M,20,29,20-29,Portugal,,
 2020-02-27,obitos_20_29_m,obitos,,,M,20,29,20-29,Portugal,,
 2020-02-28,obitos_20_29_m,obitos,,,M,20,29,20-29,Portugal,,
@@ -23960,6 +24008,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_20_29_m,obitos,,,M,20,29,20-29,Portugal,,
 2021-06-27,obitos_20_29_m,obitos,,,M,20,29,20-29,Portugal,,
 2021-06-28,obitos_20_29_m,obitos,,,M,20,29,20-29,Portugal,7,Count
+2021-06-29,obitos_20_29_m,obitos,,,M,20,29,20-29,Portugal,,
 2020-02-26,obitos_30_39_f,obitos,,,F,30,39,30-39,Portugal,,
 2020-02-27,obitos_30_39_f,obitos,,,F,30,39,30-39,Portugal,,
 2020-02-28,obitos_30_39_f,obitos,,,F,30,39,30-39,Portugal,,
@@ -24449,6 +24498,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_30_39_f,obitos,,,F,30,39,30-39,Portugal,,
 2021-06-27,obitos_30_39_f,obitos,,,F,30,39,30-39,Portugal,,
 2021-06-28,obitos_30_39_f,obitos,,,F,30,39,30-39,Portugal,20,Count
+2021-06-29,obitos_30_39_f,obitos,,,F,30,39,30-39,Portugal,,
 2020-02-26,obitos_30_39_m,obitos,,,M,30,39,30-39,Portugal,,
 2020-02-27,obitos_30_39_m,obitos,,,M,30,39,30-39,Portugal,,
 2020-02-28,obitos_30_39_m,obitos,,,M,30,39,30-39,Portugal,,
@@ -24938,6 +24988,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_30_39_m,obitos,,,M,30,39,30-39,Portugal,,
 2021-06-27,obitos_30_39_m,obitos,,,M,30,39,30-39,Portugal,,
 2021-06-28,obitos_30_39_m,obitos,,,M,30,39,30-39,Portugal,24,Count
+2021-06-29,obitos_30_39_m,obitos,,,M,30,39,30-39,Portugal,,
 2020-02-26,obitos_40_49_f,obitos,,,F,40,49,40-49,Portugal,,
 2020-02-27,obitos_40_49_f,obitos,,,F,40,49,40-49,Portugal,,
 2020-02-28,obitos_40_49_f,obitos,,,F,40,49,40-49,Portugal,,
@@ -25427,6 +25478,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_40_49_f,obitos,,,F,40,49,40-49,Portugal,,
 2021-06-27,obitos_40_49_f,obitos,,,F,40,49,40-49,Portugal,,
 2021-06-28,obitos_40_49_f,obitos,,,F,40,49,40-49,Portugal,63,Count
+2021-06-29,obitos_40_49_f,obitos,,,F,40,49,40-49,Portugal,,
 2020-02-26,obitos_40_49_m,obitos,,,M,40,49,40-49,Portugal,,
 2020-02-27,obitos_40_49_m,obitos,,,M,40,49,40-49,Portugal,,
 2020-02-28,obitos_40_49_m,obitos,,,M,40,49,40-49,Portugal,,
@@ -25916,6 +25968,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_40_49_m,obitos,,,M,40,49,40-49,Portugal,,
 2021-06-27,obitos_40_49_m,obitos,,,M,40,49,40-49,Portugal,,
 2021-06-28,obitos_40_49_m,obitos,,,M,40,49,40-49,Portugal,92,Count
+2021-06-29,obitos_40_49_m,obitos,,,M,40,49,40-49,Portugal,,
 2020-02-26,obitos_50_59_f,obitos,,,F,50,59,50-59,Portugal,,
 2020-02-27,obitos_50_59_f,obitos,,,F,50,59,50-59,Portugal,,
 2020-02-28,obitos_50_59_f,obitos,,,F,50,59,50-59,Portugal,,
@@ -26405,6 +26458,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_50_59_f,obitos,,,F,50,59,50-59,Portugal,,
 2021-06-27,obitos_50_59_f,obitos,,,F,50,59,50-59,Portugal,,
 2021-06-28,obitos_50_59_f,obitos,,,F,50,59,50-59,Portugal,136,Count
+2021-06-29,obitos_50_59_f,obitos,,,F,50,59,50-59,Portugal,,
 2020-02-26,obitos_50_59_m,obitos,,,M,50,59,50-59,Portugal,,
 2020-02-27,obitos_50_59_m,obitos,,,M,50,59,50-59,Portugal,,
 2020-02-28,obitos_50_59_m,obitos,,,M,50,59,50-59,Portugal,,
@@ -26894,6 +26948,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_50_59_m,obitos,,,M,50,59,50-59,Portugal,,
 2021-06-27,obitos_50_59_m,obitos,,,M,50,59,50-59,Portugal,,
 2021-06-28,obitos_50_59_m,obitos,,,M,50,59,50-59,Portugal,335,Count
+2021-06-29,obitos_50_59_m,obitos,,,M,50,59,50-59,Portugal,,
 2020-02-26,obitos_60_69_f,obitos,,,F,60,69,60-69,Portugal,,
 2020-02-27,obitos_60_69_f,obitos,,,F,60,69,60-69,Portugal,,
 2020-02-28,obitos_60_69_f,obitos,,,F,60,69,60-69,Portugal,,
@@ -27383,6 +27438,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_60_69_f,obitos,,,F,60,69,60-69,Portugal,,
 2021-06-27,obitos_60_69_f,obitos,,,F,60,69,60-69,Portugal,,
 2021-06-28,obitos_60_69_f,obitos,,,F,60,69,60-69,Portugal,465,Count
+2021-06-29,obitos_60_69_f,obitos,,,F,60,69,60-69,Portugal,,
 2020-02-26,obitos_60_69_m,obitos,,,M,60,69,60-69,Portugal,,
 2020-02-27,obitos_60_69_m,obitos,,,M,60,69,60-69,Portugal,,
 2020-02-28,obitos_60_69_m,obitos,,,M,60,69,60-69,Portugal,,
@@ -27872,6 +27928,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_60_69_m,obitos,,,M,60,69,60-69,Portugal,,
 2021-06-27,obitos_60_69_m,obitos,,,M,60,69,60-69,Portugal,,
 2021-06-28,obitos_60_69_m,obitos,,,M,60,69,60-69,Portugal,1074,Count
+2021-06-29,obitos_60_69_m,obitos,,,M,60,69,60-69,Portugal,,
 2020-02-26,obitos_70_79_f,obitos,,,F,70,79,70-79,Portugal,,
 2020-02-27,obitos_70_79_f,obitos,,,F,70,79,70-79,Portugal,,
 2020-02-28,obitos_70_79_f,obitos,,,F,70,79,70-79,Portugal,,
@@ -28361,6 +28418,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_70_79_f,obitos,,,F,70,79,70-79,Portugal,,
 2021-06-27,obitos_70_79_f,obitos,,,F,70,79,70-79,Portugal,,
 2021-06-28,obitos_70_79_f,obitos,,,F,70,79,70-79,Portugal,1357,Count
+2021-06-29,obitos_70_79_f,obitos,,,F,70,79,70-79,Portugal,,
 2020-02-26,obitos_70_79_m,obitos,,,M,70,79,70-79,Portugal,,
 2020-02-27,obitos_70_79_m,obitos,,,M,70,79,70-79,Portugal,,
 2020-02-28,obitos_70_79_m,obitos,,,M,70,79,70-79,Portugal,,
@@ -28850,6 +28908,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_70_79_m,obitos,,,M,70,79,70-79,Portugal,,
 2021-06-27,obitos_70_79_m,obitos,,,M,70,79,70-79,Portugal,,
 2021-06-28,obitos_70_79_m,obitos,,,M,70,79,70-79,Portugal,2289,Count
+2021-06-29,obitos_70_79_m,obitos,,,M,70,79,70-79,Portugal,,
 2020-02-26,obitos_80_plus_f,obitos,,,F,80,plus,80-plus,Portugal,,
 2020-02-27,obitos_80_plus_f,obitos,,,F,80,plus,80-plus,Portugal,,
 2020-02-28,obitos_80_plus_f,obitos,,,F,80,plus,80-plus,Portugal,,
@@ -29339,6 +29398,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_80_plus_f,obitos,,,F,80,plus,80-plus,Portugal,,
 2021-06-27,obitos_80_plus_f,obitos,,,F,80,plus,80-plus,Portugal,,
 2021-06-28,obitos_80_plus_f,obitos,,,F,80,plus,80-plus,Portugal,6069,Count
+2021-06-29,obitos_80_plus_f,obitos,,,F,80,plus,80-plus,Portugal,,
 2020-02-26,obitos_80_plus_m,obitos,,,M,80,plus,80-plus,Portugal,,
 2020-02-27,obitos_80_plus_m,obitos,,,M,80,plus,80-plus,Portugal,,
 2020-02-28,obitos_80_plus_m,obitos,,,M,80,plus,80-plus,Portugal,,
@@ -29828,6 +29888,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_80_plus_m,obitos,,,M,80,plus,80-plus,Portugal,,
 2021-06-27,obitos_80_plus_m,obitos,,,M,80,plus,80-plus,Portugal,,
 2021-06-28,obitos_80_plus_m,obitos,,,M,80,plus,80-plus,Portugal,5146,Count
+2021-06-29,obitos_80_plus_m,obitos,,,M,80,plus,80-plus,Portugal,,
 2020-02-26,obitos_acores,obitos,,,All,,,,acores,0,Count
 2020-02-27,obitos_acores,obitos,,,All,,,,acores,0,Count
 2020-02-28,obitos_acores,obitos,,,All,,,,acores,0,Count
@@ -30317,6 +30378,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_acores,obitos,,,All,,,,acores,34,Count
 2021-06-27,obitos_acores,obitos,,,All,,,,acores,34,Count
 2021-06-28,obitos_acores,obitos,,,All,,,,acores,34,Count
+2021-06-29,obitos_acores,obitos,,,All,,,,acores,34,Count
 2020-02-26,obitos_arsalentejo,obitos,,,All,,,,arsalentejo,0,Count
 2020-02-27,obitos_arsalentejo,obitos,,,All,,,,arsalentejo,0,Count
 2020-02-28,obitos_arsalentejo,obitos,,,All,,,,arsalentejo,0,Count
@@ -30806,6 +30868,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_arsalentejo,obitos,,,All,,,,arsalentejo,972,Count
 2021-06-27,obitos_arsalentejo,obitos,,,All,,,,arsalentejo,972,Count
 2021-06-28,obitos_arsalentejo,obitos,,,All,,,,arsalentejo,972,Count
+2021-06-29,obitos_arsalentejo,obitos,,,All,,,,arsalentejo,972,Count
 2020-02-26,obitos_arsalgarve,obitos,,,All,,,,arsalgarve,0,Count
 2020-02-27,obitos_arsalgarve,obitos,,,All,,,,arsalgarve,0,Count
 2020-02-28,obitos_arsalgarve,obitos,,,All,,,,arsalgarve,0,Count
@@ -31295,6 +31358,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_arsalgarve,obitos,,,All,,,,arsalgarve,365,Count
 2021-06-27,obitos_arsalgarve,obitos,,,All,,,,arsalgarve,365,Count
 2021-06-28,obitos_arsalgarve,obitos,,,All,,,,arsalgarve,365,Count
+2021-06-29,obitos_arsalgarve,obitos,,,All,,,,arsalgarve,365,Count
 2020-02-26,obitos_arscentro,obitos,,,All,,,,arscentro,0,Count
 2020-02-27,obitos_arscentro,obitos,,,All,,,,arscentro,0,Count
 2020-02-28,obitos_arscentro,obitos,,,All,,,,arscentro,0,Count
@@ -31784,6 +31848,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_arscentro,obitos,,,All,,,,arscentro,3027,Count
 2021-06-27,obitos_arscentro,obitos,,,All,,,,arscentro,3027,Count
 2021-06-28,obitos_arscentro,obitos,,,All,,,,arscentro,3027,Count
+2021-06-29,obitos_arscentro,obitos,,,All,,,,arscentro,3027,Count
 2020-02-26,obitos_arslvt,obitos,,,All,,,,arslvt,0,Count
 2020-02-27,obitos_arslvt,obitos,,,All,,,,arslvt,0,Count
 2020-02-28,obitos_arslvt,obitos,,,All,,,,arslvt,0,Count
@@ -32273,6 +32338,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_arslvt,obitos,,,All,,,,arslvt,7254,Count
 2021-06-27,obitos_arslvt,obitos,,,All,,,,arslvt,7254,Count
 2021-06-28,obitos_arslvt,obitos,,,All,,,,arslvt,7255,Count
+2021-06-29,obitos_arslvt,obitos,,,All,,,,arslvt,7260,Count
 2020-02-26,obitos_arsnorte,obitos,,,All,,,,arsnorte,0,Count
 2020-02-27,obitos_arsnorte,obitos,,,All,,,,arsnorte,0,Count
 2020-02-28,obitos_arsnorte,obitos,,,All,,,,arsnorte,0,Count
@@ -32762,6 +32828,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_arsnorte,obitos,,,All,,,,arsnorte,5362,Count
 2021-06-27,obitos_arsnorte,obitos,,,All,,,,arsnorte,5363,Count
 2021-06-28,obitos_arsnorte,obitos,,,All,,,,arsnorte,5364,Count
+2021-06-29,obitos_arsnorte,obitos,,,All,,,,arsnorte,5365,Count
 2020-02-26,obitos_estrangeiro,obitos,,,All,,,,estrangeiro,0,Count
 2020-02-27,obitos_estrangeiro,obitos,,,All,,,,estrangeiro,0,Count
 2020-02-28,obitos_estrangeiro,obitos,,,All,,,,estrangeiro,0,Count
@@ -33251,6 +33318,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_estrangeiro,obitos,,,All,,,,estrangeiro,,
 2021-06-27,obitos_estrangeiro,obitos,,,All,,,,estrangeiro,,
 2021-06-28,obitos_estrangeiro,obitos,,,All,,,,estrangeiro,,
+2021-06-29,obitos_estrangeiro,obitos,,,All,,,,estrangeiro,,
 2020-02-26,obitos_f,obitos,,,F,,,,Portugal,,
 2020-02-27,obitos_f,obitos,,,F,,,,Portugal,,
 2020-02-28,obitos_f,obitos,,,F,,,,Portugal,,
@@ -33740,6 +33808,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_f,obitos,,,F,,,,Portugal,8116,Count
 2021-06-27,obitos_f,obitos,,,F,,,,Portugal,8116,Count
 2021-06-28,obitos_f,obitos,,,F,,,,Portugal,8117,Count
+2021-06-29,obitos_f,obitos,,,F,,,,Portugal,8121,Count
 2020-02-26,obitos_m,obitos,,,M,,,,Portugal,,
 2020-02-27,obitos_m,obitos,,,M,,,,Portugal,,
 2020-02-28,obitos_m,obitos,,,M,,,,Portugal,,
@@ -34229,6 +34298,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_m,obitos,,,M,,,,Portugal,8967,Count
 2021-06-27,obitos_m,obitos,,,M,,,,Portugal,8968,Count
 2021-06-28,obitos_m,obitos,,,M,,,,Portugal,8969,Count
+2021-06-29,obitos_m,obitos,,,M,,,,Portugal,8971,Count
 2020-02-26,obitos_madeira,obitos,,,All,,,,madeira,0,Count
 2020-02-27,obitos_madeira,obitos,,,All,,,,madeira,0,Count
 2020-02-28,obitos_madeira,obitos,,,All,,,,madeira,0,Count
@@ -34718,6 +34788,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,obitos_madeira,obitos,,,All,,,,madeira,69,Count
 2021-06-27,obitos_madeira,obitos,,,All,,,,madeira,69,Count
 2021-06-28,obitos_madeira,obitos,,,All,,,,madeira,69,Count
+2021-06-29,obitos_madeira,obitos,,,All,,,,madeira,69,Count
 2020-02-26,recuperados,recuperados,,,All,,,,Portugal,0,Count
 2020-02-27,recuperados,recuperados,,,All,,,,Portugal,0,Count
 2020-02-28,recuperados,recuperados,,,All,,,,Portugal,0,Count
@@ -35207,6 +35278,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados,recuperados,,,All,,,,Portugal,825209,Count
 2021-06-27,recuperados,recuperados,,,All,,,,Portugal,825684,Count
 2021-06-28,recuperados,recuperados,,,All,,,,Portugal,826292,Count
+2021-06-29,recuperados,recuperados,,,All,,,,Portugal,827969,Count
 2020-02-26,recuperados_acores,recuperados,,,All,,,,acores,,
 2020-02-27,recuperados_acores,recuperados,,,All,,,,acores,,
 2020-02-28,recuperados_acores,recuperados,,,All,,,,acores,,
@@ -35696,6 +35768,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados_acores,recuperados,,,All,,,,acores,,
 2021-06-27,recuperados_acores,recuperados,,,All,,,,acores,,
 2021-06-28,recuperados_acores,recuperados,,,All,,,,acores,,
+2021-06-29,recuperados_acores,recuperados,,,All,,,,acores,,
 2020-02-26,recuperados_arsalentejo,recuperados,,,All,,,,arsalentejo,,
 2020-02-27,recuperados_arsalentejo,recuperados,,,All,,,,arsalentejo,,
 2020-02-28,recuperados_arsalentejo,recuperados,,,All,,,,arsalentejo,,
@@ -36185,6 +36258,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados_arsalentejo,recuperados,,,All,,,,arsalentejo,,
 2021-06-27,recuperados_arsalentejo,recuperados,,,All,,,,arsalentejo,,
 2021-06-28,recuperados_arsalentejo,recuperados,,,All,,,,arsalentejo,,
+2021-06-29,recuperados_arsalentejo,recuperados,,,All,,,,arsalentejo,,
 2020-02-26,recuperados_arsalgarve,recuperados,,,All,,,,arsalgarve,,
 2020-02-27,recuperados_arsalgarve,recuperados,,,All,,,,arsalgarve,,
 2020-02-28,recuperados_arsalgarve,recuperados,,,All,,,,arsalgarve,,
@@ -36674,6 +36748,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados_arsalgarve,recuperados,,,All,,,,arsalgarve,,
 2021-06-27,recuperados_arsalgarve,recuperados,,,All,,,,arsalgarve,,
 2021-06-28,recuperados_arsalgarve,recuperados,,,All,,,,arsalgarve,,
+2021-06-29,recuperados_arsalgarve,recuperados,,,All,,,,arsalgarve,,
 2020-02-26,recuperados_arscentro,recuperados,,,All,,,,arscentro,,
 2020-02-27,recuperados_arscentro,recuperados,,,All,,,,arscentro,,
 2020-02-28,recuperados_arscentro,recuperados,,,All,,,,arscentro,,
@@ -37163,6 +37238,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados_arscentro,recuperados,,,All,,,,arscentro,,
 2021-06-27,recuperados_arscentro,recuperados,,,All,,,,arscentro,,
 2021-06-28,recuperados_arscentro,recuperados,,,All,,,,arscentro,,
+2021-06-29,recuperados_arscentro,recuperados,,,All,,,,arscentro,,
 2020-02-26,recuperados_arslvt,recuperados,,,All,,,,arslvt,,
 2020-02-27,recuperados_arslvt,recuperados,,,All,,,,arslvt,,
 2020-02-28,recuperados_arslvt,recuperados,,,All,,,,arslvt,,
@@ -37652,6 +37728,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados_arslvt,recuperados,,,All,,,,arslvt,,
 2021-06-27,recuperados_arslvt,recuperados,,,All,,,,arslvt,,
 2021-06-28,recuperados_arslvt,recuperados,,,All,,,,arslvt,,
+2021-06-29,recuperados_arslvt,recuperados,,,All,,,,arslvt,,
 2020-02-26,recuperados_arsnorte,recuperados,,,All,,,,arsnorte,,
 2020-02-27,recuperados_arsnorte,recuperados,,,All,,,,arsnorte,,
 2020-02-28,recuperados_arsnorte,recuperados,,,All,,,,arsnorte,,
@@ -38141,6 +38218,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados_arsnorte,recuperados,,,All,,,,arsnorte,,
 2021-06-27,recuperados_arsnorte,recuperados,,,All,,,,arsnorte,,
 2021-06-28,recuperados_arsnorte,recuperados,,,All,,,,arsnorte,,
+2021-06-29,recuperados_arsnorte,recuperados,,,All,,,,arsnorte,,
 2020-02-26,recuperados_estrangeiro,recuperados,,,All,,,,estrangeiro,,
 2020-02-27,recuperados_estrangeiro,recuperados,,,All,,,,estrangeiro,,
 2020-02-28,recuperados_estrangeiro,recuperados,,,All,,,,estrangeiro,,
@@ -38630,6 +38708,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados_estrangeiro,recuperados,,,All,,,,estrangeiro,,
 2021-06-27,recuperados_estrangeiro,recuperados,,,All,,,,estrangeiro,,
 2021-06-28,recuperados_estrangeiro,recuperados,,,All,,,,estrangeiro,,
+2021-06-29,recuperados_estrangeiro,recuperados,,,All,,,,estrangeiro,,
 2020-02-26,recuperados_madeira,recuperados,,,All,,,,madeira,,
 2020-02-27,recuperados_madeira,recuperados,,,All,,,,madeira,,
 2020-02-28,recuperados_madeira,recuperados,,,All,,,,madeira,,
@@ -39119,6 +39198,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,recuperados_madeira,recuperados,,,All,,,,madeira,,
 2021-06-27,recuperados_madeira,recuperados,,,All,,,,madeira,,
 2021-06-28,recuperados_madeira,recuperados,,,All,,,,madeira,,
+2021-06-29,recuperados_madeira,recuperados,,,All,,,,madeira,,
 2020-02-26,rt_continente,rt,rt_continente,,All,,,,Portugal,,
 2020-02-27,rt_continente,rt,rt_continente,,All,,,,Portugal,,
 2020-02-28,rt_continente,rt,rt_continente,,All,,,,Portugal,,
@@ -39608,6 +39688,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,rt_continente,rt,rt_continente,,All,,,,Portugal,1.15,Count
 2021-06-27,rt_continente,rt,rt_continente,,All,,,,Portugal,1.15,Count
 2021-06-28,rt_continente,rt,rt_continente,,All,,,,Portugal,1.14,Count
+2021-06-29,rt_continente,rt,rt_continente,,All,,,,Portugal,1.14,Count
 2020-02-26,rt_nacional,rt,rt_nacional,,All,,,,Portugal,,
 2020-02-27,rt_nacional,rt,rt_nacional,,All,,,,Portugal,,
 2020-02-28,rt_nacional,rt,rt_nacional,,All,,,,Portugal,,
@@ -40097,6 +40178,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,rt_nacional,rt,rt_nacional,,All,,,,Portugal,1.14,Count
 2021-06-27,rt_nacional,rt,rt_nacional,,All,,,,Portugal,1.14,Count
 2021-06-28,rt_nacional,rt,rt_nacional,,All,,,,Portugal,1.13,Count
+2021-06-29,rt_nacional,rt,rt_nacional,,All,,,,Portugal,1.13,Count
 2020-02-26,sintomas_cefaleia,sintomas,,cefaleia,All,,,,Portugal,,
 2020-02-27,sintomas_cefaleia,sintomas,,cefaleia,All,,,,Portugal,,
 2020-02-28,sintomas_cefaleia,sintomas,,cefaleia,All,,,,Portugal,,
@@ -40586,6 +40668,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,sintomas_cefaleia,sintomas,,cefaleia,All,,,,Portugal,,
 2021-06-27,sintomas_cefaleia,sintomas,,cefaleia,All,,,,Portugal,,
 2021-06-28,sintomas_cefaleia,sintomas,,cefaleia,All,,,,Portugal,,
+2021-06-29,sintomas_cefaleia,sintomas,,cefaleia,All,,,,Portugal,,
 2020-02-26,sintomas_dificuldade_respiratoria,sintomas,,dificuldade respiratoria,All,,,,Portugal,,
 2020-02-27,sintomas_dificuldade_respiratoria,sintomas,,dificuldade respiratoria,All,,,,Portugal,,
 2020-02-28,sintomas_dificuldade_respiratoria,sintomas,,dificuldade respiratoria,All,,,,Portugal,,
@@ -41075,6 +41158,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,sintomas_dificuldade_respiratoria,sintomas,,dificuldade respiratoria,All,,,,Portugal,,
 2021-06-27,sintomas_dificuldade_respiratoria,sintomas,,dificuldade respiratoria,All,,,,Portugal,,
 2021-06-28,sintomas_dificuldade_respiratoria,sintomas,,dificuldade respiratoria,All,,,,Portugal,,
+2021-06-29,sintomas_dificuldade_respiratoria,sintomas,,dificuldade respiratoria,All,,,,Portugal,,
 2020-02-26,sintomas_dores_musculares,sintomas,,dores musculares,All,,,,Portugal,,
 2020-02-27,sintomas_dores_musculares,sintomas,,dores musculares,All,,,,Portugal,,
 2020-02-28,sintomas_dores_musculares,sintomas,,dores musculares,All,,,,Portugal,,
@@ -41564,6 +41648,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,sintomas_dores_musculares,sintomas,,dores musculares,All,,,,Portugal,,
 2021-06-27,sintomas_dores_musculares,sintomas,,dores musculares,All,,,,Portugal,,
 2021-06-28,sintomas_dores_musculares,sintomas,,dores musculares,All,,,,Portugal,,
+2021-06-29,sintomas_dores_musculares,sintomas,,dores musculares,All,,,,Portugal,,
 2020-02-26,sintomas_febre,sintomas,,febre,All,,,,Portugal,,
 2020-02-27,sintomas_febre,sintomas,,febre,All,,,,Portugal,,
 2020-02-28,sintomas_febre,sintomas,,febre,All,,,,Portugal,,
@@ -42053,6 +42138,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,sintomas_febre,sintomas,,febre,All,,,,Portugal,,
 2021-06-27,sintomas_febre,sintomas,,febre,All,,,,Portugal,,
 2021-06-28,sintomas_febre,sintomas,,febre,All,,,,Portugal,,
+2021-06-29,sintomas_febre,sintomas,,febre,All,,,,Portugal,,
 2020-02-26,sintomas_fraqueza_generalizada,sintomas,,fraqueza generalizada,All,,,,Portugal,,
 2020-02-27,sintomas_fraqueza_generalizada,sintomas,,fraqueza generalizada,All,,,,Portugal,,
 2020-02-28,sintomas_fraqueza_generalizada,sintomas,,fraqueza generalizada,All,,,,Portugal,,
@@ -42542,6 +42628,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,sintomas_fraqueza_generalizada,sintomas,,fraqueza generalizada,All,,,,Portugal,,
 2021-06-27,sintomas_fraqueza_generalizada,sintomas,,fraqueza generalizada,All,,,,Portugal,,
 2021-06-28,sintomas_fraqueza_generalizada,sintomas,,fraqueza generalizada,All,,,,Portugal,,
+2021-06-29,sintomas_fraqueza_generalizada,sintomas,,fraqueza generalizada,All,,,,Portugal,,
 2020-02-26,sintomas_tosse,sintomas,,tosse,All,,,,Portugal,,
 2020-02-27,sintomas_tosse,sintomas,,tosse,All,,,,Portugal,,
 2020-02-28,sintomas_tosse,sintomas,,tosse,All,,,,Portugal,,
@@ -43031,6 +43118,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,sintomas_tosse,sintomas,,tosse,All,,,,Portugal,,
 2021-06-27,sintomas_tosse,sintomas,,tosse,All,,,,Portugal,,
 2021-06-28,sintomas_tosse,sintomas,,tosse,All,,,,Portugal,,
+2021-06-29,sintomas_tosse,sintomas,,tosse,All,,,,Portugal,,
 2020-02-26,suspeitos,suspeitos,,,All,,,,Portugal,25,Count
 2020-02-27,suspeitos,suspeitos,,,All,,,,Portugal,51,Count
 2020-02-28,suspeitos,suspeitos,,,All,,,,Portugal,59,Count
@@ -43520,6 +43608,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,suspeitos,suspeitos,,,All,,,,Portugal,,
 2021-06-27,suspeitos,suspeitos,,,All,,,,Portugal,,
 2021-06-28,suspeitos,suspeitos,,,All,,,,Portugal,,
+2021-06-29,suspeitos,suspeitos,,,All,,,,Portugal,,
 2020-02-26,transmissao_importada,transmissao,transmissao_importada,,All,,,,Portugal,,
 2020-02-27,transmissao_importada,transmissao,transmissao_importada,,All,,,,Portugal,,
 2020-02-28,transmissao_importada,transmissao,transmissao_importada,,All,,,,Portugal,,
@@ -44009,6 +44098,7 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,transmissao_importada,transmissao,transmissao_importada,,All,,,,Portugal,,
 2021-06-27,transmissao_importada,transmissao,transmissao_importada,,All,,,,Portugal,,
 2021-06-28,transmissao_importada,transmissao,transmissao_importada,,All,,,,Portugal,,
+2021-06-29,transmissao_importada,transmissao,transmissao_importada,,All,,,,Portugal,,
 2020-02-26,vigilancia,vigilancia,,,All,,,,Portugal,,
 2020-02-27,vigilancia,vigilancia,,,All,,,,Portugal,,
 2020-02-28,vigilancia,vigilancia,,,All,,,,Portugal,,
@@ -44498,3 +44588,4 @@ data,origVars,origType,other,symptoms,sex,ageGrpLower,ageGrpUpper,ageGrp,region,
 2021-06-26,vigilancia,vigilancia,,,All,,,,Portugal,48435,Count
 2021-06-27,vigilancia,vigilancia,,,All,,,,Portugal,49320,Count
 2021-06-28,vigilancia,vigilancia,,,All,,,,Portugal,50051,Count
+2021-06-29,vigilancia,vigilancia,,,All,,,,Portugal,51109,Count
