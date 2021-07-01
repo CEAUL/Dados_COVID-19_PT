@@ -4,35 +4,35 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Thu 01 Jul 2021 (03:10:56 UTC \[+0000\])**
+**Last updated: Thu 01 Jul 2021 (09:54:27 WEST \[+0100\])**
 
-  - Data available from **26 Feb 2020** until **30 Jun 2021** (491 days
-    - 0 missing).
+-   Data available from **26 Feb 2020** until **30 Jun 2021** (491
+    days - 0 missing).
 
 ### Download User Friendly Version
 
-  - Download the user friendly data from:
+-   Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
     or use the following direct link in your program:
-      - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
-  - **Variables**
-      - `data`: Date (Portuguese spelling).
-      - `origVars`: Variable name taken from source data.
-      - `origType`: Original variable count type.
-      - `other`: Other types of `origVars`.
-      - `symptoms`: Recorded COVID-19 symptoms.
-      - `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
+    -   <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
+-   **Variables**
+    -   `data`: Date (Portuguese spelling).
+    -   `origVars`: Variable name taken from source data.
+    -   `origType`: Original variable count type.
+    -   `other`: Other types of `origVars`.
+    -   `symptoms`: Recorded COVID-19 symptoms.
+    -   `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
         Males).
-      - `ageGrp`: Age groups in years (`desconhecidos` - unknown).
-      - `ageGrpLower`: Lower limit of age group (useful for sorting).
-      - `ageGrpUpper`: Upper limit of age group.
-      - `region`: Portuguese Regions
-      - `value`: Numeric value.
-      - `valueUnits`: Units for the variable `value`.
+    -   `ageGrp`: Age groups in years (`desconhecidos` - unknown).
+    -   `ageGrpLower`: Lower limit of age group (useful for sorting).
+    -   `ageGrpUpper`: Upper limit of age group.
+    -   `region`: Portuguese Regions
+    -   `value`: Numeric value.
+    -   `valueUnits`: Units for the variable `value`.
 
 <br>
 
-  - Download the original unprocessed data (json to CSV) from:
+-   Download the original unprocessed data (json to CSV) from:
     **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
 
 ### Source
@@ -46,7 +46,7 @@ The original data were downloaded from an API provide by VOST
 ### Summary: Last 10 (available) Days
 
 |            Date | Cases (7 Day Mean) | Active Cases | Deaths (7 Day Mean) |
-| --------------: | -----------------: | -----------: | ------------------: |
+|----------------:|-------------------:|-------------:|--------------------:|
 | Mon 21 Jun 2021 |       756 (1104.9) |        28657 |            3 ( 3.0) |
 | Tue 22 Jun 2021 |      1020 (1111.6) |        28378 |            6 ( 3.6) |
 | Wed 23 Jun 2021 |      1497 (1132.6) |        29012 |            3 ( 3.1) |
@@ -55,8 +55,8 @@ The original data were downloaded from an API provide by VOST
 | Sat 26 Jun 2021 |      1568 (1277.4) |        30759 |            2 ( 3.0) |
 | Sun 27 Jun 2021 |      1496 (1356.7) |        31779 |            1 ( 2.7) |
 | Mon 28 Jun 2021 |       902 (1377.6) |        32071 |            2 ( 2.6) |
-| Tue 29 Jun 2021 |      1746 (1481.3) |        32134 |            6 ( 2.6) |
-| Wed 30 Jun 2021 |      2302 (1596.3) |        33471 |            4 ( 2.7) |
+| Tue 29 Jun 2021 |      1806 (1489.9) |        32194 |            6 ( 2.6) |
+| Wed 30 Jun 2021 |      2302 (1604.9) |        33471 |            4 ( 2.7) |
 
 <img src="README_figs/README-plotNewCases-1.png" width="672" />
 
@@ -207,9 +207,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548.00    -1634.00
 ##   5: 2020-05-22      ativos                ativos 21321.00     -862.00
 ##  ---                                                                  
-## 697: 2021-06-09          rt           rt_nacional     1.05       -0.02
-## 698: 2021-06-23          rt           rt_nacional     1.17       -0.01
-## 699: 2021-06-25          rt           rt_nacional     1.14       -0.03
-## 700: 2021-06-28          rt           rt_nacional     1.13       -0.01
-## 701: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
+## 698: 2021-06-09          rt           rt_nacional     1.05       -0.02
+## 699: 2021-06-23          rt           rt_nacional     1.17       -0.01
+## 700: 2021-06-25          rt           rt_nacional     1.14       -0.03
+## 701: 2021-06-28          rt           rt_nacional     1.13       -0.01
+## 702: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
 ```
