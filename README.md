@@ -4,35 +4,35 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 16 Jul 2021 (11:31:57 WEST \[+0100\])**
+**Last updated: Wed 21 Jul 2021 (16:12:10 UTC \[+0000\])**
 
--   Data available from **26 Feb 2020** until **15 Jul 2021** (506
-    days - 0 missing).
+  - Data available from **26 Feb 2020** until **21 Jul 2021** (512 days
+    - 0 missing).
 
 ### Download User Friendly Version
 
--   Download the user friendly data from:
+  - Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
     or use the following direct link in your program:
-    -   <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
--   **Variables**
-    -   `data`: Date (Portuguese spelling).
-    -   `origVars`: Variable name taken from source data.
-    -   `origType`: Original variable count type.
-    -   `other`: Other types of `origVars`.
-    -   `symptoms`: Recorded COVID-19 symptoms.
-    -   `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
+      - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
+  - **Variables**
+      - `data`: Date (Portuguese spelling).
+      - `origVars`: Variable name taken from source data.
+      - `origType`: Original variable count type.
+      - `other`: Other types of `origVars`.
+      - `symptoms`: Recorded COVID-19 symptoms.
+      - `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
         Males).
-    -   `ageGrp`: Age groups in years (`desconhecidos` - unknown).
-    -   `ageGrpLower`: Lower limit of age group (useful for sorting).
-    -   `ageGrpUpper`: Upper limit of age group.
-    -   `region`: Portuguese Regions
-    -   `value`: Numeric value.
-    -   `valueUnits`: Units for the variable `value`.
+      - `ageGrp`: Age groups in years (`desconhecidos` - unknown).
+      - `ageGrpLower`: Lower limit of age group (useful for sorting).
+      - `ageGrpUpper`: Upper limit of age group.
+      - `region`: Portuguese Regions
+      - `value`: Numeric value.
+      - `valueUnits`: Units for the variable `value`.
 
 <br>
 
--   Download the original unprocessed data (json to CSV) from:
+  - Download the original unprocessed data (json to CSV) from:
     **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
 
 ### Source
@@ -46,17 +46,17 @@ The original data were downloaded from an API provide by VOST
 ### Summary: Last 10 (available) Days
 
 |            Date | Cases (7 Day Mean) | Active Cases | Deaths (7 Day Mean) |
-|----------------:|-------------------:|-------------:|--------------------:|
-| Tue 06 Jul 2021 |      2170 (2212.3) |        38488 |            1 ( 3.7) |
-| Wed 07 Jul 2021 |      3285 (2352.7) |        40258 |            8 ( 4.3) |
-| Thu 08 Jul 2021 |      3269 (2469.9) |        41863 |            9 ( 4.9) |
-| Fri 09 Jul 2021 |      3194 (2578.1) |        43323 |            7 ( 4.9) |
-| Sat 10 Jul 2021 |      3162 (2657.7) |        44006 |            6 ( 5.1) |
-| Sun 11 Jul 2021 |      2323 (2698.0) |        45302 |            8 ( 6.3) |
+| --------------: | -----------------: | -----------: | ------------------: |
 | Mon 12 Jul 2021 |      1782 (2740.7) |        46048 |            8 ( 6.7) |
 | Tue 13 Jul 2021 |      2650 (2809.3) |        45199 |            9 ( 7.9) |
 | Wed 14 Jul 2021 |      4153 (2933.3) |        47108 |            9 ( 8.0) |
 | Thu 15 Jul 2021 |      3641 (2986.4) |        48476 |            5 ( 7.4) |
+| Fri 16 Jul 2021 |      3547 (3036.9) |        49445 |            7 ( 7.4) |
+| Sat 17 Jul 2021 |      3677 (3110.4) |        49776 |            5 ( 7.3) |
+| Sun 18 Jul 2021 |      3261 (3244.4) |        51771 |            8 ( 7.3) |
+| Mon 19 Jul 2021 |      1855 (3254.9) |        52236 |            8 ( 7.3) |
+| Tue 20 Jul 2021 |      2706 (3262.9) |        50487 |            4 ( 6.6) |
+| Wed 21 Jul 2021 |      4376 (3294.7) |        52147 |           13 ( 7.1) |
 
 <img src="README_figs/README-plotNewCases-1.png" width="672" />
 
@@ -85,11 +85,11 @@ CVPT[, .(data, origVars, origType, sex, ageGrp, region, value, valueUnits)]
 ##     4: 2020-02-29     ativos     ativos All        Portugal    NA           
 ##     5: 2020-03-01     ativos     ativos All        Portugal    NA           
 ##    ---                                                                      
-## 46042: 2021-07-11 vigilancia vigilancia All        Portugal 73762      Count
-## 46043: 2021-07-12 vigilancia vigilancia All        Portugal 74899      Count
-## 46044: 2021-07-13 vigilancia vigilancia All        Portugal 76360      Count
-## 46045: 2021-07-14 vigilancia vigilancia All        Portugal 77682      Count
-## 46046: 2021-07-15 vigilancia vigilancia All        Portugal 78681      Count
+## 46588: 2021-07-17 vigilancia vigilancia All        Portugal 79711      Count
+## 46589: 2021-07-18 vigilancia vigilancia All        Portugal 79710      Count
+## 46590: 2021-07-19 vigilancia vigilancia All        Portugal 79883      Count
+## 46591: 2021-07-20 vigilancia vigilancia All        Portugal 80940      Count
+## 46592: 2021-07-21 vigilancia vigilancia All        Portugal 79542      Count
 
 # Order data by original variable name and date.
 setkeyv(CVPT, c("origVars", "data"))
@@ -155,7 +155,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
     y = "Number of Confirmed Cases",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Age Group")
-## Warning: Removed 63 row(s) containing missing values (geom_path).
+## Warning: Removed 72 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
@@ -178,7 +178,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 490 row(s) containing missing values (geom_path).
+## Warning: Removed 496 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -207,9 +207,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548.00    -1634.00
 ##   5: 2020-05-22      ativos                ativos 21321.00     -862.00
 ##  ---                                                                  
-## 718: 2021-06-28          rt           rt_nacional     1.13       -0.01
-## 719: 2021-07-09          rt           rt_nacional     1.18       -0.02
-## 720: 2021-07-12          rt           rt_nacional     1.16       -0.02
-## 721: 2021-07-14          rt           rt_nacional     1.14       -0.02
-## 722: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
+## 730: 2021-07-14          rt           rt_nacional     1.14       -0.02
+## 731: 2021-07-16          rt           rt_nacional     1.12       -0.02
+## 732: 2021-07-19          rt           rt_nacional     1.10       -0.02
+## 733: 2021-07-21          rt           rt_nacional     1.09       -0.01
+## 734: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
 ```
