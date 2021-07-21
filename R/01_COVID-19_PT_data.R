@@ -42,6 +42,7 @@ library(RCurl)
 
   if (nAvail>0){
     for(i in 1:nAvail){
+      cat("Downloading ...", dlJSON$cvURL[i], "\n")
       download.file(dlJSON$cvURL[i], destfile = here("data-raw", dlJSON$jsonFile[i]))
       Sys.sleep(runif(1, min = 0.01, max = 0.5))    }
   } else {message("Raw JSON data up to date")}
