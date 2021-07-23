@@ -4,9 +4,9 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 23 Jul 2021 (03:11:42 UTC \[+0000\])**
+**Last updated: Fri 23 Jul 2021 (16:11:51 UTC \[+0000\])**
 
-  - Data available from **26 Feb 2020** until **22 Jul 2021** (513 days
+  - Data available from **26 Feb 2020** until **23 Jul 2021** (514 days
     - 0 missing).
 
 ### Download User Friendly Version
@@ -47,7 +47,6 @@ The original data were downloaded from an API provide by VOST
 
 |            Date | Cases (7 Day Mean) | Active Cases | Deaths (7 Day Mean) |
 | --------------: | -----------------: | -----------: | ------------------: |
-| Tue 13 Jul 2021 |      2650 (2809.3) |        45199 |            9 ( 7.9) |
 | Wed 14 Jul 2021 |      4153 (2933.3) |        47108 |            9 ( 8.0) |
 | Thu 15 Jul 2021 |      3641 (2986.4) |        48476 |            5 ( 7.4) |
 | Fri 16 Jul 2021 |      3547 (3036.9) |        49445 |            7 ( 7.4) |
@@ -57,6 +56,7 @@ The original data were downloaded from an API provide by VOST
 | Tue 20 Jul 2021 |      2706 (3262.9) |        50487 |            4 ( 6.6) |
 | Wed 21 Jul 2021 |      4376 (3294.7) |        52147 |           13 ( 7.1) |
 | Thu 22 Jul 2021 |      3622 (3292.0) |        52988 |           16 ( 8.7) |
+| Fri 23 Jul 2021 |      3794 (3327.3) |        53534 |           16 (10.0) |
 
 <img src="README_figs/README-plotNewCases-1.png" width="672" />
 
@@ -85,11 +85,11 @@ CVPT[, .(data, origVars, origType, sex, ageGrp, region, value, valueUnits)]
 ##     4: 2020-02-29     ativos     ativos All        Portugal    NA           
 ##     5: 2020-03-01     ativos     ativos All        Portugal    NA           
 ##    ---                                                                      
-## 46679: 2021-07-18 vigilancia vigilancia All        Portugal 79710      Count
-## 46680: 2021-07-19 vigilancia vigilancia All        Portugal 79883      Count
-## 46681: 2021-07-20 vigilancia vigilancia All        Portugal 80940      Count
-## 46682: 2021-07-21 vigilancia vigilancia All        Portugal 79542      Count
-## 46683: 2021-07-22 vigilancia vigilancia All        Portugal 81377      Count
+## 46770: 2021-07-19 vigilancia vigilancia All        Portugal 79883      Count
+## 46771: 2021-07-20 vigilancia vigilancia All        Portugal 80940      Count
+## 46772: 2021-07-21 vigilancia vigilancia All        Portugal 79542      Count
+## 46773: 2021-07-22 vigilancia vigilancia All        Portugal 81377      Count
+## 46774: 2021-07-23 vigilancia vigilancia All        Portugal 81851      Count
 
 # Order data by original variable name and date.
 setkeyv(CVPT, c("origVars", "data"))
@@ -155,7 +155,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
     y = "Number of Confirmed Cases",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Age Group")
-## Warning: Removed 63 row(s) containing missing values (geom_path).
+## Warning: Removed 54 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
@@ -178,7 +178,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 497 row(s) containing missing values (geom_path).
+## Warning: Removed 498 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -207,9 +207,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548.00    -1634.00
 ##   5: 2020-05-22      ativos                ativos 21321.00     -862.00
 ##  ---                                                                  
-## 732: 2021-07-14          rt           rt_nacional     1.14       -0.02
-## 733: 2021-07-16          rt           rt_nacional     1.12       -0.02
-## 734: 2021-07-19          rt           rt_nacional     1.10       -0.02
-## 735: 2021-07-21          rt           rt_nacional     1.09       -0.01
-## 736: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
+## 734: 2021-07-16          rt           rt_nacional     1.12       -0.02
+## 735: 2021-07-19          rt           rt_nacional     1.10       -0.02
+## 736: 2021-07-21          rt           rt_nacional     1.09       -0.01
+## 737: 2021-07-23          rt           rt_nacional     1.07       -0.02
+## 738: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
 ```
