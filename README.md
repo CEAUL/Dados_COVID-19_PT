@@ -4,35 +4,35 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Thu 26 Aug 2021 (16:54:33 WEST \[+0100\])**
+**Last updated: Wed 01 Sep 2021 (16:13:45 UTC \[+0000\])**
 
--   Data available from **26 Feb 2020** until **25 Aug 2021** (547
-    days - 0 missing).
+  - Data available from **26 Feb 2020** until **31 Aug 2021** (553 days
+    - 0 missing).
 
 ### Download User Friendly Version
 
--   Download the user friendly data from:
+  - Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
     or use the following direct link in your program:
-    -   <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
--   **Variables**
-    -   `data`: Date (Portuguese spelling).
-    -   `origVars`: Variable name taken from source data.
-    -   `origType`: Original variable count type.
-    -   `other`: Other types of `origVars`.
-    -   `symptoms`: Recorded COVID-19 symptoms.
-    -   `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
+      - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
+  - **Variables**
+      - `data`: Date (Portuguese spelling).
+      - `origVars`: Variable name taken from source data.
+      - `origType`: Original variable count type.
+      - `other`: Other types of `origVars`.
+      - `symptoms`: Recorded COVID-19 symptoms.
+      - `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
         Males).
-    -   `ageGrp`: Age groups in years (`desconhecidos` - unknown).
-    -   `ageGrpLower`: Lower limit of age group (useful for sorting).
-    -   `ageGrpUpper`: Upper limit of age group.
-    -   `region`: Portuguese Regions
-    -   `value`: Numeric value.
-    -   `valueUnits`: Units for the variable `value`.
+      - `ageGrp`: Age groups in years (`desconhecidos` - unknown).
+      - `ageGrpLower`: Lower limit of age group (useful for sorting).
+      - `ageGrpUpper`: Upper limit of age group.
+      - `region`: Portuguese Regions
+      - `value`: Numeric value.
+      - `valueUnits`: Units for the variable `value`.
 
 <br>
 
--   Download the original unprocessed data (json to CSV) from:
+  - Download the original unprocessed data (json to CSV) from:
     **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
 
 ### Source
@@ -46,17 +46,17 @@ The original data were downloaded from an API provide by VOST
 ### Summary: Last 10 (available) Days
 
 |            Date | Cases (7 Day Mean) | Active Cases | Deaths (7 Day Mean) |
-|----------------:|-------------------:|-------------:|--------------------:|
-| Mon 16 Aug 2021 |      1135 (2344.1) |        45304 |           11 (12.6) |
-| Tue 17 Aug 2021 |      2118 (2327.9) |        43745 |           11 (11.7) |
-| Wed 18 Aug 2021 |      2983 (2332.9) |        44505 |           17 (12.4) |
-| Thu 19 Aug 2021 |      2554 (2310.9) |        44809 |           12 (12.6) |
-| Fri 20 Aug 2021 |      2507 (2297.9) |        44916 |            9 (12.1) |
-| Sat 21 Aug 2021 |      2676 (2312.9) |        44588 |            8 (11.6) |
+| --------------: | -----------------: | -----------: | ------------------: |
 | Sun 22 Aug 2021 |      2112 (2297.9) |        45465 |            9 (11.0) |
 | Mon 23 Aug 2021 |      1126 (2296.6) |        45542 |            6 (10.3) |
 | Tue 24 Aug 2021 |      2261 (2317.0) |        44180 |           13 (10.6) |
 | Wed 25 Aug 2021 |      3062 (2328.3) |        44990 |           16 (10.4) |
+| Thu 26 Aug 2021 |      2552 (2328.0) |        45408 |           15 (10.9) |
+| Fri 27 Aug 2021 |      2370 (2308.4) |        45426 |           14 (11.6) |
+| Sat 28 Aug 2021 |      2374 (2265.3) |        44957 |            8 (11.6) |
+| Sun 29 Aug 2021 |      1782 (2218.1) |        45659 |           10 (11.7) |
+| Mon 30 Aug 2021 |      1072 (2210.4) |        45581 |            9 (12.1) |
+| Tue 31 Aug 2021 |      1908 (2160.0) |        44087 |           13 (12.1) |
 
 <img src="README_figs/README-plotNewCases-1.png" width="672" />
 
@@ -85,11 +85,11 @@ CVPT[, .(data, origVars, origType, sex, ageGrp, region, value, valueUnits)]
 ##     4: 2020-02-29     ativos     ativos All        Portugal    NA           
 ##     5: 2020-03-01     ativos     ativos All        Portugal    NA           
 ##    ---                                                                      
-## 49773: 2021-08-21 vigilancia vigilancia All        Portugal 50638      Count
-## 49774: 2021-08-22 vigilancia vigilancia All        Portugal 50355      Count
-## 49775: 2021-08-23 vigilancia vigilancia All        Portugal 48945      Count
-## 49776: 2021-08-24 vigilancia vigilancia All        Portugal 47576      Count
-## 49777: 2021-08-25 vigilancia vigilancia All        Portugal 46701      Count
+## 50319: 2021-08-27 vigilancia vigilancia All        Portugal 46973      Count
+## 50320: 2021-08-28 vigilancia vigilancia All        Portugal 46723      Count
+## 50321: 2021-08-29 vigilancia vigilancia All        Portugal 45959      Count
+## 50322: 2021-08-30 vigilancia vigilancia All        Portugal 45327      Count
+## 50323: 2021-08-31 vigilancia vigilancia All        Portugal 44930      Count
 
 # Order data by original variable name and date.
 setkeyv(CVPT, c("origVars", "data"))
@@ -178,7 +178,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 531 row(s) containing missing values (geom_path).
+## Warning: Removed 537 row(s) containing missing values (geom_path).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
@@ -207,9 +207,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548.00    -1634.00
 ##   5: 2020-05-22      ativos                ativos 21321.00     -862.00
 ##  ---                                                                  
-## 807: 2021-07-28          rt           rt_nacional     1.01       -0.03
-## 808: 2021-07-30          rt           rt_nacional     0.98       -0.03
-## 809: 2021-08-02          rt           rt_nacional     0.94       -0.04
-## 810: 2021-08-04          rt           rt_nacional     0.92       -0.02
-## 811: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
+## 816: 2021-07-28          rt           rt_nacional     1.01       -0.03
+## 817: 2021-07-30          rt           rt_nacional     0.98       -0.03
+## 818: 2021-08-02          rt           rt_nacional     0.94       -0.04
+## 819: 2021-08-04          rt           rt_nacional     0.92       -0.02
+## 820: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
 ```
