@@ -147,3 +147,8 @@ dataMetaInfo <- paste0("\n+ Data available from **", firstDate, "** until **",
                        missingDates)
 
 saveRDS(dataMetaInfo, file = here("data", "dataMetaInfo.RData"))
+
+## Render the README file
+
+rmarkdown::render(here("README.Rmd"),
+                  output_format = "github_document")
