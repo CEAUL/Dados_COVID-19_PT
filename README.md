@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 28 Sep 2021 (16:14:51 UTC \[+0000\])**
+**Last updated: Wed 29 Sep 2021 (03:11:04 UTC \[+0000\])**
 
   - Data available from **26 Feb 2020** until **28 Sep 2021** (581 days
     - 0 missing).
@@ -90,6 +90,7 @@ CVPT[, .(data, origVars, origType, sex, ageGrp, region, value, valueUnits)]
 ## 52869: 2021-09-26 vigilancia vigilancia All        Portugal 28297      Count
 ## 52870: 2021-09-27 vigilancia vigilancia All        Portugal 27845      Count
 ## 52871: 2021-09-28 vigilancia vigilancia All        Portugal 27391      Count
+
 # Order data by original variable name and date.
 setkeyv(CVPT, c("origVars", "data"))
 
