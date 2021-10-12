@@ -4,35 +4,35 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Tue 12 Oct 2021 (03:11:24 UTC \[+0000\])**
+**Last updated: Tue 12 Oct 2021 (11:38:44 WEST \[+0100\])**
 
-  - Data available from **26 Feb 2020** until **11 Oct 2021** (594 days
-    - 0 missing).
+-   Data available from **26 Feb 2020** until **11 Oct 2021** (594
+    days - 0 missing).
 
 ### Download User Friendly Version
 
-  - Download the user friendly data from:
+-   Download the user friendly data from:
     **[covid19pt\_DSSG\_Long.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv)**
     or use the following direct link in your program:
-      - <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
-  - **Variables**
-      - `data`: Date (Portuguese spelling).
-      - `origVars`: Variable name taken from source data.
-      - `origType`: Original variable count type.
-      - `other`: Other types of `origVars`.
-      - `symptoms`: Recorded COVID-19 symptoms.
-      - `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
+    -   <https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Long.csv>
+-   **Variables**
+    -   `data`: Date (Portuguese spelling).
+    -   `origVars`: Variable name taken from source data.
+    -   `origType`: Original variable count type.
+    -   `other`: Other types of `origVars`.
+    -   `symptoms`: Recorded COVID-19 symptoms.
+    -   `sex`: Gender (`F` - Females, `M` - Males, `All` - Females &
         Males).
-      - `ageGrp`: Age groups in years (`desconhecidos` - unknown).
-      - `ageGrpLower`: Lower limit of age group (useful for sorting).
-      - `ageGrpUpper`: Upper limit of age group.
-      - `region`: Portuguese Regions
-      - `value`: Numeric value.
-      - `valueUnits`: Units for the variable `value`.
+    -   `ageGrp`: Age groups in years (`desconhecidos` - unknown).
+    -   `ageGrpLower`: Lower limit of age group (useful for sorting).
+    -   `ageGrpUpper`: Upper limit of age group.
+    -   `region`: Portuguese Regions
+    -   `value`: Numeric value.
+    -   `valueUnits`: Units for the variable `value`.
 
 <br>
 
-  - Download the original unprocessed data (json to CSV) from:
+-   Download the original unprocessed data (json to CSV) from:
     **[covid19pt\_DSSG\_Orig.csv](https://raw.githubusercontent.com/CEAUL/Dados_COVID-19_PT/master/data/covid19pt_DSSG_Orig.csv)**
 
 ### Source
@@ -46,7 +46,7 @@ The original data were downloaded from an API provide by VOST
 ### Summary: Last 10 (available) Days
 
 |            Date | Cases (7 Day Mean) | Active Cases | Deaths (7 Day Mean) |
-| --------------: | -----------------: | -----------: | ------------------: |
+|----------------:|-------------------:|-------------:|--------------------:|
 | Sat 02 Oct 2021 |        690 (617.0) |        30257 |            7 ( 4.9) |
 | Sun 03 Oct 2021 |        449 (595.6) |        30367 |            7 ( 5.6) |
 | Mon 04 Oct 2021 |        193 (590.3) |        30222 |            7 ( 6.4) |
@@ -207,9 +207,9 @@ CV[dailyChange<0 & !(origType %in% c("vigilancia", "internados"))][
 ##   4: 2020-05-18      ativos                ativos 21548.00    -1634.00
 ##   5: 2020-05-22      ativos                ativos 21321.00     -862.00
 ##  ---                                                                  
-## 914: 2021-08-30          rt           rt_nacional     0.98       -0.01
-## 915: 2021-09-03          rt           rt_nacional     0.96       -0.02
-## 916: 2021-09-06          rt           rt_nacional     0.92       -0.04
-## 917: 2021-09-10          rt           rt_nacional     0.87       -0.05
-## 918: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
+## 942: 2021-09-13          rt           rt_nacional     0.85       -0.02
+## 943: 2021-09-15          rt           rt_nacional     0.84       -0.01
+## 944: 2021-09-17          rt           rt_nacional     0.83       -0.01
+## 945: 2021-09-20          rt           rt_nacional     0.82       -0.01
+## 946: 2020-05-21 transmissao transmissao_importada   767.00       -3.00
 ```
