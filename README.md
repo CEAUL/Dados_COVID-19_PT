@@ -4,7 +4,7 @@ README](https://github.com/CEAUL/Dados_COVID-19_PT/workflows/Render%20README/bad
 
 ## Daily Portuguese COVID-19 Data
 
-**Last updated: Fri 04 Nov 2022 (16:19:50 UTC \[+0000\])**
+**Last updated: Sat 05 Nov 2022 (03:54:23 UTC \[+0000\])**
 
   - Data available from **26 Feb 2020** until **20 Dec 2021** (664 days
     - 0 missing).
@@ -131,8 +131,8 @@ obAll %>%
     fill = "",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])"))
     )
-## Warning: Removed 1 rows containing missing values (position_stack).
-## Warning: Removed 7 row(s) containing missing values (geom_path).
+## Warning: Removed 1 rows containing missing values (`position_stack()`).
+## Warning: Removed 7 rows containing missing values (`geom_line()`).
 ```
 
 <img src="README_figs/README-deathsbySex-1.png" width="672" />
@@ -155,7 +155,7 @@ CV[origType=="confirmados" & !(ageGrp %chin% c("", "desconhecidos"))][
     y = "Number of Confirmed Cases",
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Age Group")
-## Warning: Removed 54 row(s) containing missing values (geom_path).
+## Warning: Removed 54 rows containing missing values (`geom_line()`).
 ```
 
 <img src="README_figs/README-casesbyAgeSex-1.png" width="672" />
@@ -178,7 +178,7 @@ CV[origType=="confirmados" & ageGrp=="" & region!="Portugal"] %>%
     caption = paste0("Updated on: ", format(Sys.time(), "%a %d %b %Y (%H:%M:%S %Z [%z])")),
     colour = "Region")
 ## Warning: Transformation introduced infinite values in continuous y-axis
-## Warning: Removed 648 row(s) containing missing values (geom_path).
+## Warning: Removed 648 rows containing missing values (`geom_line()`).
 ```
 
 <img src="README_figs/README-casesbyRegion-1.png" width="672" />
